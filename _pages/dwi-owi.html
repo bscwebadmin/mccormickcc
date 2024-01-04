@@ -63,16 +63,7 @@ services_section:
 		    {% if page.contact_section.sub_title %}
 			 <h5 class="formSection__Heading">{{ page.contact_section.sub_title }}</h5>
 			{% endif %}
-			<form method="post" netlify-honeypot="bot-field" data-netlify="true" action="{{general_data.contact_form_action_url}}" name="contact" class="cfForm">
-				<input type="hidden" name="bot-field" />+ <input type="hidden" name="form-name" value="contact" />
-				<div class="formFlex">
-					<div class="formSmallInputs inputWrapper">
-						<input class="" name="NAME" type="text" placeholder="NAME" /><input class="" name="EMAIL" type="text" placeholder="EMAIL" /><input class="" name="PHONE NUMBER" type="text" placeholder="PHONE NUMBER" />
-					</div>
-					<div class="formLargeInputs inputWrapper"><textarea class="inputLarge" name="MESSAGE" placeholder="MESSAGE"></textarea></div>
-				</div>
-				<input type="submit" class="formSubmit" value="submit" />
-			</form>
+			{% include form.html %}
 		</section>
 	</div>
 	{% if page.banner_section.banner_image_url %}
