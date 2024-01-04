@@ -1,0 +1,122 @@
+---
+layout: page
+title: >-
+  Estate Planning
+description: >-
+  Shane McCormick has over 20 years of legal experience fighting for diverse clients. As a veteran, he knows the importance of persistence and determination. He brings all these valuable skills to the courtroom to ensure the best possible outcome for every client, every time. A local attorney who knows the system, he has been providing outstanding legal services to Acadiana and the surrounding area since 2002.
+keywords: >-
+  Estate Planning
+permalink: "/estate-planning"
+banner_section:
+  title: "Estate Planning"
+  lists:
+    - WILL
+    - POWER OF ATTORNEY
+    - LIVING WILL
+    - SUCCESSION
+  banner_image_url: "/assets/images/banner_planning.jpg"
+
+contact_section:
+  title: "CONTACT US now for a consultation"
+  sub_title: "REQUEST A CONSULTATION"
+  banner_image_url: "/assets/images/contact_form_bg_2.jpg"
+
+white_section: 
+  title: >- 
+    ENSURE THAT YOUR FINAL WISHES ARE UPHELD, EVEN AFTER YOU’VE PASSED ON
+  description: >-
+    When a person passes away it is necessary, in most cases, to distribute their estate (property belonging them). In Louisiana this procedure is called a “Succession”. <br/> <br/>  Estate planning is the process of arranging for disposal and disbursement of the estate after a person passes away. It involves preparing a Last Will and Testament, designating beneficiaries, creating Trusts, preparing Powers of Attorney and accounting for the assets and liabilities of the estate. <br/> <br/>  Our firm has extensive experience ensuring that the deceased person’s wishes are carried out as expressed in their Last Will and Testament. In the event a Last Will and Testament was not created then Louisiana law provides for the distribution of their assets to their rightful heirs. <br/> <br/>  We understand but this can be an emotional strain on the decedents family , and as such, all matters or handled as expediently as possible to ensure a smooth transition.
+
+services_section:
+  title: >-
+    Call today to set up an appointment so that I can help you plan for your future so that your wishes can be carried out.
+
+  button_text: "Contact"
+  button_url: "/contact"
+  services:
+    - list: "LAST WILL & TESTAMENT"
+    - list: "POWER OF ATTORNEY"
+    - list: "LIVING WILL"
+    - list: "SUCCESSION"
+    - list: "TRUSTS"
+    - list: "& MORE"
+
+---
+
+{% assign general_data = site.data.general_settings %}
+
+<section class="hero pageHero pageHero--Collage">
+	<div class="pageHero__Text">
+		{% if page.banner_section.title %}
+		 <h1>{{ page.banner_section.title }}</h1>
+		{% endif %}
+		{% for list in page.banner_section.lists %}
+		 <p class="pageDesc pageHeroBreak">{{ list }}</p>
+		{% endfor %}
+		<div class="pageHero__Phone">
+		   <a href="tel:{{ general_data.phone }}">{{ general_data.phone }}</a>
+		</div>
+	</div>
+	<div class="pageHero__Form">
+	    {% if page.contact_section.title %}
+		 <h2>{{ page.contact_section.title }}</h2>
+		{% endif %}
+		<section class="formSection">
+		    {% if page.contact_section.sub_title %}
+			 <h5 class="formSection__Heading">{{ page.contact_section.sub_title }}</h5>
+			{% endif %}
+			<form method="post" netlify-honeypot="bot-field" data-netlify="true" action="{{general_data.contact_form_action_url}}" name="contact" class="cfForm">
+				<input type="hidden" name="bot-field" />+ <input type="hidden" name="form-name" value="contact" />
+				<div class="formFlex">
+					<div class="formSmallInputs inputWrapper">
+						<input class="" name="NAME" type="text" placeholder="NAME" /><input class="" name="EMAIL" type="text" placeholder="EMAIL" /><input class="" name="PHONE NUMBER" type="text" placeholder="PHONE NUMBER" />
+					</div>
+					<div class="formLargeInputs inputWrapper"><textarea class="inputLarge" name="MESSAGE" placeholder="MESSAGE"></textarea></div>
+				</div>
+				<input type="submit" class="formSubmit" value="submit" />
+			</form>
+		</section>
+	</div>
+	{% if page.banner_section.banner_image_url %}
+	<div class="pageHero__ImageWrapper pageHero__ImageWrapper--TR">
+		<img class="pageHero__Image pageHero__Image--TR pageHero__ImageWrapper--TR" src="{{page.banner_section.banner_image_url}}" />
+	</div>
+	{% endif %}
+	{% if page.contact_section.banner_image_url %}
+	<div class="pageHero__ImageWrapper pageHero__ImageWrapper--BL">
+		<div class="blueBlock"></div>
+		<img class="pageHero__Image pageHero__Image--BL" src="{{page.contact_section.banner_image_url}}" />
+	</div>
+	{% endif %}
+</section>
+
+{% assign service = page.services_section %}
+{% assign white = page.white_section %}
+<section class="sliceZone">
+	<section class="pageBody maxWidth">
+	    {% if white.title %}
+		<h3>{{ white.title }}</h3>
+		{% endif %}
+		{% if white.description %}
+		<p>{{ white.description }} </p>
+		{% endif %}
+	</section>
+	<section class="pagePrefooter">
+		<div class="pagePrefooter__Text">
+		   {% if service.title %}
+			<p>{{ service.title }}</p>
+			{% endif %}
+			{% if service.button_text %}
+			 <a class="prefooter__Button prefooter__Button--Desktop" href="{{service.button_url}}">{{service.button_text}}</a>
+			{% endif %}
+		</div>
+		<ul>
+		    {% for list in service.services %}
+			<li>{{ list.list }}</li>
+			{% endfor %}
+		</ul>
+		{% if service.button_text %}
+		 <a class="prefooter__Button prefooter__Button--Mobile" href="{{service.button_url}}">{{service.button_text}}</a>
+		{% endif %}
+	</section>
+</section>

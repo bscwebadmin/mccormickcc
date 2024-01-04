@@ -1,0 +1,46 @@
+{% assign general_data = site.data.general_settings %}
+<footer class="maxWidth">
+    {% if general_data.footer_logo_url %}
+     <div class="footer__Col">
+      <img class="footer__Logo img-fluid" src="{{ general_data.footer_logo_url }}" alt="{{ general_data.site_title }}" />
+     </div>
+    {% endif %}
+    <div class="footer__Col footer__Address">
+        {% if general_data.address %}
+         <p>{{ general_data.address.address }}</p>
+        {% endif %}
+        <a href="{{ general_data.google_map_url }}">
+        <address>
+            503 W University Ave
+            
+            Lafayette, LA 70506
+        </address>
+        </a>
+        {% if general_data.address %}
+         <a href="mailto:{{ general_data.email }}">{{ general_data.email }}</a>
+        {% endif %}
+        {% if general_data.phone %}
+         <a href="tel:{{general_data.phone}}">{{ general_data.phone }}</a>
+        {% endif %}
+        
+        <div class="socials--desktop">
+            <p class="footer__SocialText">CONNECT WITH US</p>
+            {% for social_account in general_data.social_accounts %}
+             <a href="{{social_account.url}}"><img src="{{social_account.icon}}" alt="{{social_account.url}}" /></a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="footer__Col footer__Statement">
+        {% if general_data.footer_title %}
+         <h6>{{ general_data.footer_title }}</h6>
+        {% endif %}
+        <div class="socials--mobile">
+            <p class="footer__SocialText">CONNECT WITH US</p>
+            {% for social_account in general_data.social_accounts %}
+            <a href="{{social_account.url}}">
+             <img src="{{social_account.icon}}" alt="{{social_account.url}}" />
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,40 @@
+---
+layout: page
+title: >-
+  Contact Us
+description: >-
+  Shane McCormick has over 20 years of legal experience fighting for diverse clients. As a veteran, he knows the importance of persistence and determination. He brings all these valuable skills to the courtroom to ensure the best possible outcome for every client, every time. A local attorney who knows the system, he has been providing outstanding legal services to Acadiana and the surrounding area since 2002.
+keywords: >-
+  additional-services
+permalink: "/contact"
+gallery:
+  - image_url: "/assets/images/gallery_01.jpg"
+  - image_url: "/assets/images/gallery_02.jpg"
+  - image_url: "/assets/images/gallery_03.jpg"
+
+contact_form_title: "CONTACT US now for a consultation"
+contact_form_subtitle: "REQUEST A CONSULTATION"
+---
+{% assign general_data = site.data.general_settings %}
+<div>
+	<section class="pageHero--Form pageHero">
+		<div class="pageHero__Form">
+		    {% if page.contact_form_title %}
+			 <h2>{{ page.contact_form_title }}</h2>
+			{% endif %}
+			<section class="formSection">
+			    {% if page.contact_form_subtitle %}
+				 <h5 class="formSection__Heading">{{ page.contact_form_subtitle }}</h5>
+				{% endif %}
+				{% include form.html %}
+			</section>
+		</div>
+		<div class="pageHero--Form__TripleImg">
+		    {% for gallery in page.gallery %}
+			<div class="pageHero--Form__imgWrapper">
+			  <img src="{{ gallery.image_url }}" />
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+</div>

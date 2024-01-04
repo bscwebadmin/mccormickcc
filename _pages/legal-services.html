@@ -1,0 +1,301 @@
+---
+layout: page
+title: >-
+  Legal Services
+description: >-
+  Shane McCormick has over 20 years of legal experience fighting for diverse clients. As a veteran, he knows the importance of persistence and determination. He brings all these valuable skills to the courtroom to ensure the best possible outcome for every client, every time. A local attorney who knows the system, he has been providing outstanding legal services to Acadiana and the surrounding area since 2002.
+keywords: >-
+  legal-services
+permalink: "/legal-services"
+banner_section:
+  title: "LEGAL SERVICES"
+  description: >-
+    Trust an experienced attorney and legal team to have your back: anytime, anywhere. Trust McCormick Law Firm.
+  background_image_url: "/assets/images/services.jpg"
+
+contact_section:
+  title: "CONTACT US now for a consultation"
+  sub_title: "REQUEST A CONSULTATION"
+
+personal_injury_section:
+  title: "PERSONAL INJURY"
+  subtitle: >-
+    If you were injured through no fault of your own and need help navigating through the legal system contact us immediately.
+  lists:
+    - ACCIDENTS (CAR, 18 WHEELER, MOTORCYCLE, BOAT)
+    - Wrongful Death
+    - Slip and Fall
+    - Workplace Injury
+    - Medical Malpractice
+    - General Negligence
+  button_text: "learn more"
+  button_url: "/personal-injury"
+  image_url: "/assets/images/about_big_bg.jpg"
+
+criminal_law_section:
+  title: "CRIMINAL LAW"
+  subtitle: >-
+    Our firm offers criminal defense services to those charged with having committed a crime.
+
+  lists:
+    - Felonies &amp; Misdemeanors
+    - Drug Crimes
+    - Violent Crimes
+    - Theft
+    - Domestic Abuse
+    - Cyber Crimes
+    - "&amp; More"
+  button_text: "learn more"
+  button_url: "/criminal-law"
+  image_url: "/assets/images/gallery_05.jpg"
+
+family_law_section:
+  title: "Family law"
+  subtitle: >-
+    We realize that extended litigation should be a last alternative in resolving a domestic or family dispute.
+  lists:
+    - Divorce
+    - Child Custody
+    - Child Support
+    - Spousal Support
+    - Community Property Partitions
+    - Paternity/Disavowal Actions
+    - Prenuptial Agreements
+    - Adoptions
+  button_text: "learn more"
+  button_url: "/family-law"
+  image_url: "/assets/images/banner_8.jpg"
+
+dwi_owi_section:
+  title: "dwi/owi"
+  subtitle: >-
+    If you have been arrested for driving under the influence of alcohol or drugs, it is imperative that you contact my office immediately.
+  lists:
+    - Driving Under the Influence of Drugs/Alcohol
+    - Car, Truck, Motorcycle, or Boat
+    - DUI RELATED HIT & RUN
+    - Underage DUI
+    - ACCIDENT DEFENSE
+    - RELATED TRAFFIC OFFENSES
+  button_text: "learn more"
+  button_url: "/dwi-owi"
+  image_url: "/assets/images/banner_5.jpg"
+
+estate_planning_section:
+  title: "Estate Planning"
+  subtitle: >-
+    Call today to set up an appointment so that I can help you plan for your future so that your wishes can be carried out.
+  lists:
+    - "Last Will &amp; Testament"
+    - Power of Attorney
+    - Living Will
+    - Succession
+    - Trusts
+    - "&amp; More"
+  button_text: "learn more"
+  button_url: "/estate-planning"
+  image_url: "/assets/images/gallery_06.jpg"
+
+additional_services_section:
+  title: "additional services"
+  subtitle: >-
+    We pride ourselves on being a full service law firm and strive to fulfill our clients needs.
+  lists:
+    - Contracts
+    - "Cash Sales &amp; Leases"
+    - Civil Litigation
+    - Property Law/Boundary Disputes
+  button_text: "learn more"
+  button_url: "/additional-services"
+  image_url: "/assets/images/banner_one.jpg"
+
+---
+{% assign general_data = site.data.general_settings %}
+
+<div>
+    <section class="pageHero pageHero--Thirds">
+        <div class="pageHero__Text">
+           {% if page.banner_section.title %}
+            <h1>{{ page.banner_section.title }}</h1>
+           {% endif %}
+           {% if page.banner_section.description %}
+            <p class="pageDesc">{{ page.banner_section.description }}</p>
+           {% endif %}
+            <div class="pageHero__Phone"><a href="tel:{{ general_data.phone }}">{{ general_data.phone }}</a></div>
+        </div>
+        {% if page.banner_section.background_image_url %}
+        <div class="pageHero__ImageWrapper pageHero__ImageWrapper--Thirds">
+           <img class="pageHero__Image" src="{{ page.banner_section.background_image_url }}" />
+        </div>
+        {% endif %}
+        <div class="pageHero__Form">
+	    {% if page.contact_form_section.title %}
+		   <h2>{{ page.contact_form_section.title }}</h2>
+	  	{% endif %}
+		<section class="formSection">
+			{% if page.contact_form_section.sub_title %}
+			 <h5 class="formSection__Heading">{{ page.contact_form_section.sub_title }}</h5>
+			{% endif %}
+			<form method="post" netlify-honeypot="bot-field" data-netlify="true" action="{{ general_data.contact_form_action_url}}" name="contact" class="cfForm">
+                    <input type="hidden" name="bot-field" />+ <input type="hidden" name="form-name" value="contact" />
+                    <div class="formFlex">
+                        <div class="formSmallInputs inputWrapper">
+                            <input class="" name="NAME" type="text" placeholder="NAME" /><input class="" name="EMAIL" type="text" placeholder="EMAIL" /><input class="" name="PHONE NUMBER" type="text" placeholder="PHONE NUMBER" />
+                        </div>
+                        <div class="formLargeInputs inputWrapper"><textarea class="inputLarge" name="MESSAGE" placeholder="MESSAGE"></textarea></div>
+                    </div>
+                    <input type="submit" class="formSubmit" value="submit" />
+                </form>
+            </section>
+        </div>
+    </section>
+</div>
+
+<section class="sliceZone">
+   {% assign sectionTwo = page.personal_injury_section %}
+    <section class="allServices">
+        <div class="allServices__Service">
+           {% if sectionTwo.image_url %}
+            <div class="allServices__ImgWrapper">
+              <img src="{{sectionTwo.image_url}}" alt="{{sectionTwo.title}}" class="allServices__Img" />
+            </div>
+            {% endif %}
+            <div class="allServices__Service__Text">
+               {% if sectionTwo.title %}
+                <h3>{{ sectionTwo.title }}</h3>
+               {% endif %}
+               {% if sectionTwo.subtitle %}
+                <p>{{ sectionTwo.subtitle }}</p>
+                {% endif %}
+                <ul>
+                  {% for list in sectionTwo.lists %}
+                    <li>{{ list }}</li>
+                  {% endfor %}
+                </ul>
+                {% if sectionTwo.button_text %}
+                 <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>
+                {% endif %}
+            </div>
+        </div>
+        {% assign sectionThree = page.criminal_law_section %}
+        <div class="allServices__Service">
+           {% if sectionThree.image_url %}
+            <div class="allServices__ImgWrapper">
+              <img src="{{sectionThree.image_url}}" alt="{{sectionThree.title}}" class="allServices__Img" />
+            </div>
+            {% endif %}
+            <div class="allServices__Service__Text">
+               {% if sectionThree.title %}
+                <h3>{{ sectionThree.title }}</h3>
+               {% endif %}
+               {% if sectionThree.subtitle %}
+                <p>{{ sectionThree.subtitle }}</p>
+                {% endif %}
+                <ul>
+                  {% for list in sectionThree.lists %}
+                    <li>{{ list }}</li>
+                  {% endfor %}
+                </ul>
+                {% if sectionThree.button_text %}
+                  <a href="{{ sectionThree.button_url }}">{{sectionThree.button_text}}</a>
+                {% endif %}
+            </div>
+        </div>
+        {% assign sectionFour = page.family_law_section %}
+        <div class="allServices__Service">
+           {% if sectionFour.image_url %}
+            <div class="allServices__ImgWrapper">
+              <img src="{{sectionFour.image_url}}" alt="{{sectionFour.title}}" class="allServices__Img" />
+            </div>
+            {% endif %}
+            <div class="allServices__Service__Text">
+              {% if sectionFour.title %}
+                <h3>{{ sectionFour.title }}</h3>
+               {% endif %}
+               {% if sectionFour.subtitle %}
+                <p>{{ sectionFour.subtitle }}</p>
+                {% endif %}
+                <ul>
+                  {% for list in sectionFour.lists %}
+                    <li>{{ list }}</li>
+                  {% endfor %}
+                </ul>
+                {% if sectionFour.button_text %}
+                 <a href="{{ sectionFour.button_url }}">{{sectionFour.button_text}}</a>
+                {% endif %}
+            </div>
+        </div>
+        {% assign sectionFive = page.dwi_owi_section %}
+        <div class="allServices__Service">
+           {% if sectionFive.image_url %}
+            <div class="allServices__ImgWrapper">
+              <img src="{{sectionFive.image_url}}" alt="{{sectionFive.title}}" class="allServices__Img" />
+            </div>
+            {% endif %}
+            <div class="allServices__Service__Text">
+               {% if sectionFive.title %}
+                <h3>{{ sectionFive.title }}</h3>
+               {% endif %}
+               {% if sectionFive.subtitle %}
+                <p>{{ sectionFive.subtitle }}</p>
+                {% endif %}
+                <ul>
+                  {% for list in sectionFive.lists %}
+                    <li>{{ list }}</li>
+                  {% endfor %}
+                </ul>
+                {% if sectionFive.button_text %}
+                 <a href="{{ sectionFive.button_url }}">{{sectionFive.button_text}}</a>
+                {% endif %}
+            </div>
+        </div>
+        {% assign sectionSix = page.estate_planning_section %}
+        <div class="allServices__Service">
+            {% if sectionSix.image_url %}
+	            <div class="allServices__ImgWrapper">
+	              <img src="{{sectionSix.image_url}}" alt="{{sectionSix.title}}" class="allServices__Img" />
+	            </div>
+            {% endif %}
+            <div class="allServices__Service__Text">
+            {% if sectionSix.title %}
+             <h3>{{ sectionSix.title }}</h3>
+            {% endif %}
+            {% if sectionSix.subtitle %}
+             <p>{{ sectionSix.subtitle }}</p>
+            {% endif %}
+              <ul>
+                {% for list in sectionSix.lists %}
+                  <li>{{ list }}</li>
+                {% endfor %}
+              </ul>
+            {% if sectionSix.button_text %}
+              <a href="{{ sectionSix.button_url }}">{{sectionSix.button_text}}</a>
+            {% endif %}
+            </div>
+        </div>
+        {% assign sectionSeven = page.additional_services_section %}
+        <div class="allServices__Service">
+            {% if sectionSeven.image_url %}
+	            <div class="allServices__ImgWrapper">
+	              <img src="{{sectionSeven.image_url}}" alt="{{sectionSeven.title}}" class="allServices__Img" />
+	            </div>
+            {% endif %}
+            <div class="allServices__Service__Text">
+               {% if sectionSeven.title %}
+                <h3>{{ sectionSeven.title }}</h3>
+               {% endif %}
+               {% if sectionSeven.subtitle %}
+                <p>{{ sectionSeven.subtitle }}</p>
+                {% endif %}
+                <ul>
+                  {% for list in sectionSeven.lists %}
+                    <li>{{ list }}</li>
+                  {% endfor %}
+                </ul>
+                {% if sectionSeven.button_text %}
+                 <a href="{{ sectionSeven.button_url }}">{{sectionSeven.button_text}}</a>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</section>

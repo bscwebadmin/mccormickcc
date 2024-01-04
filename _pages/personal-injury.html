@@ -1,0 +1,124 @@
+---
+layout: page
+title: "Personal Injury"
+keywords: >-
+  personal-injury,criminal-law
+permalink: "/personal-injury"
+banner_section:
+  title: "PERSONAL INJURY"
+  lists:
+    - HURT ON THE ROAD, AT
+    - WORK, OR BY A DOCTOR?
+    - LET ME HANDLE YOUR
+    - CLAIM.
+  banner_image_url: "/assets/images/banner_7.jpg"
+
+contact_section:
+  title: "CONTACT US now for a consultation"
+  sub_title: "REQUEST A CONSULTATION"
+  banner_image_url: "/assets/images/banner_8.jpg"
+
+white_section: 
+  title: >- 
+    INJURED? OUT OF WORK? MOUNTING MEDICAL EXPENSES?
+  description: >-
+    Our firm has vast experience in handling personal injury cases and will fight to ensure that you receive a fair and equitable result, be it at trial or through settlement negotiations.  <br/><br/> WWe have tried many cases, both before juries and judges, and have had favorable results for both. Our representation is aggressive and always geared towards finding the best result for our client. We represent clients all over the state from all walks of life.
+
+gallery:
+  - image_url: "/assets/images/gallery_04.jpg"
+  - image_url: "/assets/images/gallery_05.jpg"
+  - image_url: "/assets/images/gallery_06.jpg"
+
+services_section:
+  title: >-
+    We represent clients all over the state from all walks of life. Our practice areas include: felonies and misdemeanors, drug crimes, crimes of violence, theft , domestic abuse, computer crimes, and many others. If your specific crime and/or charge is not listed above , please understand that I have experience in many areas of criminal law and feel free to call my office of fill out the contact form on this page for a consultation.
+
+  button_text: "Contact"
+  button_url: "/contact"
+  services:
+    - list: "ACCIDENTS (CAR, 18 WHEELER, MOTORCYCLE, BOAT)"
+    - list: "WRONGFUL DEATH"
+    - list: "SLIP AND FALL"
+    - list: "WORKPLACE INJURY"
+    - list: "MEDICAL MALPRACTICE"
+    - list: "GENERAL NEGLIGENCE"
+---
+
+<section class="hero pageHero pageHero--Collage">
+    <div class="pageHero__Text">
+		{% if page.banner_section.title %}
+		 <h1>{{ page.banner_section.title }}</h1>
+		{% endif %}
+		{% for list in page.banner_section.lists %}
+		 <p class="pageDesc pageHeroBreak">{{ list }}</p>
+		{% endfor %}
+		<div class="pageHero__Phone">
+		   <a href="tel:{{ general_data.phone }}">{{ general_data.phone }}</a>
+		</div>
+    </div>
+    <div class="pageHero__Form">
+        <section class="formSection">
+		    {% if page.contact_section.sub_title %}
+			 <h5 class="formSection__Heading">{{ page.contact_section.sub_title }}</h5>
+			{% endif %}
+            <form method="post" netlify-honeypot="bot-field" data-netlify="true" action="{{general_data.contact_form_action_url}}" name="contact" class="cfForm">
+                <input type="hidden" name="bot-field" />+ <input type="hidden" name="form-name" value="contact" />
+                <div class="formFlex">
+                    <div class="formSmallInputs inputWrapper">
+                        <input class="" name="NAME" type="text" placeholder="NAME" /><input class="" name="EMAIL" type="text" placeholder="EMAIL" /><input class="" name="PHONE NUMBER" type="text" placeholder="PHONE NUMBER" />
+                    </div>
+                    <div class="formLargeInputs inputWrapper"><textarea class="inputLarge" name="MESSAGE" placeholder="MESSAGE"></textarea></div>
+                </div>
+                <input type="submit" class="formSubmit" value="submit" />
+            </form>
+        </section>
+    </div>
+	{% if page.banner_section.banner_image_url %}
+	<div class="pageHero__ImageWrapper pageHero__ImageWrapper--TR">
+		<img class="pageHero__Image pageHero__Image--TR pageHero__ImageWrapper--TR" src="{{page.banner_section.banner_image_url}}" />
+	</div>
+	{% endif %}
+	{% if page.contact_section.banner_image_url %}
+	<div class="pageHero__ImageWrapper pageHero__ImageWrapper--BL">
+		<div class="blueBlock"></div>
+		<img class="pageHero__Image pageHero__Image--BL" src="{{page.contact_section.banner_image_url}}" />
+	</div>
+	{% endif %}
+</section>
+{% assign service = page.services_section %}
+{% assign white = page.white_section %}
+<section class="sliceZone">
+    <section class="pageBody maxWidth">
+	    {% if white.title %}
+		<h3>{{ white.title }}</h3>
+		{% endif %}
+		{% if white.description %}
+		<p>{{ white.description }} </p>
+		{% endif %}
+    </section>
+    <section class="threeImage">
+       {% for gallery in page.gallery %}
+        <div class="threeImage__ImageWrapper">
+          <img alt="{{ gallery.image_url }}" src="{{ gallery.image_url }}" class="threeImage__Image" />
+        </div>
+        {% endfor %}
+    </section>
+    <section class="pagePrefooter">
+        <div class="pagePrefooter__Text">
+		   {% if service.title %}
+			<p>{{ service.title }}</p>
+			{% endif %}
+			{% if service.button_text %}
+			 <a class="prefooter__Button prefooter__Button--Desktop" href="{{service.button_url}}">{{service.button_text}}</a>
+			{% endif %}
+		</div>
+		<ul>
+		    {% for list in service.services %}
+			<li>{{ list.list }}</li>
+			{% endfor %}
+		</ul>
+		{% if service.button_text %}
+		 <a class="prefooter__Button prefooter__Button--Mobile" href="{{service.button_url}}">{{service.button_text}}</a>
+		{% endif %}
+    </section>
+</section>

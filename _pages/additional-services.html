@@ -1,0 +1,108 @@
+---
+layout: page
+title: >-
+  Additional Services
+description: >-
+  Shane McCormick has over 20 years of legal experience fighting for diverse clients. As a veteran, he knows the importance of persistence and determination. He brings all these valuable skills to the courtroom to ensure the best possible outcome for every client, every time. A local attorney who knows the system, he has been providing outstanding legal services to Acadiana and the surrounding area since 2002.
+keywords: >-
+  additional-services
+permalink: "/additional-services"
+banner_section:
+  title: "Additional Services"
+  sub_title: "Legal Problem? Call now."
+  banner_image_url: "/assets/images/banner_one.jpg"
+
+contact_form_section:
+  title: "CONTACT US now for a consultation"
+  sub_title: "REQUEST A CONSULTATION"
+
+white_section:
+  title: "Knowledgeable, professional, &amp; comprehensive legal services."
+  description: >- 
+    We pride ourselves on being a full service law firm and strive to fulfill our clients needs. Should you have a problem and/or dispute not specifically delineated above, please feel free to contact my office for a consultation.
+
+services_section:
+  title: >-
+    "McCormick Law Firm has experience in several more areas of law. These include but are in no way limited to:"
+  button_text: "Contact"
+  button_url: "/contact"
+  services:
+   - list: "Contracts"
+   - list: "Cash Sales &amp; Leases"
+   - list: "Civil Litigation"
+   - list: "Property Law/Boundary Disputes"
+
+---
+
+{% assign general_data = site.date.general_settings %}
+<section class="hero pageHero pageHero--Collage">
+	<div class="pageHero__Text">
+	    {% if page.banner_section.title %}
+		 <h1>{{ page.banner_section.title }}</h1>
+		{% endif %}
+	    {% if page.banner_section.sub_title %}
+		 <p class="pageDesc">{{ page.banner_section.sub_title }}</p>
+		{% endif %}
+		<div class="pageHero__Phone"><a href="tel:{{ general_data.phone }}">{{ general_data.phone }}</a></div>
+	</div>
+		<div class="pageHero__ImageWrapper pageHero__ImageWrapper--TR">
+		{% if page.banner_section.banner_image_url %}
+		 <img class="pageHero__Image pageHero__Image--TR pageHero__ImageWrapper--TR" src="{{ page.banner_section.banner_image_url }}" />
+		{% endif %}
+	</div>
+	<div class="pageHero__Form">
+	    {% if page.contact_form_section.title %}
+		 <h2>{{ page.contact_form_section.title }}</h2>
+		{% endif %}
+		<section class="formSection">
+			{% if page.contact_form_section.sub_title %}
+			 <h5 class="formSection__Heading">{{ page.contact_form_section.sub_title }}</h5>
+			{% endif %}
+			<form method="post" netlify-honeypot="bot-field" data-netlify="true" action="{{ general_data.contact_form_action_url}}" name="contact" class="cfForm">
+				<input type="hidden" name="bot-field" /> + <input type="hidden" name="form-name" value="contact" />
+				<div class="formFlex">
+					<div class="formSmallInputs inputWrapper">
+						<input class="" name="NAME" type="text" placeholder="NAME" /><input class="" name="EMAIL" type="text" placeholder="EMAIL" /><input class="" name="PHONE NUMBER" type="text" placeholder="PHONE NUMBER" />
+					</div>
+					<div class="formLargeInputs inputWrapper"><textarea class="inputLarge" name="MESSAGE" placeholder="MESSAGE"></textarea></div>
+				</div>
+				<input type="submit" class="formSubmit" value="submit" />
+			</form>
+		</section>
+	</div>
+
+	<div class="pageHero__ImageWrapper pageHero__ImageWrapper--BL">
+		<div class="blueBlock"></div>
+		<img class="pageHero__Image pageHero__Image--BL" src="https://cdn.sanity.io/images/9dbu44df/production/87b8a1c5efb33e1077e166d02b25eedd2819ed7a-7360x4912.jpg?w=1280&amp;h=854&amp;fit=crop" />
+	</div>
+</section>
+
+<section class="sliceZone">
+	<section class="pageBody maxWidth">
+	    {% if page.white_section.title %}
+		 <h3>{{ page.white_section.title }}</h3>
+		{% endif %}
+		{% if page.white_section.description %}
+		 <p>{{ page.white_section.description }}</p>
+		{% endif %}
+	</section>
+	<section class="pagePrefooter">
+	   {% assign services = page.services_section %}
+		<div class="pagePrefooter__Text">
+		    {% if services.title %}
+			 <p>{{ services.title }}</p>
+			{% endif %}
+			{% if services.button_text %}
+			 <a class="prefooter__Button prefooter__Button--Desktop" href="{{services.button_url}}">{{ services.button_text }}</a>
+			{% endif %}
+		</div>
+		<ul>
+		    {% for list in services.services %}
+			 <li>{{ list.list }}</li>
+			{% endfor %}
+		</ul>
+		{% if services.button_text %}
+		 <a class="prefooter__Button prefooter__Button--Mobile" href="{{ services.button_url }}">{{ services.button_text }}</a>
+		{% endif %}
+	</section>
+</section>
