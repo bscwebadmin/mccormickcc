@@ -6,13 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
-        <title>{{ page.title}}</title>
         <link data-react-helmet="true" rel="canonical" href="{{page.url}}" />
-        <meta
-            data-react-helmet="true"
-            name="description"
-            content="{{ page.description}}"
-        />
         {% capture seo %}{% seo %}
          <meta name="keywords" content="{{page.keywords}}" />
         {% endcapture %}{{seo | replace: "Jekyll", "Burning Stick Creative" }}
