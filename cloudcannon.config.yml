@@ -34,6 +34,25 @@ collections_config:
     disable_add_folder: false
     disable_file_actions: false
 _inputs:
+  _inputs:
+  ga_id:
+    label: Google Analytics ID
+    type: text
+  head_code:
+    label: Header Code
+    type: html
+    options:
+      code: true
+  body_code:
+    label: Body Code
+    type: html
+    options:
+      code: true
+  footer_code:
+    label: Footer Code
+    type: html
+    options:
+      code: true
   categories:
     type: multiselect
     options:
