@@ -18,17 +18,23 @@ service_section:
   button_url: "/personal-injury"
   services:
     - text: PERSONAL INJURY
+      description: If you were injured through no fault of your own and need help navigating through the legal system contact us immediately. When dealing with these difficult, fragile matters, you will need an attorney with not only experience, but with compassion. Someone who will take a personal interest in your case and have your best interest in mind.
       url: /personal-injury
     - text: Criminal Law
+      description: Our firm offers criminal defense services to those charged with having committed a crime. We take representation of a client very seriously as we understand the emotional toll placed on a person and their family when someone has been accused and/or charged with committing a crime. Our firm works tirelessly from the moment we are contacted by a client or their family, be it the day they are arrested or the week before trial.
       url: /criminal-law
     - text: Family Law
-      url: /family-low
+      description: We realize that extended litigation should be a last alternative in resolving a domestic or family dispute. We work to achieve our clients goals with the least emotional and financial expense.
+      url: /family-law
     - text: DWI/OWI
+      description: If you have been arrested for driving under the influence of alcohol or drugs, it is imperative that you contact my office immediately. DUI cases can develop relatively quick, and the more time that I have to gather the facts, the better the case I can build to defend you.
       url: /dwi-owi
     - text: Estate Planning
+      description: Call today to set up an appointment so that I can help you plan for your future so that your wishes can be carried out.
       url: /estate-planning
     - text: Additional Services
-      url: /additional-ervices"
+      description: We pride ourselves on being a full service law firm and strive to fulfill our clients needs. Should you have a problem and/or dispute not specifically delineated above, please feel free to contact my office for a consultation.
+      url: /additional-services
 
 about_section:
   title: "SHANE MCCORMICK"
@@ -42,7 +48,7 @@ about_section:
 
 {% assign general_data = site.data.general_settings %}
 
-<div>
+
     <section class="pageHero--Home pageHero">
         <div style="background-image: url({{ page.hero_section.background_image_url}});" class="pageHero__Home__Inner">
             {% if page.hero_section.mobile_home_logo_url %}
@@ -55,24 +61,24 @@ about_section:
         </div>
         {% include contact_form.html %}
     </section>
-</div>
+
 <section class="sliceZone">
     <section class="serviceMenu maxWidth">
-        <div class="serviceMenu__ServiceTitles serviceMenu__ServiceTitles--Mobile">
-          <h3 class="serviceMenu__ServiceTitle serviceMenu__ServiceTitle--Mobile editable">PERSONAL INJURY</h3>
-        </div>
-        <div class="serviceMenu__ServiceTitles serviceMenu__ServiceTitles--Desktop">
+       
+        <div class="serviceMenu__ServiceTitles serviceMenu__ServiceTitles--Desktop" id="v-pills-tab" role="tablist" aria-orientation="vertical">
            {% for list in page.service_section.services %}
-            <h3 class="serviceMenu__ServiceTitle serviceMenu__ServiceTitle--Mobile">
-              <a style="font-size: unset;padding: 0; border: 0"; href={{list.url}}>{{ list.text }} </a>
+            <h3 class="serviceMenu__ServiceTitle serviceMenu__ServiceTitle--Mobile service-item {% if forloop.first %}active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" type="button" role="tab" aria-controls="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" aria-selected="true>
+              <a style="font-size: unset;padding: 0; border: 0";>{{ list.text }} </a>
             </h3>
             {% endfor %}
         </div>
-        <div class="serviceMenu__ServiceText">
-           {% if page.service_section.description %}
-            <p>{{ page.service_section.description }}</p>
-           {% endif %}
-            <a href="/personal-injury">Learn more</a>
+        <div class="serviceMenu__ServiceText tab-content" id="v-pills-tabContent">
+           {% for list in page.service_section.services %}
+           <div class="tab-pane fade  {% if forloop.first %}show active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" role="tabpanel" aria-labelledby="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab">
+            <p>{{ list.description }}</p>
+            <a href="{{list.url}}">Learn more</a>
+           </div>
+           {% endfor %}
         </div>
     </section>
     {% assign about = page.about_section %}

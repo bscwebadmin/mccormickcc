@@ -648,6 +648,15 @@ table {
     border: 1px solid #0e161e;
     padding: 1.3rem 2.7rem;
 }
+.serviceMenu__ServiceTitle {
+    transition: all .5s;
+}
+.serviceMenu__ServiceTitle:hover {
+    transform: translateY(-5px)
+}
+.serviceMenu__ServiceTitle.active {
+    font-weight: bold;
+}
 .serviceMenu__ServiceTitles {
     border-top: 1px solid #002e3b;
     border-bottom: 1px solid #002e3b;
