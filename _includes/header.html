@@ -1,41 +1,73 @@
-<section class="menu homeNav">
-    <div class="hamburger" id="mobile-nav">
-        <div class="hamburger__Line"></div>
-        <div class="hamburger__Line"></div>
-        <div class="hamburger__Line"></div>
-    </div>
-    <div class="menuLogoWrapper">
-        {% assign general_data = site.data.general_settings %}
-        <a aria-current="page" href="/">
-            <img id="nav-logo" class="menu__Logo menu__Logo--Text img-fluid" alt="logo" src="{{ general_data.site_logo_url }}" />
+<!--<section class="d-flex top-0 vw-100 menu vw-100 align-items-stretch z-1 justify-content-between ps-0 py-0 homeNav">-->
+<!--    <div class="hamburger" id="mobile-nav">-->
+<!--        <div class="hamburger__Line"></div>-->
+<!--        <div class="hamburger__Line"></div>-->
+<!--        <div class="hamburger__Line"></div>-->
+<!--    </div>-->
+<!--    <div class="w-50 d-flex flex-column menuLogoWrapper">-->
+<!--        {% assign general_data = site.data.general_settings %}-->
+<!--        <a aria-current="page" href="/">-->
+<!--            <img id="nav-logo" class="d-block h-auto py-0 px-0 menu__Logo menu__Logo&#45;&#45;Text img-fluid" alt="logo" src="{{ general_data.site_logo_url }}" />-->
+<!--        </a>-->
+<!--    </div>-->
+<!--    <div class="collapse show d-flex flex-row menu__Links" id="menu__Links_id">-->
+<!--        <div class="menu__LinkContainer">-->
+<!--            <a aria-current="page" class=" menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;mobile" href="/">Home</a>-->
+<!--            <a aria-current="page" class="d-block menuLink mb-0 menuLink&#45;&#45;Top menuLink&#45;&#45;Desk" href="/">Home</a>-->
+<!--        </div>-->
+<!--        <div class="d-block position-relative menu__LinkContainer">-->
+<!--            <a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;mobile" href="/legal-services.html">-->
+<!--            Legal Services</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/criminal-law.html">Criminal Law</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/personal-injury.html">PERSONAL INJURY</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/dwi-owi.html">DWI/OWI</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/estate-planning.html">Estate Planning</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/family-law.html">Family Law</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/additional-services.html">Additional Services</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;Desk" href="/legal-services.html">Legal Services</a>-->
+<!--            <div class="d-block ms-1 position-absolute z-1 dropArrow" id="dropArrowBtn">▼</div>-->
+<!--            <div class="subLinkContainer d-none" id="subLinkContainerId">-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/criminal-law">Criminal Law</a>-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/personal-injury">PERSONAL INJURY</a>-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/dwi-owi">DWI/OWI</a>-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/estate-planning">Estate Planning</a>-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/family-law">Family Law</a>-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/additional-services">Additional Services</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="menu__LinkContainer"><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;mobile" href="/about.html">About</a><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;Desk" href="/about.html">About</a></div>-->
+<!--        <div class="menu__LinkContainer"><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;mobile" href="/contact.html">Contact</a><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;Desk" href="/contact.html">Contact</a></div>-->
+<!--    </div>-->
+<!--</section>-->
+<nav class="navbar custom-nav navbar-expand-lg bg-primary">
+    {% assign general_data = site.data.general_settings %}
+    <div class="container-fluid d-flex justify-content-between">
+
+        <a class="navbar-brand mx-auto" href="/">
+            <img id="nav-logo" class="d-block h-auto py-0 px-0 menu__Logo menu__Logo--Text img-fluid" alt="logo"
+                 src="{{ general_data.site_logo_url }}">
         </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link menu-link text-white active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    LEGAL SERVICES
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">CONTACT</a>
+            </li>
+        </ul>
     </div>
-    <div class="collapse show menu__Links" id="menu__Links_id">
-        <div class="menu__LinkContainer">
-            <a aria-current="page" class="menuLink menuLink--Top menuLink--mobile" href="/">Home</a>
-            <a aria-current="page" class="menuLink menuLink--Top menuLink--Desk" href="/">Home</a>
-        </div>
-        <div class="menu__LinkContainer">
-            <a class="menuLink menuLink--Top menuLink--mobile" href="/legal-services.html">
-            Legal Services</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/criminal-law.html">Criminal Law</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/personal-injury.html">PERSONAL INJURY</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/dwi-owi.html">DWI/OWI</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/estate-planning.html">Estate Planning</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/family-law.html">Family Law</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/additional-services.html">Additional Services</a>
-            <a class="menuLink menuLink--Top menuLink--Desk" href="/legal-services.html">Legal Services</a>
-            <div class="dropArrow" id="dropArrowBtn">▼</div>
-            <div class="subLinkContainer d-none" id="subLinkContainerId">
-                <a class="menuLink menuLink--Sub sub--desk" href="/criminal-law">Criminal Law</a>
-                <a class="menuLink menuLink--Sub sub--desk" href="/personal-injury">PERSONAL INJURY</a>
-                <a class="menuLink menuLink--Sub sub--desk" href="/dwi-owi">DWI/OWI</a>
-                <a class="menuLink menuLink--Sub sub--desk" href="/estate-planning">Estate Planning</a>
-                <a class="menuLink menuLink--Sub sub--desk" href="/family-law">Family Law</a>
-                <a class="menuLink menuLink--Sub sub--desk" href="/additional-services">Additional Services</a>
-            </div>
-        </div>
-        <div class="menu__LinkContainer"><a class="menuLink menuLink--Top menuLink--mobile" href="/about.html">About</a><a class="menuLink menuLink--Top menuLink--Desk" href="/about.html">About</a></div>
-        <div class="menu__LinkContainer"><a class="menuLink menuLink--Top menuLink--mobile" href="/contact.html">Contact</a><a class="menuLink menuLink--Top menuLink--Desk" href="/contact.html">Contact</a></div>
-    </div>
-</section>
+</nav>

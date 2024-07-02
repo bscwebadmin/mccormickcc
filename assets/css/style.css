@@ -577,30 +577,29 @@ table {
 .textOverlay__ImageWrapper--Headshot {
     width: 13.3rem;
     height: 13.3rem;
-    overflow: hidden;
-    position: relative;
+    /*overflow: hidden;*/
+    /*position: relative;*/
     border-radius: 50%;
     margin: 0 auto 3.1rem;
 }
 .textOverlay__Headshot {
-    height: 100%;
-    width: auto;
+    /*height: 100%;*/
+    /*width: auto;*/
     min-width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    display: block;
+    /*object-fit: cover;*/
+    /*display: block;*/
 }
 .textOverlay__ImageWrapper--BG {
     display: none;
 }
 @media only screen and (min-width: 1024px) {
     .textOverlay {
-        padding: 0;
+        /*padding: 0;*/
         background: #fff;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
+        /*display: flex;*/
+        /*flex-direction: row;*/
+        /*justify-content: flex-end;*/
+        /*align-items: center;*/
     }
     .textOverlay h4 {
         font-size: 3.5rem;
@@ -609,23 +608,23 @@ table {
         margin-top: 3rem;
     }
     .textOverlay__ImageWrapper--Headshot {
-        margin: 0 auto 3rem 0;
+        /*margin: 0 auto 3rem 0;*/
     }
     .textOverlay__ImageWrapper--BG {
-        display: block;
-        position: absolute;
+        /*display: block;*/
+        /*position: absolute;*/
         left: 0;
         width: 72vw;
         height: 44.3rem;
-        overflow: hidden;
-        z-index: 0;
+        /*overflow: hidden;*/
+        /*z-index: 0;*/
     }
     .textOverlay__ImageWrapper--BG img {
         width: 100%;
         display: block;
     }
     .textOverlay__Red {
-        position: relative;
+        /*position: relative;*/
         width: 55vw;
         padding: 5rem max((100vw - 111rem)/2, 4.5vw) 5rem 9rem;
         background: #741625;
@@ -688,7 +687,7 @@ table {
     margin-bottom: 0.75em;
 }
 .serviceMenu__ServiceText {
-    margin-top: 2rem;
+    /*margin-top: 2rem;*/
 }
 .serviceMenu__ServiceText p {
     margin-bottom: 1em;
@@ -713,28 +712,28 @@ table {
     .serviceMenu {
         padding-top: 5.3rem;
         padding-bottom: 5.3rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        /*display: flex;*/
+        /*flex-direction: row;*/
+        /*justify-content: space-between;*/
     }
     .serviceMenu__ServiceTitle:nth-of-type(2) {
-        margin-top: 0;
+        /*margin-top: 0;*/
     }
     .serviceMenu__ServiceTitle {
         cursor: pointer;
         margin-bottom: 0.75em;
     }
     .serviceMenu__ServiceTitles--Desktop {
-        margin-top: 0;
-        display: block;
+        /*margin-top: 0;*/
+        /*display: block;*/
         width: 45.6rem;
     }
     .serviceMenu__ServiceText {
-        margin-top: 0;
+        /*margin-top: 0;*/
         width: 66.5rem;
     }
     .serviceMenu__ServiceTitles {
-        border: 0;
+        /*border: 0;*/
     }
 }
 .sanityText p {
@@ -884,13 +883,13 @@ p:not(footer p, .pageHero p) {
     }
 }
 .menu {
-    position: fixed;
+    /*position: fixed;*/
     background-color: #fff;
-    top: 0;
-    right: 0;
-    width: 100vw;
+    /*top: 0;*/
+    /*right: 0;*/
+    /*width: 100vw;*/
     padding: 1.8rem 1.4rem 2.4rem;
-    z-index: 1000;
+    /*z-index: 1000;*/
 }
 .collapse {
     display: none;
@@ -898,10 +897,6 @@ p:not(footer p, .pageHero p) {
 .hamburger {
     width: 3rem;
     height: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     margin-left: auto;
     margin-bottom: 1.8rem;
     cursor: pointer;
@@ -912,17 +907,17 @@ p:not(footer p, .pageHero p) {
     height: 0.46rem;
 }
 .menu__Logo {
-    margin: 0 auto;
-    width: 28.5rem;
-    display: block;
-    height: auto;
+    /*margin: 0 auto;*/
+    width: 27.5rem;
+    /*display: block;*/
+    /*height: auto;*/
 }
 .menuLink {
     color: #002e3b;
     text-transform: uppercase;
     margin-bottom: 0.75em;
     font-size: 2rem;
-    display: block;
+    /*display: block;*/
     cursor: pointer;
     text-decoration: none;
 }
@@ -941,9 +936,9 @@ p:not(footer p, .pageHero p) {
     cursor: pointer;
     width: 1em;
     color: #002e3b;
-    margin-left: 1em;
+    /*margin-left: 1em;*/
     height: 1em;
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     transform: translateY(50%) translateX(150%);
     right: 0;
@@ -973,10 +968,10 @@ p:not(footer p, .pageHero p) {
 @media only screen and (min-width: 1024px) {
     .menu {
         height: 13.2rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
+        /*!*display: flex;*!*/
+        /*flex-direction: row;*/
+        /*justify-content: flex-end;*/
+        /*!*align-items: center;*!*/
         padding: 3rem 9rem;
     }
     .hamburger,
@@ -996,9 +991,9 @@ p:not(footer p, .pageHero p) {
         display: block;
     }
     .menu__Links {
-        display: block;
-        display: flex;
-        flex-direction: row;
+        /*display: block;*/
+        /*display: flex;*/
+        /*flex-direction: row;*/
     }
     .menuLogoWrapper {
         width: 42rem;
@@ -1009,16 +1004,16 @@ p:not(footer p, .pageHero p) {
     }
     .menuLink--Top {
         margin-left: 4.5rem;
-        margin-bottom: 0;
+        /*margin-bottom: 0;*/
     }
     .dropArrow {
-        z-index: 1000;
+        /*z-index: 1000;*/
         cursor: pointer;
         width: 1em;
         color: #002e3b;
-        margin-left: 1em;
+        /*margin-left: 1em;*/
         height: 1em;
-        position: absolute;
+        /*position: absolute;*/
         top: 0;
         transform: translateY(50%) translateX(150%);
         right: 0;
@@ -1028,26 +1023,26 @@ p:not(footer p, .pageHero p) {
         display: block;
     }
     .subLinkContainer {
-        position: absolute;
-        bottom: 0;
-        transform: translateY(100%);
-        right: 0;
-        background-color: #fff;
-        z-index: 1000;
-        padding: 2em;
-        width: 100%;
+        /*position: absolute;*/
+        /*bottom: 0;*/
+        /*transform: translateY(100%);*/
+        /*right: 0;*/
+        /*background-color: #fff;*/
+        /*z-index: 1000;*/
+        /*padding: 2em;*/
+        /*width: 100%;*/
     }
     .subLinkContainer a {
         margin-left: 0;
         margin-bottom: 1em;
     }
     .homeNav {
-        padding-left: 0;
-        width: 100vw;
-        padding-top: 0;
-        padding-bottom: 0;
-        align-items: stretch;
-        justify-content: space-between;
+        /*padding-left: 0;*/
+        /*width: 100vw;*/
+        /*padding-top: 0;*/
+        /*padding-bottom: 0;*/
+        /*align-items: stretch;*/
+        /*justify-content: space-between;*/
         background-color: transparent;
     }
     .homeNav .menu__LinkContainer {
@@ -1055,10 +1050,10 @@ p:not(footer p, .pageHero p) {
     }
     .homeNav .menuLogoWrapper {
         background-color: rgba(116, 22, 37, 0.86);
-        width: 50%;
+        /*width: 50%;*/
         padding-right: 6rem;
-        display: flex;
-        flex-direction: column;
+        /*display: flex;*/
+        /*flex-direction: column;*/
         justify-content: center;
     }
     .homeNav .menuLogoWrapper .menu__Logo--Text {
@@ -1103,6 +1098,7 @@ p:not(footer p, .pageHero p) {
 .pageHero h2 {
     font-size: 3rem;
     text-transform: uppercase;
+    margin-right: 3rem;
 }
 .pageHero p {
     margin-top: 0.667em;
@@ -1140,8 +1136,8 @@ p:not(footer p, .pageHero p) {
     text-align: center;
 }
 .pageHero__Form {
-    padding-top: 2.7rem;
-    padding-bottom: 2.7rem;
+    /*padding-top: 2.7rem;*/
+    /*padding-bottom: 2.7rem;*/
     background-color: #002e3b;
     min-height: 30px;
 }
@@ -1172,12 +1168,12 @@ p:not(footer p, .pageHero p) {
     display: none;
 }
 .pageHero__Home__Inner {
-    height: 53rem;
+    /*height: 53rem;*/
     background-image: var(--bgImage);
     background-size: cover;
     flex-direction: column;
     justify-content: flex-end;
-    display: flex;
+    /*display: flex;*/
 }
 .pageHero__Home__Logo--Desk {
     display: none;
@@ -1226,26 +1222,26 @@ p:not(footer p, .pageHero p) {
 .pageHero--Form__imgWrapper:nth-of-type(2) {
     display: none;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 992px) {
     .pageHero :not(div, img) {
         padding: 0;
     }
     .pageHero__Home__Inner {
-        height: 100vh;
-        justify-content: center;
+        /*height: 100vh;*/
+        /*justify-content: center;*/
     }
     .pageHero__Home__Inner .pageHero__Home__Logo--Cut,
     .pageHero__Home__Inner .pageHero__Phone {
         display: none;
     }
     .pageHero__Home__Logo--Desk {
-        display: block;
+        /*display: block;*/
     }
     .pageHero__Form {
         padding: 7.1rem max((100vw - 111rem)/2, 4.5vw);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        /*display: flex;*/
+        /*flex-direction: row;*/
+        /*justify-content: space-between;*/
     }
     .pageHero__Form h2 {
         font-size: 4.9rem;
@@ -1254,11 +1250,11 @@ p:not(footer p, .pageHero p) {
     }
     .pageHero__Form .formSection {
         width: 66.6rem;
-        display: block;
+        /*display: block;*/
     }
     .blueBlock,
     .pageHero__Form .formSection .formSection__Heading {
-        display: none;
+        /*display: none;*/
     }
     .pageHero--Collage {
         min-height: 78.1rem;
@@ -1470,9 +1466,9 @@ p:not(footer p, .pageHero p) {
 }
 .cfForm {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+    flex-direction: row;
+    /*align-items: center;*/
+    /*justify-content: start;*/
     font-size: 2rem;
     color: #002e3b;
 }
@@ -1506,13 +1502,13 @@ p:not(footer p, .pageHero p) {
     min-height: 5em;
 }
 .formFlex {
-    width: 100%;
+    /*width: 100%;*/
 }
 .formSubmit {
-    color: #fff;
+    background-color: #fff;
     text-transform: uppercase;
     margin-left: auto;
-    background-color: #002e3b;
+    color: #002e3b;
     padding: 1.2rem 2.2rem;
 }
 .pageHero .cfForm input:not([type="submit"]),
@@ -1536,7 +1532,7 @@ p:not(footer p, .pageHero p) {
         display: none;
     }
     .cfForm {
-        height: 100%;
+        /*height: 100%;*/
     }
     .cfForm input:not([type="submit"]) {
         display: block;
@@ -1551,24 +1547,24 @@ p:not(footer p, .pageHero p) {
         align-items: stretch;
     }
     .cfForm .formSubmit {
-        display: block;
-        margin-left: auto;
-        margin-top: 1.9rem;
+        /*display: block;*/
+        /*margin-left: auto;*/
+        /*margin-top: 1.9rem;*/
         padding: 1.2rem 2.2rem;
     }
     .formSmallInputs input:nth-of-type(n + 2) {
         margin-top: 1rem;
     }
     .inputWrapper {
-        display: flex;
+        /*display: flex;*/
         flex-direction: column;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
         width: calc(50% - 1rem);
     }
     .inputLarge {
         height: 100%;
-        border: 0;
-        margin-bottom: 0 !important;
+        /*border: 0;*/
+        /*margin-bottom: 0 !important;*/
     }
 }
 .aboutSection {
@@ -1658,7 +1654,7 @@ p:not(footer p, .pageHero p) {
 }
 .autoMarg,
 .maxWidth {
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 @media (min-width: 1024px) {
     :root {
@@ -1697,7 +1693,7 @@ footer a {
     text-transform: uppercase;
 }
 .footer__Statement {
-    margin-top: 3rem;
+    /*margin-top: 3rem;*/
 }
 .footer__Statement h6 {
     color: #741625;
@@ -1723,12 +1719,12 @@ footer a {
     }
     .footer__Logo {
         width: 31.5rem;
-        order: 1;
+        /*order: 1;*/
     }
     .footer__Statement {
-        margin-top: 0;
+        /*margin-top: 0;*/
         width: 33rem;
-        order: 2;
+        /*order: 2;*/
     }
     .footer__Address {
         width: 25.9rem;

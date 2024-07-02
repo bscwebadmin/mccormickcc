@@ -48,64 +48,89 @@ about_section:
 
 {% assign general_data = site.data.general_settings %}
 
+<section class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner"
+         style="background-image: url({{ page.hero_section.background_image_url}});">
+    <div class="seal-container">
+        <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="seal d-block img-fluid"/>
+    </div>
+</section>
 
-    <section class="pageHero--Home pageHero">
-        <div style="background-image: url({{ page.hero_section.background_image_url}});" class="pageHero__Home__Inner">
-            {% if page.hero_section.mobile_home_logo_url %}
-             <img src="{{page.hero_section.mobile_home_logo_url}}" alt="logo" class="pageHero__Home__Logo pageHero__Home__Logo--Cut img-fluid" />
-            {% endif %}
-            {% if page.hero_section.desktop_home_logo_url %}
-             <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="pageHero__Home__Logo pageHero__Home__Logo--Desk img-fluid" />
-            {% endif %}
-            <div class="pageHero__Phone"><a href="tel:{{ general_data.phone }}">{{ general_data.phone }}</a></div>
-        </div>
-        {% include contact_form.html %}
-    </section>
+{% include contact_form.html %}
 
-<section class="sliceZone">
-    <section class="serviceMenu maxWidth">
-       
-        <div class="serviceMenu__ServiceTitles serviceMenu__ServiceTitles--Desktop" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-           {% for list in page.service_section.services %}
-            <h3 class="serviceMenu__ServiceTitle serviceMenu__ServiceTitle--Mobile service-item {% if forloop.first %}active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" type="button" role="tab" aria-controls="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" aria-selected="true>
-              <a style="font-size: unset;padding: 0; border: 0";>{{ list.text }} </a>
+
+
+<!--<section class="">-->
+<!--    <section class="d-flex flex-row justify-content-between serviceMenu  mx-auto maxWidth">-->
+<!--        <div class="border-0 serviceMenu__ServiceTitles d-block mt-0 serviceMenu__ServiceTitles&#45;&#45;Desktop" id="v-pills-tab" role="tablist" aria-orientation="vertical">-->
+<!--           {% for list in page.service_section.services %}-->
+<!--            <h3 class="mt-0 serviceMenu__ServiceTitle serviceMenu__ServiceTitle&#45;&#45;Mobile service-item {% if forloop.first %}active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" type="button" role="tab" aria-controls="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" aria-selected="true>-->
+<!--              <a style="font-size: unset;padding: 0; border: 0";>{{ list.text }} </a>-->
+<!--            </h3>-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+<!--        <div class="serviceMenu__ServiceText tab-content" id="v-pills-tabContent">-->
+<!--           {% for list in page.service_section.services %}-->
+<!--           <div class="tab-pane fade  {% if forloop.first %}show active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" role="tabpanel" aria-labelledby="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab">-->
+<!--            <p>{{ list.description }}</p>-->
+<!--            <a href="{{list.url}}">Learn more</a>-->
+<!--           </div>-->
+<!--           {% endfor %}-->
+<!--        </div>-->
+<!--    </section>-->
+
+<div class="container custom-service">
+    <div class="row">
+        <div class="col-md-6 border-0 serviceMenu__ServiceTitles d-block mt-0 serviceMenu__ServiceTitles--Desktop" role="tablist" aria-orientation="vertical">
+            {% for list in page.service_section.services %}
+            <h3 class="mt-0 serviceMenu__ServiceTitle serviceMenu__ServiceTitle--Mobile service-item {% if forloop.first %}active{% endif %}" data-bs-toggle="pill" data-bs-target="#v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" type="button" role="tab" aria-controls="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" aria-selected="true">
+                <a style="font-size: unset;padding: 0; border: 0";>{{ list.text }} </a>
             </h3>
             {% endfor %}
         </div>
-        <div class="serviceMenu__ServiceText tab-content" id="v-pills-tabContent">
-           {% for list in page.service_section.services %}
-           <div class="tab-pane fade  {% if forloop.first %}show active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" role="tabpanel" aria-labelledby="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab">
-            <p>{{ list.description }}</p>
-            <a href="{{list.url}}">Learn more</a>
-           </div>
-           {% endfor %}
-        </div>
-    </section>
-    {% assign about = page.about_section %}
-    <section class="textOverlay">
-        <div class="textOverlay__ImageWrapper textOverlay__ImageWrapper--BG">
-        {% if about.background_image %}
-          <img class="textOverlay__BG" src="{{ about.background_image }}" alt="paper" />
-        {% endif %}
-        </div>
-        <div class="textOverlay__Red">
-            <div class="textOverlay__ImageWrapper textOverlay__ImageWrapper--Headshot">
-            {% if about.profile_image %}
-              <img class="textOverlay__Headshot" src="{{ about.profile_image }}" alt="{{about.title}}" />
-            {% endif %}
+        <div class="col-md-6 serviceMenu__ServiceText tab-content" id="v-pills-tabContent">
+            {% for list in page.service_section.services %}
+            <div class="tab-pane fade  {% if forloop.first %}show active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" role="tabpanel" aria-labelledby="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab">
+                <p class="service-paragraph">{{ list.description }}</p>
+                <a class="d-inline-block text-decoration-none text-uppercase service-learn-more " href="{{list.url}}">Learn more</a>
             </div>
-            {% if about.title %}
-             <h4>{{ about.title }}</h4>
-            {% endif %}
-            {% if about.description %}
-            <p>{{ about.description }}</p>
-            {% endif %}
-            {% if about.button_text %}
-             <a href="{{about.button_url}}">{{ about.button_text }}</a>
-            {% endif %}
+            {% endfor %}
         </div>
-    </section>
-</section>
+    </div>
+</div>
+
+    {% assign about = page.about_section %}
+<!--    <section class="p-0 d-flex flex-row justify-content-end align-items-center textOverlay">-->
+<!--        <div class="d-block position-absolute overflow-hidden z-0 textOverlay__ImageWrapper&#45;&#45;BG">-->
+<!--        {% if about.background_image %}-->
+<!--          <img class="" src="{{ about.background_image }}" alt="paper" />-->
+<!--        {% endif %}-->
+<!--        </div>-->
+<!--        <div class="position-relative position-relative textOverlay__Red">-->
+<!--            <div class="overflow-hidden position-relative mt-0 me-auto mb-5 ms-0 textOverlay__ImageWrapper&#45;&#45;Headshot">-->
+<!--            {% if about.profile_image %}-->
+<!--              <img class="h-100 w-auto object-fit-cover d-block textOverlay__Headshot" src="{{ about.profile_image }}" alt="{{about.title}}" />-->
+<!--            {% endif %}-->
+<!--            </div>-->
+<!--            {% if about.title %}-->
+<!--             <h4>{{ about.title }}</h4>-->
+<!--            {% endif %}-->
+<!--            {% if about.description %}-->
+<!--            <p>{{ about.description }}</p>-->
+<!--            {% endif %}-->
+<!--            {% if about.button_text %}-->
+<!--             <a href="{{about.button_url}}">{{ about.button_text }}</a>-->
+<!--            {% endif %}-->
+<!--        </div>-->
+<!--    </section>-->
+<!--</section>-->
+<div class="container">
+    <div class="d-block position-absolute overflow-hidden z-0 overflow-hidden">
+        {% if about.background_image %}
+        <img src="{{ about.background_image }}" alt="paper" />
+        {% endif %}
+    </div>
+
+</div>
 <section class="formSection">
     <h5 class="formSection__Heading editable">REQUEST A CONSULTATION</h5>
     {% include form.html %}

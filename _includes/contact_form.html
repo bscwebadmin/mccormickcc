@@ -1,17 +1,40 @@
-<div class="pageHero__Form">
-    <h2>CONTACT US now for a consultation</h2>
-    <section class="formSection">
-        <h5 class="formSection__Heading">REQUEST A CONSULTATION</h5>
-      <form action="https://formspree.io/f/mkndnqlr" method="POST" class="cfForm">
-      <div class="formFlex">
-          <div class="formSmallInputs inputWrapper">
-              <input class="" name="NAME" type="text" placeholder="NAME" />
-              <input class="" name="EMAIL" type="text" placeholder="EMAIL" />
-              <input class="" name="PHONE NUMBER" type="text" placeholder="PHONE NUMBER" />
-          </div>
-          <div class="formLargeInputs inputWrapper"><textarea class="inputLarge" name="MESSAGE" placeholder="MESSAGE"></textarea></div>
-      </div>
-      <input type="submit" class="formSubmit" value="submit" />
-      </form>
-    </section>
+<!--<div class="d-sm-flex justify-content-md-between pageHero__Form">-->
+<!--    <h2>CONTACT US now for a consultation</h2>-->
+<!--    <section class="d-sm-block formSection">-->
+<!--        <h5 class="d-none formSection__Heading">REQUEST A CONSULTATION</h5>-->
+<!--      <form action="https://formspree.io/f/mkndnqlr" method="POST" class="d-md-flex align-content-center justify-content-md-start h-100 cfForm">-->
+<!--          <div class="row formFlex p-0">-->
+<!--              <div class="col-lg-6 p-0">-->
+<!--                  <input class="mb-3" name="NAME" type="text" placeholder="NAME" />-->
+<!--                  <input class="mb-3" name="EMAIL" type="text" placeholder="EMAIL" />-->
+<!--                  <input class="mb-6" name="PHONE NUMBER" type="text" placeholder="PHONE NUMBER" />-->
+<!--              </div>-->
+<!--              <div class="col-lg-6 pe-0"><textarea class="inputLarge mb-6" name="MESSAGE" placeholder="MESSAGE"></textarea></div>-->
+<!--          </div>-->
+<!--      <input type="submit" class="d-block ms-lg-auto formSubmit" value="submit" />-->
+<!--      </form>-->
+<!--    </section>-->
+<!--</div>-->
+<div class="d-sm-flex flex-row pageHero__Form">
+    <h2 class="text-white">CONTACT US NOW FOR A CONSULTATION</h2>
+    <form action="https://formspree.io/f/mkndnqlr" method="POST"
+          class="d-md-flex align-content-center justify-content-md-start h-100 pe-3 form-container new-form cfForm">
+        <div class="field-group inputs-container">
+            <div class="mb-3">
+                <input type="email" class="form-control" id="inputName" placeholder="NAME">
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="inputEmail1" placeholder="EMAIL">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="inputPhone1" placeholder="PHONE NUMBER">
+            </div>
+        </div>
+        <div class="field-group message-container">
+            <div class="mb-3">
+                <textarea type="text" class="form-control" id="inputMessage1" placeholder="MESSAGE"></textarea>
+            </div>
+            <input type="submit" class="d-block ms-lg-auto formSubmit" value="submit" />
+        </div>
+    </form>
 </div>
