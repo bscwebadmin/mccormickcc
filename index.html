@@ -48,14 +48,30 @@ about_section:
 
 {% assign general_data = site.data.general_settings %}
 
-<section class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner"
-         style="background-image: url({{ page.hero_section.background_image_url}});">
+<!--DESKTOP-->
+
+<section class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner d-none d-lg-block"
+         style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover;">
     <div class="seal-container">
         <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="seal d-block img-fluid"/>
     </div>
 </section>
+<section class="d-none d-lg-block">
+    {% include contact_form.html %}
+</section>
 
-{% include contact_form.html %}
+<!--MOBILE-->
+
+<section class="container-fluid text-white text-center d-flex align-items-start py-0 d-lg-none"
+         style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover;">
+    <div class="seal-container">
+        <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="seal d-block img-fluid"/>
+    </div>
+</section>
+<section class="d-block d-lg-none">
+    {% include contact_form.html %}
+</section>
+
 
 
 
@@ -124,12 +140,11 @@ about_section:
 <!--    </section>-->
 <!--</section>-->
 <div class="container">
-    <div class="d-block position-absolute overflow-hidden z-0 overflow-hidden">
+    <div class="d-block col-12">
         {% if about.background_image %}
         <img src="{{ about.background_image }}" alt="paper" />
         {% endif %}
     </div>
-
 </div>
 <section class="formSection">
     <h5 class="formSection__Heading editable">REQUEST A CONSULTATION</h5>

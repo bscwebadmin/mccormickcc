@@ -38,7 +38,11 @@
 
 .contact-form {
     background-color: #002e3b;
+    /*color: #ffffff;*/
 }
+/*textarea::placeholder {*/
+/*    color: #ffffff;*/
+/*}*/
 
 .field-group {
     display: flex;

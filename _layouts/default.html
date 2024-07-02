@@ -45,10 +45,19 @@
             <div>
                 <div>
                    {% include header.html %}
-                    <section class="home">
+                    <section class="desktop-home d-none d-lg-block position-absolute">
                         {{ content }}
-<!--                        {% include footer.html %}-->
+                        {% include footer.html %}
                     </section>
+
+                </div>
+                <div>
+                   {% include header.html %}
+                    <section class="mobile-home d-block d-lg-none position-absolute">
+                        {{ content }}
+                        {% include footer.html %}
+                    </section>
+
                 </div>
             </div>
         </div>
