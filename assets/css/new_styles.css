@@ -1,3 +1,21 @@
+/*DEFAULT*/
+/**/
+/**/
+.mobile-home{
+    /*top: 0px;*/
+    /*left: 0px;*/
+    /*right: 0px;*/
+    /*bottom: 0px;*/
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    /*position: fixed;*/
+    /*transition: all 0.3s ease-out 0s;*/
+    /*opacity: 1;*/
+    /*visibility: visible;*/
+    /*overflow: hidden;*/
+
+}
+
 
 /*NAVBAR DESKTOP*/
 /**/
@@ -11,26 +29,31 @@
     background-color: transparent !important;
 }
 
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;   /* Increase this value if the nav still appears below content */
+.desktop-dropdown{
+    border-color: transparent;
 }
 
-.nav-link {
-    font-size: 2rem;
-}
+/*.navbar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    z-index: 10;   !* Increase this value if the nav still appears below content *!*/
+/*}*/
+
+
+/*.nav-link {*/
+/*    font-size: 2rem;*/
+/*}*/
 
 .custom-nav {
     height: 13.2rem;
     padding: 1rem 4rem;
 }
 
-.nav-item {
-    margin-right: 30px
-}
+/*.nav-item {*/
+/*    margin-right: 30px*/
+/*}*/
 
 /**/
 /*CONTACT FORM DESKTOP*/

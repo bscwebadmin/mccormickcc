@@ -39,35 +39,53 @@
 <!--        <div class="menu__LinkContainer"><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;mobile" href="/contact.html">Contact</a><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;Desk" href="/contact.html">Contact</a></div>-->
 <!--    </div>-->
 <!--</section>-->
-<nav class="navbar custom-nav navbar-expand-lg bg-primary">
+<nav class="navbar navbar-expand-lg bg-primary z-3 py-5">
     {% assign general_data = site.data.general_settings %}
-    <div class="container-fluid d-flex justify-content-between">
-
-        <a class="navbar-brand mx-auto" href="/">
-            <img id="nav-logo" class="d-block h-auto py-0 px-0 menu__Logo menu__Logo--Text img-fluid" alt="logo"
-                 src="{{ general_data.site_logo_url }}">
-        </a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link menu-link text-white active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                   aria-expanded="false">
-                    LEGAL SERVICES
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">ABOUT</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">CONTACT</a>
-            </li>
-        </ul>
+    <div class="container-fluid">
+        <div class=" d-flex justify-content-center col-5 ">
+            <a class="navbar-brand" href="/">
+                <img id="nav-logo" class="d-block h-auto py-0 px-0 menu__Logo menu__Logo--Text img-fluid" alt="logo"
+                     src="{{ general_data.site_logo_url }}">
+            </a>
+        </div>
+<!--        <div class="col-5 row ">-->
+            <ul class="navbar-nav fs-2 px-lg-3 px-xl-0">
+                <li class="nav-item mx-xl-4 mx-3">
+                    <a class="nav-link menu-link text-white active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item dropdown mx-xl-4 mx-3">
+                    <a class="nav-link text-white" href="/legal-services">LEGAL SERVICES</a>
+                </li>
+                <li class="nav-item dropdown mx-xl-4 mx-3">
+                    <a class="nav-link text-white dropdown-toggle" href="#" id="legalDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                    <ul class="dropdown-menu fs-3 border-0 px-3 py-2 bg-transparent">
+                        <li><a class="dropdown-item text-uppercase text-white" href="/criminal-law">criminal law</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white" href="/personal-injury">personal injury</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white" href="/dwi-owi">dwi/owi</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white" href="/estate-planning">estate planning</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white" href="/family-law">family law</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white" href="/additional-services">additional services</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-xl-4 mx-3">
+                    <a class="nav-link text-white" href="/about">ABOUT</a>
+                </li>
+                <li class="nav-item mx-xl-4 mx-3">
+                    <a class="nav-link text-white" href="/contact">CONTACT</a>
+                </li>
+            </ul>
+<!--        </div>-->
     </div>
 </nav>
+<!--<nav class="navbar navbar-expand-lg bg-primary">-->
+<!-- <div>-->
+<!--  <ul class="navbar-nav">-->
+<!--   <li class="nav-item">-->
+<!--    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+<!--   </li>-->
+<!--   <li class="nav-item">-->
+<!--    <a class="nav-link" href="#">About</a>-->
+<!--   </li>-->
+<!--  </ul>-->
+<!-- </div>-->
+<!--</nav>-->
