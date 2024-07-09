@@ -1,9 +1,12 @@
 {% assign general_data = site.data.general_settings %}
 <footer class="maxWidth">
     {% if general_data.footer_logo_url %}
-     <div class="">
+    <div class="col-6">
       <img class="order-1 footer__Logo img-fluid" src="{{ general_data.footer_logo_url }}" alt="{{ general_data.site_title }}" />
-     </div>
+    </div>
+    <div class="col-auto bg-primary">
+    </div>
+
     {% endif %}
     <div class="order-3 footer__Address">
         {% if general_data.address %}
