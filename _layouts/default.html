@@ -42,18 +42,18 @@
     <body>
        {{ site.data.general_settings.body_code | raw}}
         <div>
-            <div>
-                <div class="d-none d-lg-block">
+            <div class="d-flex">
+                <div class="d-none d-lg-block desktop-home">
                    {% include header.html %}
-                    <section class="desktop-home ">
+                    <section class=" ">
                         {{ content }}
                         {% include footer.html %}
                     </section>
 
                 </div>
-                <div class="d-block d-lg-none">
+                <div class="d-lg-none mobile-home ">
                    {% include header.html %}
-                    <section class="mobile-home position-absolute">
+                    <section class="">
                         {{ content }}
                         {% include footer.html %}
                     </section>

@@ -140,10 +140,24 @@ about_section:
 <!--    </section>-->
 <!--</section>-->
 <div class="container">
-    <div class="d-block col-12">
-        {% if about.background_image %}
-        <img src="{{ about.background_image }}" alt="paper" />
-        {% endif %}
+    <div class="row">
+        <div class="d-block col-6">
+            {% if about.background_image %}
+            <img src="{{ about.background_image }}" alt="paper" class="img-fluid">
+            {% endif %}
+        </div>
+        <div class="d-block col-6 bg-primary px-5 py-5 " style="background: linear-gradient(180deg, rgba(116,22,37,.9), rgba(58,11,19,.9))">
+            <div class="px-5 py-5">
+                <div class="d-flex col-3 border-0 py-3">
+                    <img src="/assets/images/about_sm.jpg?_cchid=23ecf755b0243d1bb7a93a2eb5b67d9d" alt="SHANE MCCORMICK" class="img-fluid rounded-circle">
+                </div>
+                <div class="display-5 text-white col-lg-10 col-xl-10"> SHANE MCCORMICK
+                    <p class="fs-3 py-3">
+                        Shane McCormick has over 20 years of legal experience fighting for diverse clients. As a veteran, he knows the importance of persistence and determination. He brings all these valuable skills to the courtroom to ensure the best possible outcome for every client, every time. A local attorney who knows the system, he has been providing outstanding legal services to Acadiana and the surrounding area since 2002.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <section class="formSection">

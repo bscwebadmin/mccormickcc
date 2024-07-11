@@ -39,7 +39,7 @@
 <!--        <div class="menu__LinkContainer"><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;mobile" href="/contact.html">Contact</a><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;Desk" href="/contact.html">Contact</a></div>-->
 <!--    </div>-->
 <!--</section>-->
-<nav class="navbar navbar-expand-lg bg-primary z-3 py-5">
+<nav class="d-lg-block d-none navbar navbar-expand-lg bg-primary z-3 py-5 ">
     {% assign general_data = site.data.general_settings %}
     <div class="container-fluid">
         <div class=" d-flex justify-content-center col-5 ">
@@ -77,6 +77,61 @@
 <!--        </div>-->
     </div>
 </nav>
+<div class="d-block d-lg-none bg-secondary">
+    <nav class="navbar navbar-expand-lg bg-secondary z-3 py-4">
+        {% assign general_data = site.data.general_settings %}
+        <div class="container-fluid justify-content-end px-3">
+            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavHamburgerContent" aria-controls="homeNavHamburgerContent" aria-expanded="false" aria-label="Toggle nav" style="color: transparent; border-color: transparent;">
+                <span class="fa-stack d-md-none">
+                    <i class="fa fa-circle fa-stack-1x icon-under fa-3x"></i>
+                    <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over"></i>
+                </span>
+                <span class="fa-stack d-none d-md-flex d-lg-none">
+                    <i class="fa fa-circle fa-stack-1x icon-under fa-3x"></i>
+                    <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over"></i>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="logo col-12 d-flex justify-content-center pb-4">
+        <div class="col-10 col-md-5  d-flex">
+            <a href="/">
+                <img alt="logo" class="img-fluid " src="/assets/images/white_logo.png?_cchid=b90a170187e3c754830a1ce083cb9b17">
+            </a>
+        </div>
+    </div>
+
+    <div class="collapse navbar-collapse" id="homeNavHamburgerContent" data-bs-theme="red">
+        <div class="p-2 ">
+            <ul class="navbar-nav text-white fs-2 grid gap-0 ">
+                <li class="nav-item g-col-12">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item g-col-12">
+                    <a class="nav-link" href="/legal-services">Legal Services</a>
+                </li>
+                <li class="nav-item g-col-12 fs-4 px-4">
+                    <a class="nav-link" href="/criminal-law">Criminal Law</a>
+                    <a class="nav-link" href="/personal-injury">Personal Injury</a>
+                    <a class="nav-link" href="/dwi-owi">DWI/OWI</a>
+                    <a class="nav-link" href="/estate-planning">Estate Planning</a>
+                    <a class="nav-link" href="/family-law">Family Law</a>
+                    <a class="nav-link" href="/additional-services">Additional Services</a>
+                </li>
+                <li class="nav-item g-col-12">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item g-col-12">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
 <!--<nav class="navbar navbar-expand-lg bg-primary">-->
 <!-- <div>-->
 <!--  <ul class="navbar-nav">-->

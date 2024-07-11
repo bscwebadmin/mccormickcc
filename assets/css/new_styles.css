@@ -2,32 +2,32 @@
 /**/
 /**/
 .mobile-home{
-    /*top: 0px;*/
-    /*left: 0px;*/
-    /*right: 0px;*/
-    /*bottom: 0px;*/
-    /*width: 100vw;*/
-    /*height: 100vh;*/
-    /*position: fixed;*/
-    /*transition: all 0.3s ease-out 0s;*/
-    /*opacity: 1;*/
-    /*visibility: visible;*/
-    /*overflow: hidden;*/
-
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    overflow-x: hidden;
 }
+/*.desktop-home{*/
+/*    min-height: 100vh;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    width: 100vw*/
+/*}*/
 
 
 /*NAVBAR DESKTOP*/
 /**/
 /**/
 
-.bg-primary{
-    background-color: rgba(116, 22, 37, .85) !important;
-}
+/*.bg-primary{*/
+/*    background-color: rgba(116, 22, 37, .86) !important;*/
+/*}*/
 
 .navbar-half-transparent{
     background-color: transparent !important;
 }
+.
 
 .desktop-dropdown{
     border-color: transparent;
@@ -49,6 +49,17 @@
 .custom-nav {
     height: 13.2rem;
     padding: 1rem 4rem;
+}
+/*.icon-wrapper {*/
+/*  display: inline-block;*/
+/*  padding: 10px;*/
+
+.icon-under {
+    color:  #741625
+}
+.icon-over {
+    color: #ffffff;
+    border-color: transparent;
 }
 
 /*.nav-item {*/
