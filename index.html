@@ -50,8 +50,10 @@ about_section:
 
 <!--DESKTOP-->
 
-<section class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner d-none d-lg-block"
-         style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover;">
+<section
+        class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner d-none d-lg-block"
+        style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover;"
+        xmlns="http://www.w3.org/1999/html">
     <div class="seal-container">
         <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="seal d-block img-fluid"/>
     </div>
@@ -62,18 +64,51 @@ about_section:
 
 <!--MOBILE-->
 
-<section class="container-fluid text-white text-center d-flex align-items-start py-0 d-lg-none z-0"
-         style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover;">
-    <div class="seal-container">
-        <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="seal d-block img-fluid"/>
+<section class=" text-white py-0 d-lg-none z-0 py-0"
+         style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover; ">
+    <div class="row py-0 ">
+        <div class="container-fluid px-0 py-0">
+            <div class="d-flex col-12 py-5 ">
+                <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="img-fluid"/>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center py-4 phoneNum-bg">
+            <div class=" ">
+                <div class=" ">
+                    <a href="tel:" class="text-white display-3 link-underline link-underline-opacity-0">337-889-0529</a>
+                </div>
+            </div>
+        </div>
+        <div class=" d-flex justify-content-center py-4 bg-success">
+            <h2 class="text-white display-3 text-white text-uppercase col-8">
+                contact us now for a consultation
+            </h2>
+        </div>
     </div>
 </section>
-<section class="d-block d-lg-none">
-    {% include contact_form.html %}
+
+<section class="d-flex">
+    <div>
+        <nav class="navbar display-3">
+            <ul class="navbar-nav flex-column justify-content-center" id="serviceTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="personal-injury-tab" data-bs-toggle="tab" data-bs-target="#personal-injury-content" role="tab" aria-controls="personal-injury-content" aria-selected="true"> THIS IS A TAB</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="criminal-law-tab" data-bs-toggle="tab" data-bs-target="#criminal-law-content" role="tab" aria-controls="criminal-law-content" aria-selected="false"> THIS IS ANOTHER TAB</a>
+                </li>
+            </ul>
+        </nav>
+         <div class="tab-content" id="serviceTabContent">
+                <div class="tab-pane fade active fs-1" id="personal-injury-content" role="tabpanel" aria-labelledby="personal-injury-tab">
+                    Text for first tab...
+                </div>
+                <div class="tab-pane fade" id="criminal-law-content" role="tabpanel" aria-labelledby="criminal-law-tab">
+                    Text for second tab...
+                </div>
+        </div>
+    </div>
 </section>
-
-
-
 
 <!--<section class="">-->
 <!--    <section class="d-flex flex-row justify-content-between serviceMenu  mx-auto maxWidth">-->
@@ -94,25 +129,27 @@ about_section:
 <!--        </div>-->
 <!--    </section>-->
 
-<div class="container custom-service">
-    <div class="row">
-        <div class="col-md-6 border-0 serviceMenu__ServiceTitles d-block mt-0 serviceMenu__ServiceTitles--Desktop" role="tablist" aria-orientation="vertical">
-            {% for list in page.service_section.services %}
-            <h3 class="mt-0 serviceMenu__ServiceTitle serviceMenu__ServiceTitle--Mobile service-item {% if forloop.first %}active{% endif %}" data-bs-toggle="pill" data-bs-target="#v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" type="button" role="tab" aria-controls="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" aria-selected="true">
-                <a style="font-size: unset;padding: 0; border: 0";>{{ list.text }} </a>
-            </h3>
-            {% endfor %}
-        </div>
-        <div class="col-md-6 serviceMenu__ServiceText tab-content" id="v-pills-tabContent">
-            {% for list in page.service_section.services %}
-            <div class="tab-pane fade  {% if forloop.first %}show active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" role="tabpanel" aria-labelledby="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab">
-                <p class="service-paragraph">{{ list.description }}</p>
-                <a class="d-inline-block text-decoration-none text-uppercase service-learn-more " href="{{list.url}}">Learn more</a>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
+<!--NICK'S FORM AREA-->
+
+<!--<div class="container custom-service">-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-6 border-0 serviceMenu__ServiceTitles d-block mt-0 serviceMenu__ServiceTitles&#45;&#45;Desktop" role="tablist" aria-orientation="vertical">-->
+<!--            {% for list in page.service_section.services %}-->
+<!--            <h3 class="mt-0 serviceMenu__ServiceTitle serviceMenu__ServiceTitle&#45;&#45;Mobile service-item {% if forloop.first %}active{% endif %}" data-bs-toggle="pill" data-bs-target="#v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" type="button" role="tab" aria-controls="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" aria-selected="true">-->
+<!--                <a style="font-size: unset;padding: 0; border: 0";>{{ list.text }} </a>-->
+<!--            </h3>-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+<!--        <div class="col-md-6 serviceMenu__ServiceText tab-content" id="v-pills-tabContent">-->
+<!--            {% for list in page.service_section.services %}-->
+<!--            <div class="tab-pane fade  {% if forloop.first %}show active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" role="tabpanel" aria-labelledby="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab">-->
+<!--                <p class="service-paragraph">{{ list.description }}</p>-->
+<!--                <a class="d-inline-block text-decoration-none text-uppercase service-learn-more " href="{{list.url}}">Learn more</a>-->
+<!--            </div>-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
     {% assign about = page.about_section %}
 <!--    <section class="p-0 d-flex flex-row justify-content-end align-items-center textOverlay">-->

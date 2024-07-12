@@ -132,6 +132,10 @@ input.form-control, textarea.form-control {
     width: auto;
     object-fit: cover;
 }
+.phoneNum-bg {
+    background-color: hsla(0,0%,43.9%,.25);
+}
+
 
 .custom-service {
     /*margin-right: .2rem !important;*/
@@ -151,6 +155,7 @@ input.form-control, textarea.form-control {
     border: 1px solid;
     padding: 1.3rem 2.7rem;
 }
+
 
 /**/
 /* ABOUT SECTION ON HOME PAGE*/
