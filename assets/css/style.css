@@ -381,7 +381,7 @@ template {
 }
 .pagePrefooter p,
 li {
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
 }
 .prefooter__Button,
 li {
@@ -1465,8 +1465,8 @@ p:not(footer p, .pageHero p) {
     padding-right: 11vw;
 }
 .cfForm {
-    display: flex;
-    flex-direction: row;
+    /*display: flex;*/
+    /*flex-direction: row;*/
     /*align-items: center;*/
     /*justify-content: start;*/
     font-size: 2rem;
@@ -1504,13 +1504,13 @@ p:not(footer p, .pageHero p) {
 .formFlex {
     /*width: 100%;*/
 }
-.formSubmit {
-    background-color: #fff;
-    text-transform: uppercase;
-    margin-left: auto;
-    color: #002e3b;
-    padding: 1.2rem 2.2rem;
-}
+/*.formSubmit {*/
+/*    background-color: #002e3b;*/
+/*    text-transform: uppercase;*/
+/*    margin-left: auto;*/
+/*    color: #fff;*/
+/*    padding: 1.2rem 2.2rem;*/
+/*}*/
 .pageHero .cfForm input:not([type="submit"]),
 .pageHero .cfForm textarea {
     background-color: hsla(0, 0%, 100%, 0.25);
@@ -1649,8 +1649,8 @@ p:not(footer p, .pageHero p) {
     line-height: 1.25;
 }
 .maxWidth {
-    max-width: 111rem;
-    width: 78vw;
+    /*max-width: 111rem;*/
+    /*width: 78vw;*/
 }
 .autoMarg,
 .maxWidth {
@@ -1674,8 +1674,8 @@ p:not(footer p, .pageHero p) {
 footer {
     color: #002e3b;
     margin: 0 auto;
-    padding-top: 4.8rem;
-    padding-bottom: 4.8rem;
+    /*padding-top: 4.8rem;*/
+    /*padding-bottom: 4.8rem;*/
     font-size: 2rem;
     line-height: 1.3em;
 }
