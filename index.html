@@ -51,7 +51,7 @@ about_section:
 <!--DESKTOP-->
 
 <section
-        class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner d-none d-lg-block"
+        class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner d-none d-lg-block overflow-y-hidden"
         style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover;"
         xmlns="http://www.w3.org/1999/html">
     <div class="seal-container">
@@ -91,7 +91,7 @@ about_section:
 
 <section class="container-fluid d-none d-lg-grid py-5">
     <div class="row">
-        <div class="col-6 d-grid">
+        <div class="col-5 d-grid">
             <nav class="navbar display-6 px-5 justify-content-center">
                 <ul class="navbar-nav flex-column justify-content-center" id="serviceTab" role="tablist">
                     <li class="nav-item">
@@ -115,38 +115,38 @@ about_section:
                 </ul>
             </nav>
         </div>
-        <div class="tab-content col-4" id="serviceTabContent">
-            <div class="tab-pane fade fs-3" id="personal-injury-content" role="tabpanel" aria-labelledby="personal-injury-tab">
+        <div class="tab-content col-6 d-flex align-items-center" id="serviceTabContent">
+            <div class="tab-pane fade fs-2" id="personal-injury-content" role="tabpanel" aria-labelledby="personal-injury-tab">
                 <p>
                 If you were injured through no fault of your own and need help navigating through the legal system contact us immediately. When dealing with these difficult, fragile matters, you will need an attorney with not only experience, but with compassion. Someone who will take a personal interest in your case and have your best interest in mind.
                 </p>
                 <a href="/personal-injury" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
             </div>
-            <div class="tab-pane fade fs-3" id="criminal-law-content" role="tabpanel" aria-labelledby="criminal-law-tab">
+            <div class="tab-pane fade fs-2" id="criminal-law-content" role="tabpanel" aria-labelledby="criminal-law-tab">
                 <p>
                 Our firm offers criminal defense services to those charged with having committed a crime. We take representation of a client very seriously as we understand the emotional toll placed on a person and their family when someone has been accused and/or charged with committing a crime. Our firm works tirelessly from the moment we are contacted by a client or their family, be it the day they are arrested or the week before trial.
                 </p>
                 <a href="/criminal-law" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
             </div>
-             <div class="tab-pane fade fs-3" id="family-law-content" role="tabpanel" aria-labelledby="family-law-tab">
+             <div class="tab-pane fade fs-2" id="family-law-content" role="tabpanel" aria-labelledby="family-law-tab">
                  <p>
                  We realize that extended litigation should be a last alternative in resolving a domestic or family dispute. We work to achieve our clients goals with the least emotional and financial expense.
                  </p>
                  <a href="/family-law" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
             </div>
-            <div class="tab-pane fade fs-3" id="dwi-owi-content" role="tabpanel" aria-labelledby="dwi-owi-tab">
+            <div class="tab-pane fade fs-2" id="dwi-owi-content" role="tabpanel" aria-labelledby="dwi-owi-tab">
                 <p>
                 If you have been arrested for driving under the influence of alcohol or drugs, it is imperative that you contact my office immediately. DUI cases can develop relatively quick, and the more time that I have to gather the facts, the better the case I can build to defend you.
                 </p>
                 <a href="/dwi-owi" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
             </div>
-            <div class="tab-pane fade fs-3" id="estate-content" role="tabpanel" aria-labelledby="estate-tab">
+            <div class="tab-pane fade fs-2" id="estate-content" role="tabpanel" aria-labelledby="estate-tab">
                 <p>
                 Call today to set up an appointment so that I can help you plan for your future so that your wishes can be carried out.
                 </p>
                 <a href="/estate-planning" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
             </div>
-            <div class="tab-pane fade fs-3" id="additional-services-content" role="tabpanel" aria-labelledby="additional-services-tab">
+            <div class="tab-pane fade fs-2" id="additional-services-content" role="tabpanel" aria-labelledby="additional-services-tab">
                 <p>
                 We pride ourselves on being a full service law firm and strive to fulfill our clients needs. Should you have a problem and/or dispute not specifically delineated above, please feel free to contact my office for a consultation.
                 </p>
@@ -227,14 +227,14 @@ about_section:
 
 <!-- DESKTOP MCCORMICK AREA HERE-->
 
-<div class="container d-none d-lg-block">
-    <div class="row">
-        <div class="d-block col-6">
+<div class="container-fluid d-none d-lg-block">
+    <div class="row justify-content-around">
+        <div class=" col-8 d-flex px-0 py-5 position-relative">
             {% if about.background_image %}
-            <img src="{{ about.background_image }}" alt="paper" class="img-fluid">
+            <img src="{{ about.background_image }}" alt="paper" class="img-fluid py-5">
             {% endif %}
         </div>
-        <div class="d-block col-6 bg-primary px-5 py-5 " style="background: linear-gradient(180deg, rgba(116,22,37,.9), rgba(58,11,19,.9))">
+        <div class="col-7 px-5 py-5 position-relative mt-n5" style="background: linear-gradient(180deg, rgba(116,22,37,.9), rgba(58,11,19,.9)); margin-left: -30%;">
             <div class="px-5 py-5">
                 <div class="d-flex col-3 border-0 py-3">
                     <img src="/assets/images/about_sm.jpg?_cchid=23ecf755b0243d1bb7a93a2eb5b67d9d" alt="SHANE MCCORMICK" class="img-fluid rounded-circle">

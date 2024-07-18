@@ -1,16 +1,16 @@
 {% assign general_data = site.data.general_settings %}
-<footer class="d-flex justify-content-center py-5">
-    <div class="px-5">
+<footer class="py-5 ">
+    <div class="px-5 d-flex row justify-content-center d-lg-none">
         {% if general_data.footer_logo_url %}
-        <div class="d-flex col-8 justify-content-center">
+        <div class="col-12 col-sm-10 py-4">
           <img class="img-fluid" src="{{ general_data.footer_logo_url }}" alt="{{ general_data.site_title }}" />
         </div>
         {% endif %}
-        <div class="py-4">
+        <div class="py-4 d-grid col-10">
             {% if general_data.address %}
             {{ general_data.address.address }}
             {% endif %}
-            <div class="position-relative col-8">
+            <div class="position-relative col-12 col-sm-4 col-md-9">
                 <a href="{{ general_data.google_map_url }}" class="w-100 h-100">
                     <address class="position-relative ">
                         503 W University Ave
@@ -20,23 +20,23 @@
             </div>
 
             {% if general_data.address %}
-            <div class="position-relative col-5 ">
-                <a href="mailto:{{ general_data.email }}" class="w-100 h-100">{{ general_data.email }}</a>
+            <div class="position-relative col-12 col-3 col-md-6 ">
+                <a href="mailto:{{ general_data.email }}" class="">{{ general_data.email }}</a>
             </div>
             {% endif %}
             {% if general_data.phone %}
-            <div class="position-relative col-3 ">
-                <a href="tel:{{general_data.phone}}" class="w-100 h-100">{{ general_data.phone }}</a>
+            <div class="position-relative col-7 col-sm-4 col-md-3">
+                <a href="tel:{{general_data.phone}}">{{ general_data.phone }}</a>
             </div>
             {% endif %}
-            <div class="py-4 col-10 col-md-6 ">
+            <div class="py-4 col-10 col-sm-4 col-md-6 ">
                 <h6 class="text-primary fs-1 py-4">
                 VETERAN OWNED
                 20 YEARS EXPERIENCE
                 </h6>
             </div>
-            <div class="position-relative col-4 ">
-                <p class=" ">CONNECT WITH US</p>
+            <div class="position-relative col-9 col-md-5 ">
+                <p class="fw-bold ">CONNECT WITH US</p>
                 {% for social_account in general_data.social_accounts %}
                  <a href="{{social_account.url}}"><img src="{{social_account.icon}}" alt="{{social_account.url}}" /></a>
                 {% endfor %}
@@ -55,5 +55,51 @@
 <!--                {% endfor %}-->
 <!--            </div>-->
 <!--        </div>-->
+    </div>
+    <div class="d-none d-lg-block">
+        <div class="row justify-content-between px-5">
+            {% if general_data.footer_logo_url %}
+            <div class="col-4">
+                <img class="img-fluid" src="{{ general_data.footer_logo_url }}" alt="{{ general_data.site_title }}"/>
+            </div>
+            {% endif %}
+            {% if general_data.address %}
+            {{ general_data.address.address }}
+            {% endif %}
+            <div class="col-4">
+                <h6 class="d-flex justify-content-center text-primary px-3 fs-1">
+                    VETERAN OWNED
+                    20 YEARS EXPERIENCE
+                </h6>
+            </div>
+            <div class="col-3">
+                <div class="">
+                    <a href="{{ general_data.google_map_url }}" class="">
+                        <address class=" " style="margin-bottom: 0;">
+                            503 W University Ave
+                            Lafayette, LA 70506
+                        </address>
+                    </a>
+                </div>
+                {% if general_data.address %}
+                <div class="">
+                    <a href="mailto:{{ general_data.email }}" class="">{{ general_data.email }}</a>
+                </div>
+                {% endif %}
+                {% if general_data.phone %}
+                <div class="">
+                    <a href="tel:{{general_data.phone}}">{{ general_data.phone }}</a>
+                </div>
+                {% endif %}
+                <div class="col py-5">
+                    <p class="fw-bold ">CONNECT WITH US</p>
+                    {% for social_account in general_data.social_accounts %}
+                     <a href="{{social_account.url}}"><img src="{{social_account.icon}}" alt="{{social_account.url}}" /></a>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </footer>

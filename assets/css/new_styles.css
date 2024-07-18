@@ -16,6 +16,8 @@
 /*}*/
 
 
+
+
 /*NAVBAR DESKTOP*/
 /**/
 /**/
@@ -65,6 +67,10 @@
 /*.nav-item {*/
 /*    margin-right: 30px*/
 /*}*/
+
+.no-y-scroll {
+    overflow-y: hidden;
+}
 
 /**/
 /*CONTACT FORM DESKTOP*/

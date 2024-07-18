@@ -531,6 +531,7 @@ li {
 /*}*/
 body {
     line-height: 1;
+    overflow-x: hidden;
 }
 ol,
 ul {
@@ -757,6 +758,7 @@ h6,
 html {
     font-weight: 500;
     font-style: normal;
+    /*overflow-x: hidden;*/
 }
 h1,
 h2,
