@@ -76,10 +76,13 @@
 /*CONTACT FORM DESKTOP*/
 /**/
 
-.index-info-color{
-    color: rgba(0, 46, 59, 1);
+.index-info-color .nav-link {
+    color: rgba(0, 46, 59, 1) !important;
 }
 
+
+
+}
 .contact-form {
     background-color: #002e3b;
     /*color: #ffffff;*/
@@ -166,12 +169,39 @@ input.form-control, textarea.form-control {
     color: black;
     border-color: black;
 }
+
 .learn-more-btn:hover {
     background-color: transparent;
     color: black;
     border-color: black;
 }
 
+.learn-more-white-btn {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+.learn-more-white-btn:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.hover-item:hover {
+    background-color: transparent;
+}
+
+.form-text-color input::placeholder{
+    color: white !important;
+    opacity: 100%;
+}
+.form-text-area-color textarea::placeholder{
+    color: white !important;
+    opacity: 100%;
+}
+/*input::placeholder{*/
+/*    color: white !important;*/
+/*}*/
 .custom-service {
     /*margin-right: .2rem !important;*/
     padding-left: 6rem;

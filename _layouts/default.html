@@ -38,6 +38,12 @@
             gtag('config', '{{site.data.general_settings.ga_id}}');
         </script>
         {{ site.data.general_settings.head_code | raw}}
+        <script>
+            $('.dropdown-item').on('click', function() {
+            $('.content-item').hide();  // Hide all content items
+            $($(this).data('target')).show();  // Show the one corresponding to the clicked dropdown item
+            });
+        </script>
     </head>
     <body>
        {{ site.data.general_settings.body_code | raw}}
@@ -63,5 +69,6 @@
         </div>
         <script src="/assets/js/bootstrap.bundle.min.js"></script>
         <script src="/assets/js/main.js"></script>
+
     </body>
 </html>

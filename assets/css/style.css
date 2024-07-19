@@ -1118,15 +1118,15 @@ p:not(footer p, .pageHero p) {
     font-size: 3rem;
 }
 .pageHero__Text {
-    padding-top: 28.5rem;
-    min-height: 100vh;
-    min-height: 0;
+    /*padding-top: 28.5rem;*/
+    /*min-height: 100vh;*/
+    /*min-height: 0;*/
     background: #741625;
     background: linear-gradient(180deg, #741625, #3a0b13);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#741625",endColorstr="#3a0b13",GradientType=1);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: flex-end;*/
 }
 .pageHero__Phone {
     padding-top: 1.9rem;

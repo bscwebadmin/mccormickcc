@@ -112,181 +112,186 @@ additional_services_section:
 ---
 {% assign general_data = site.data.general_settings %}
 
-<div>
-    <section class="pageHero pageHero--Thirds">
-        <div class="pageHero__Text">
-           {% if page.banner_section.title %}
-            <h1>{{ page.banner_section.title }}</h1>
-           {% endif %}
-           {% if page.banner_section.description %}
-            <p class="pageDesc">{{ page.banner_section.description }}</p>
-           {% endif %}
-            <div class="pageHero__Phone"><a href="tel:{{ general_data.phone }}">{{ general_data.phone }}</a></div>
-        </div>
-        {% if page.banner_section.background_image_url %}
-        <div class="pageHero__ImageWrapper pageHero__ImageWrapper--Thirds">
-           <img class="pageHero__Image" src="{{ page.banner_section.background_image_url }}" />
+<!--    <section class="pageHero pageHero&#45;&#45;Thirds ">-->
+<!--        <div class="pageHero__Text row py-3">-->
+<!--           {% if page.banner_section.title %}-->
+<!--            <div class=" order-1">-->
+<!--                <h1 class="col">{{ page.banner_section.title }}</h1>-->
+<!--            </div>-->
+<!--           {% endif %}-->
+<!--            {% if page.banner_section.background_image_url %}-->
+<!--            <div class="d-flex col-5 order-3">-->
+<!--                <img class="img-fluid" src="{{ page.banner_section.background_image_url }}" />-->
+<!--            </div>-->
+<!--            {% endif %}-->
+<!--           {% if page.banner_section.description %}-->
+<!--            <p class="pageDesc col-3 order-2">{{ page.banner_section.description }}</p>-->
+<!--           {% endif %}-->
+<!--            <div class="pageHero__Phone col-2"><a href="tel:{{ general_data.phone }}">{{ general_data.phone }}</a></div>-->
+<!--        </div>-->
+<!--		<section class="formSection col-2">-->
+<!--			{% if page.contact_form_section.sub_title %}-->
+<!--			 <h5 class="formSection__Heading">{{ page.contact_form_section.sub_title }}</h5>-->
+<!--			{% endif %}-->
+<!--		{% include form.html %}-->
+<!--        </section>-->
+<!--    </section>-->
+
+<section class="container-fluid" style="background: linear-gradient(180deg, #741625, #3a0b13);">
+    <div class="col-12 display-1">
+        {% if page.banner_section.description %}
+        <div class="">
         </div>
         {% endif %}
-        <div class="pageHero__Form">
-	    {% if page.contact_form_section.title %}
-		   <h2>{{ page.contact_form_section.title }}</h2>
-	  	{% endif %}
-		<section class="formSection">
-			{% if page.contact_form_section.sub_title %}
-			 <h5 class="formSection__Heading">{{ page.contact_form_section.sub_title }}</h5>
-			{% endif %}
-		{% include form.html %}
-            </section>
-        </div>
-    </section>
-</div>
-
-<section class="sliceZone">
-   {% assign sectionTwo = page.personal_injury_section %}
-    <section class="allServices">
-        <div class="allServices__Service">
-           {% if sectionTwo.image_url %}
-            <div class="allServices__ImgWrapper">
-              <img src="{{sectionTwo.image_url}}" alt="{{sectionTwo.title}}" class="allServices__Img" />
-            </div>
-            {% endif %}
-            <div class="allServices__Service__Text">
-               {% if sectionTwo.title %}
-                <h3>{{ sectionTwo.title }}</h3>
-               {% endif %}
-               {% if sectionTwo.subtitle %}
-                <p>{{ sectionTwo.subtitle }}</p>
-                {% endif %}
-                <ul>
-                  {% for list in sectionTwo.lists %}
-                    <li>{{ list }}</li>
-                  {% endfor %}
-                </ul>
-                {% if sectionTwo.button_text %}
-                 <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>
-                {% endif %}
-            </div>
-        </div>
-        {% assign sectionThree = page.criminal_law_section %}
-        <div class="allServices__Service">
-           {% if sectionThree.image_url %}
-            <div class="allServices__ImgWrapper">
-              <img src="{{sectionThree.image_url}}" alt="{{sectionThree.title}}" class="allServices__Img" />
-            </div>
-            {% endif %}
-            <div class="allServices__Service__Text">
-               {% if sectionThree.title %}
-                <h3>{{ sectionThree.title }}</h3>
-               {% endif %}
-               {% if sectionThree.subtitle %}
-                <p>{{ sectionThree.subtitle }}</p>
-                {% endif %}
-                <ul>
-                  {% for list in sectionThree.lists %}
-                    <li>{{ list }}</li>
-                  {% endfor %}
-                </ul>
-                {% if sectionThree.button_text %}
-                  <a href="{{ sectionThree.button_url }}">{{sectionThree.button_text}}</a>
-                {% endif %}
-            </div>
-        </div>
-        {% assign sectionFour = page.family_law_section %}
-        <div class="allServices__Service">
-           {% if sectionFour.image_url %}
-            <div class="allServices__ImgWrapper">
-              <img src="{{sectionFour.image_url}}" alt="{{sectionFour.title}}" class="allServices__Img" />
-            </div>
-            {% endif %}
-            <div class="allServices__Service__Text">
-              {% if sectionFour.title %}
-                <h3>{{ sectionFour.title }}</h3>
-               {% endif %}
-               {% if sectionFour.subtitle %}
-                <p>{{ sectionFour.subtitle }}</p>
-                {% endif %}
-                <ul>
-                  {% for list in sectionFour.lists %}
-                    <li>{{ list }}</li>
-                  {% endfor %}
-                </ul>
-                {% if sectionFour.button_text %}
-                 <a href="{{ sectionFour.button_url }}">{{sectionFour.button_text}}</a>
-                {% endif %}
-            </div>
-        </div>
-        {% assign sectionFive = page.dwi_owi_section %}
-        <div class="allServices__Service">
-           {% if sectionFive.image_url %}
-            <div class="allServices__ImgWrapper">
-              <img src="{{sectionFive.image_url}}" alt="{{sectionFive.title}}" class="allServices__Img" />
-            </div>
-            {% endif %}
-            <div class="allServices__Service__Text">
-               {% if sectionFive.title %}
-                <h3>{{ sectionFive.title }}</h3>
-               {% endif %}
-               {% if sectionFive.subtitle %}
-                <p>{{ sectionFive.subtitle }}</p>
-                {% endif %}
-                <ul>
-                  {% for list in sectionFive.lists %}
-                    <li>{{ list }}</li>
-                  {% endfor %}
-                </ul>
-                {% if sectionFive.button_text %}
-                 <a href="{{ sectionFive.button_url }}">{{sectionFive.button_text}}</a>
-                {% endif %}
-            </div>
-        </div>
-        {% assign sectionSix = page.estate_planning_section %}
-        <div class="allServices__Service">
-            {% if sectionSix.image_url %}
-	            <div class="allServices__ImgWrapper">
-	              <img src="{{sectionSix.image_url}}" alt="{{sectionSix.title}}" class="allServices__Img" />
-	            </div>
-            {% endif %}
-            <div class="allServices__Service__Text">
-            {% if sectionSix.title %}
-             <h3>{{ sectionSix.title }}</h3>
-            {% endif %}
-            {% if sectionSix.subtitle %}
-             <p>{{ sectionSix.subtitle }}</p>
-            {% endif %}
-              <ul>
-                {% for list in sectionSix.lists %}
-                  <li>{{ list }}</li>
-                {% endfor %}
-              </ul>
-            {% if sectionSix.button_text %}
-              <a href="{{ sectionSix.button_url }}">{{sectionSix.button_text}}</a>
-            {% endif %}
-            </div>
-        </div>
-        {% assign sectionSeven = page.additional_services_section %}
-        <div class="allServices__Service">
-            {% if sectionSeven.image_url %}
-	            <div class="allServices__ImgWrapper">
-	              <img src="{{sectionSeven.image_url}}" alt="{{sectionSeven.title}}" class="allServices__Img" />
-	            </div>
-            {% endif %}
-            <div class="allServices__Service__Text">
-               {% if sectionSeven.title %}
-                <h3>{{ sectionSeven.title }}</h3>
-               {% endif %}
-               {% if sectionSeven.subtitle %}
-                <p>{{ sectionSeven.subtitle }}</p>
-                {% endif %}
-                <ul>
-                  {% for list in sectionSeven.lists %}
-                    <li>{{ list }}</li>
-                  {% endfor %}
-                </ul>
-                {% if sectionSeven.button_text %}
-                 <a href="{{ sectionSeven.button_url }}">{{sectionSeven.button_text}}</a>
-                {% endif %}
-            </div>
-        </div>
-    </section>
+    </div>
 </section>
+
+
+<!--<section class="sliceZone">-->
+<!--   {% assign sectionTwo = page.personal_injury_section %}-->
+<!--    <section class="allServices">-->
+<!--        <div class="allServices__Service">-->
+<!--           {% if sectionTwo.image_url %}-->
+<!--            <div class="allServices__ImgWrapper">-->
+<!--              <img src="{{sectionTwo.image_url}}" alt="{{sectionTwo.title}}" class="allServices__Img" />-->
+<!--            </div>-->
+<!--            {% endif %}-->
+<!--            <div class="allServices__Service__Text">-->
+<!--               {% if sectionTwo.title %}-->
+<!--                <h3>{{ sectionTwo.title }}</h3>-->
+<!--               {% endif %}-->
+<!--               {% if sectionTwo.subtitle %}-->
+<!--                <p>{{ sectionTwo.subtitle }}</p>-->
+<!--                {% endif %}-->
+<!--                <ul>-->
+<!--                  {% for list in sectionTwo.lists %}-->
+<!--                    <li>{{ list }}</li>-->
+<!--                  {% endfor %}-->
+<!--                </ul>-->
+<!--                {% if sectionTwo.button_text %}-->
+<!--                 <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>-->
+<!--                {% endif %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% assign sectionThree = page.criminal_law_section %}-->
+<!--        <div class="allServices__Service">-->
+<!--           {% if sectionThree.image_url %}-->
+<!--            <div class="allServices__ImgWrapper">-->
+<!--              <img src="{{sectionThree.image_url}}" alt="{{sectionThree.title}}" class="allServices__Img" />-->
+<!--            </div>-->
+<!--            {% endif %}-->
+<!--            <div class="allServices__Service__Text">-->
+<!--               {% if sectionThree.title %}-->
+<!--                <h3>{{ sectionThree.title }}</h3>-->
+<!--               {% endif %}-->
+<!--               {% if sectionThree.subtitle %}-->
+<!--                <p>{{ sectionThree.subtitle }}</p>-->
+<!--                {% endif %}-->
+<!--                <ul>-->
+<!--                  {% for list in sectionThree.lists %}-->
+<!--                    <li>{{ list }}</li>-->
+<!--                  {% endfor %}-->
+<!--                </ul>-->
+<!--                {% if sectionThree.button_text %}-->
+<!--                  <a href="{{ sectionThree.button_url }}">{{sectionThree.button_text}}</a>-->
+<!--                {% endif %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% assign sectionFour = page.family_law_section %}-->
+<!--        <div class="allServices__Service">-->
+<!--           {% if sectionFour.image_url %}-->
+<!--            <div class="allServices__ImgWrapper">-->
+<!--              <img src="{{sectionFour.image_url}}" alt="{{sectionFour.title}}" class="allServices__Img" />-->
+<!--            </div>-->
+<!--            {% endif %}-->
+<!--            <div class="allServices__Service__Text">-->
+<!--              {% if sectionFour.title %}-->
+<!--                <h3>{{ sectionFour.title }}</h3>-->
+<!--               {% endif %}-->
+<!--               {% if sectionFour.subtitle %}-->
+<!--                <p>{{ sectionFour.subtitle }}</p>-->
+<!--                {% endif %}-->
+<!--                <ul>-->
+<!--                  {% for list in sectionFour.lists %}-->
+<!--                    <li>{{ list }}</li>-->
+<!--                  {% endfor %}-->
+<!--                </ul>-->
+<!--                {% if sectionFour.button_text %}-->
+<!--                 <a href="{{ sectionFour.button_url }}">{{sectionFour.button_text}}</a>-->
+<!--                {% endif %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% assign sectionFive = page.dwi_owi_section %}-->
+<!--        <div class="allServices__Service">-->
+<!--           {% if sectionFive.image_url %}-->
+<!--            <div class="allServices__ImgWrapper">-->
+<!--              <img src="{{sectionFive.image_url}}" alt="{{sectionFive.title}}" class="allServices__Img" />-->
+<!--            </div>-->
+<!--            {% endif %}-->
+<!--            <div class="allServices__Service__Text">-->
+<!--               {% if sectionFive.title %}-->
+<!--                <h3>{{ sectionFive.title }}</h3>-->
+<!--               {% endif %}-->
+<!--               {% if sectionFive.subtitle %}-->
+<!--                <p>{{ sectionFive.subtitle }}</p>-->
+<!--                {% endif %}-->
+<!--                <ul>-->
+<!--                  {% for list in sectionFive.lists %}-->
+<!--                    <li>{{ list }}</li>-->
+<!--                  {% endfor %}-->
+<!--                </ul>-->
+<!--                {% if sectionFive.button_text %}-->
+<!--                 <a href="{{ sectionFive.button_url }}">{{sectionFive.button_text}}</a>-->
+<!--                {% endif %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% assign sectionSix = page.estate_planning_section %}-->
+<!--        <div class="allServices__Service">-->
+<!--            {% if sectionSix.image_url %}-->
+<!--	            <div class="allServices__ImgWrapper">-->
+<!--	              <img src="{{sectionSix.image_url}}" alt="{{sectionSix.title}}" class="allServices__Img" />-->
+<!--	            </div>-->
+<!--            {% endif %}-->
+<!--            <div class="allServices__Service__Text">-->
+<!--            {% if sectionSix.title %}-->
+<!--             <h3>{{ sectionSix.title }}</h3>-->
+<!--            {% endif %}-->
+<!--            {% if sectionSix.subtitle %}-->
+<!--             <p>{{ sectionSix.subtitle }}</p>-->
+<!--            {% endif %}-->
+<!--              <ul>-->
+<!--                {% for list in sectionSix.lists %}-->
+<!--                  <li>{{ list }}</li>-->
+<!--                {% endfor %}-->
+<!--              </ul>-->
+<!--            {% if sectionSix.button_text %}-->
+<!--              <a href="{{ sectionSix.button_url }}">{{sectionSix.button_text}}</a>-->
+<!--            {% endif %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        {% assign sectionSeven = page.additional_services_section %}-->
+<!--        <div class="allServices__Service">-->
+<!--            {% if sectionSeven.image_url %}-->
+<!--	            <div class="allServices__ImgWrapper">-->
+<!--	              <img src="{{sectionSeven.image_url}}" alt="{{sectionSeven.title}}" class="allServices__Img" />-->
+<!--	            </div>-->
+<!--            {% endif %}-->
+<!--            <div class="allServices__Service__Text">-->
+<!--               {% if sectionSeven.title %}-->
+<!--                <h3>{{ sectionSeven.title }}</h3>-->
+<!--               {% endif %}-->
+<!--               {% if sectionSeven.subtitle %}-->
+<!--                <p>{{ sectionSeven.subtitle }}</p>-->
+<!--                {% endif %}-->
+<!--                <ul>-->
+<!--                  {% for list in sectionSeven.lists %}-->
+<!--                    <li>{{ list }}</li>-->
+<!--                  {% endfor %}-->
+<!--                </ul>-->
+<!--                {% if sectionSeven.button_text %}-->
+<!--                 <a href="{{ sectionSeven.button_url }}">{{sectionSeven.button_text}}</a>-->
+<!--                {% endif %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--</section>-->
