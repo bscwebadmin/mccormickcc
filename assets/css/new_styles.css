@@ -231,3 +231,18 @@ input.form-control, textarea.form-control {
     width: 72vw;
     height: 44.3rem;
 }
+
+ /*LEGAL SERVICES PAGE*/
+
+.legal-img{
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+.legal-img img{
+    margin-left: -100px;
+    margin-top: -50px;
+}
+.link-container{
+    align-items: flex-start;
+}
