@@ -1,5 +1,5 @@
 {% assign general_data = site.data.general_settings %}
-<footer class="py-5 ">
+<footer class=" container-fluid py-5">
 
 <!--    MOBILE HERE-->
 
@@ -41,7 +41,7 @@
             <div class="position-relative col-9 col-md-5 ">
                 <p class="fw-bold ">CONNECT WITH US</p>
                 {% for social_account in general_data.social_accounts %}
-                 <a href="{{social_account.url}}"><img src="{{social_account.icon}}" alt="{{social_account.url}}" /></a>
+                 <a href="{{social_account.url}}"><img src="{{social_account.icon}}" alt="{{social_account.url}}"/></a>
                 {% endfor %}
             </div>
         </div>

@@ -776,7 +776,7 @@ a:not(.menuLink, footer a):hover {
 }
 .pageHero--Halfs p,
 p:not(footer p, .pageHero p) {
-    text-align: justify ;
+    /*text-align: justify ;*/
 }
 .allServices {
     color: #002e3b;

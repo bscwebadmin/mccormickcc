@@ -39,92 +39,199 @@
 <!--        </div>-->
 <!--    </div>-->
 <!--</section>-->
-<nav class="d-lg-block d-none navbar navbar-expand-lg bg-white z-3 py-5 w-100 z-1 position-fixed">
+
+<!--DUMMY HEADER-->
+
+<nav class="d-lg-block d-block navbar navbar-expand-lg bg-white z-3 py-5 w-100 z-1 position-static dummy-Header">
     {% assign general_data = site.data.general_settings %}
-    <div class="container-fluid justify-content-end">
-        <div class=" d-flex justify-content-end col-5 ">
+    <div class="d-flex justify-content-end">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavHamburgerContent" aria-controls="homeNavHamburgerContent" aria-expanded="false" aria-label="Toggle nav" style="color: transparent; border-color: transparent;">
+            <span class="fa-stack d-md-none">
+                <i class="fa fa-circle fa-stack-1x fa-3x"></i>
+                <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over" style="color:#002e3b;"></i>
+            </span>
+            <span class="fa-stack d-none d-md-flex d-lg-none">
+                <i class="fa fa-circle fa-stack-1x fa-3x"></i>
+                <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over" style="color:#002e3b;"></i>
+            </span>
+        </button>
+    </div>
+    <div class="d-block d-lg-none">
+        <div class="collapse navbar-collapse" id="homeNavHamburgerContent1" data-bs-theme="white">
+            <div class="p-2 lh-sm">
+                <ul class="navbar-nav index-info-color fs-2 grid gap-0 ">
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/legal-services">Legal Services</a>
+                    </li>
+                    <li class="nav-item g-col-12 fs-4 px-4">
+                        <a class="nav-link" href="/criminal-law">Criminal Law</a>
+                        <a class="nav-link" href="/personal-injury">Personal Injury</a>
+                        <a class="nav-link" href="/dwi-owi">DWI/OWI</a>
+                        <a class="nav-link" href="/estate-planning">Estate Planning</a>
+                        <a class="nav-link" href="/family-law">Family Law</a>
+                        <a class="nav-link" href="/additional-services">Additional Services</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid justify-content-lg-end justify-content-center">
+
+        <div class=" d-flex justify-content-end col-lg-5 col-12">
+            <a class="navbar-brand mx-0" href="/">
+                <img id="nav-logo1" class="d-block h-auto py-0 px-0 menu__Logo menu__Logo--Text img-fluid" alt="logo"
+                     src="/assets/images/logo.png">
+            </a>
+        </div>
+<!--        <div class="col-5 row ">-->
+        <ul class="navbar-nav fs-4 px-lg-3 px-xl-0 d-lg-flex d-none">
+            <li class="nav-item mx-xl-4 mx-3">
+                <a class="nav-link menu-link index-info-color" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown mx-xl-4 mx-3 d-flex">
+                <a class=" nav-link " href="/legal-services">LEGAL SERVICES</a>
+                <a class="nav-link index-info-color dropdown-toggle dropdown-center"  href="#" id="legalDropDown1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                <ul class="dropdown-menu fs-5 border-0 px-3 py-2 bg-white">
+                    <li><a class="dropdown-item text-uppercase " href="/criminal-law">criminal law</a></li>
+                    <li><a class="dropdown-item text-uppercase " href="/personal-injury">personal injury</a></li>
+                    <li><a class="dropdown-item text-uppercase " href="/dwi-owi">dwi/owi</a></li>
+                    <li><a class="dropdown-item text-uppercase " href="/estate-planning">estate planning</a></li>
+                    <li><a class="dropdown-item text-uppercase " href="/family-law">family law</a></li>
+                    <li><a class="dropdown-item text-uppercase " href="/additional-services">additional services</a></li>
+                </ul>
+            </li>
+            <li class="nav-item mx-xl-4 mx-3">
+                <a class="nav-link index-info-color" href="/about">ABOUT</a>
+            </li>
+            <li class="nav-item mx-xl-4 mx-3">
+                <a class="nav-link index-info-color" href="/contact">CONTACT</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--REAL HEADER-->
+
+<nav class="d-lg-block d-block navbar navbar-expand-lg bg-white z-3 py-5 w-100 z-3 position-fixed top-0 w-100">
+    {% assign general_data = site.data.general_settings %}
+    <div class="d-flex justify-content-end">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavHamburgerContent" aria-controls="homeNavHamburgerContent" aria-expanded="false" aria-label="Toggle nav" style="color: transparent; border-color: transparent;">
+            <span class="fa-stack d-md-none">
+                <i class="fa fa-circle fa-stack-1x fa-3x"></i>
+                <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over" style="color:#002e3b;"></i>
+            </span>
+            <span class="fa-stack d-none d-md-flex d-lg-none">
+                <i class="fa fa-circle fa-stack-1x fa-3x"></i>
+                <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over" style="color:#002e3b;"></i>
+            </span>
+        </button>
+    </div>
+    <div class="d-block d-lg-none">
+        <div class="collapse navbar-collapse" id="homeNavHamburgerContent" data-bs-theme="white">
+            <div class="p-2 lh-sm">
+                <ul class="navbar-nav index-info-color fs-2 grid gap-0 ">
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/legal-services">Legal Services</a>
+                    </li>
+                    <li class="nav-item g-col-12 fs-4 px-4">
+                        <a class="nav-link" href="/criminal-law">Criminal Law</a>
+                        <a class="nav-link" href="/personal-injury">Personal Injury</a>
+                        <a class="nav-link" href="/dwi-owi">DWI/OWI</a>
+                        <a class="nav-link" href="/estate-planning">Estate Planning</a>
+                        <a class="nav-link" href="/family-law">Family Law</a>
+                        <a class="nav-link" href="/additional-services">Additional Services</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid justify-content-lg-end justify-content-center">
+
+        <div class=" d-flex justify-content-lg-end justify-content-center col-lg-5 col-12 ">
             <a class="navbar-brand" href="/">
                 <img id="nav-logo" class="d-block h-auto py-0 px-0 menu__Logo menu__Logo--Text img-fluid" alt="logo"
                      src="/assets/images/logo.png">
             </a>
         </div>
 <!--        <div class="col-5 row ">-->
-            <ul class="navbar-nav fs-4 px-lg-3 px-xl-0">
-                <li class="nav-item mx-xl-4 mx-3">
-                    <a class="nav-link menu-link index-info-color" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item dropdown mx-xl-4 mx-3 d-flex">
-                    <a class=" nav-link " href="/legal-services">LEGAL SERVICES</a>
-                    <a class="nav-link index-info-color dropdown-toggle dropdown-center"  href="#" id="legalDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                    <ul class="dropdown-menu fs-5 border-0 px-3 py-2 bg-white">
-                        <li><a class="dropdown-item text-uppercase " href="/criminal-law">criminal law</a></li>
-                        <li><a class="dropdown-item text-uppercase " href="/personal-injury">personal injury</a></li>
-                        <li><a class="dropdown-item text-uppercase " href="/dwi-owi">dwi/owi</a></li>
-                        <li><a class="dropdown-item text-uppercase " href="/estate-planning">estate planning</a></li>
-                        <li><a class="dropdown-item text-uppercase " href="/family-law">family law</a></li>
-                        <li><a class="dropdown-item text-uppercase " href="/additional-services">additional services</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item mx-xl-4 mx-3">
-                    <a class="nav-link index-info-color" href="/about">ABOUT</a>
-                </li>
-                <li class="nav-item mx-xl-4 mx-3">
-                    <a class="nav-link index-info-color" href="/contact">CONTACT</a>
-                </li>
-            </ul>
-<!--        </div>-->
+        <ul class="navbar-nav fs-4 px-lg-3 px-xl-0 d-lg-flex d-none">
+            <li class="nav-item mx-xl-4 mx-3">
+                <a class="nav-link menu-link index-info-color" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown mx-xl-4 mx-3 d-flex">
+                <a class=" nav-link " href="/legal-services">LEGAL SERVICES</a>
+                <a class="nav-link index-info-color dropdown-toggle dropdown-center"  href="#" id="legalDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                <ul class="dropdown-menu fs-5 border-0 px-3 py-2 bg-white">
+                    <li><a class="dropdown-item text-uppercase " href="/criminal-law">criminal law</a></li>
+                    <li><a class="dropdown-item text-uppercase " href="/personal-injury">personal injury</a></li>
+                    <li><a class="dropdown-item text-uppercase " href="/dwi-owi">dwi/owi</a></li>
+                    <li><a class="dropdown-item text-uppercase " href="/estate-planning">estate planning</a></li>
+                    <li><a class="dropdown-item text-uppercase " href="/family-law">family law</a></li>
+                    <li><a class="dropdown-item text-uppercase " href="/additional-services">additional services</a></li>
+                </ul>
+            </li>
+            <li class="nav-item mx-xl-4 mx-3">
+                <a class="nav-link index-info-color" href="/about">ABOUT</a>
+            </li>
+            <li class="nav-item mx-xl-4 mx-3">
+                <a class="nav-link index-info-color" href="/contact">CONTACT</a>
+            </li>
+        </ul>
     </div>
 </nav>
-<div class="d-block d-lg-none bg-secondary">
-    <nav class="navbar navbar-expand-lg bg-secondary z-3 py-4">
-        {% assign general_data = site.data.general_settings %}
-        <div class="container-fluid justify-content-end px-3">
-            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavHamburgerContent" aria-controls="homeNavHamburgerContent" aria-expanded="false" aria-label="Toggle nav" style="color: transparent; border-color: transparent;">
-                <span class="fa-stack d-md-none">
-                    <i class="fa fa-circle fa-stack-1x icon-under fa-3x"></i>
-                    <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over"></i>
-                </span>
-                <span class="fa-stack d-none d-md-flex d-lg-none">
-                    <i class="fa fa-circle fa-stack-1x icon-under fa-3x"></i>
-                    <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over"></i>
-                </span>
-            </button>
-        </div>
-    </nav>
 
-    <div class="logo col-12 d-flex justify-content-center pb-4">
-        <div class="col-10 col-md-5  d-flex">
-            <a href="/">
-                <img alt="logo" class="img-fluid " src="/assets/images/white_logo.png?_cchid=b90a170187e3c754830a1ce083cb9b17">
-            </a>
-        </div>
-    </div>
 
-    <div class="collapse navbar-collapse" id="homeNavHamburgerContent" data-bs-theme="red">
-        <div class="p-2 ">
-            <ul class="navbar-nav index-info-color fs-2 grid gap-0 ">
-                <li class="nav-item g-col-12">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item g-col-12">
-                    <a class="nav-link" href="/legal-services">Legal Services</a>
-                </li>
-                <li class="nav-item g-col-12 fs-4 px-4">
-                    <a class="nav-link" href="/criminal-law">Criminal Law</a>
-                    <a class="nav-link" href="/personal-injury">Personal Injury</a>
-                    <a class="nav-link" href="/dwi-owi">DWI/OWI</a>
-                    <a class="nav-link" href="/estate-planning">Estate Planning</a>
-                    <a class="nav-link" href="/family-law">Family Law</a>
-                    <a class="nav-link" href="/additional-services">Additional Services</a>
-                </li>
-                <li class="nav-item g-col-12">
-                    <a class="nav-link" href="/about">About</a>
-                </li>
-                <li class="nav-item g-col-12">
-                    <a class="nav-link" href="/contact">Contact</a>
-                </li>
+<!--<div class="d-block d-lg-none bg-secondary">-->
+<!--    <nav class="navbar navbar-expand-lg bg-secondary z-3 py-4">-->
+<!--        {% assign general_data = site.data.general_settings %}-->
+<!--        <div class="container-fluid justify-content-end px-3">-->
+<!--            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavHamburgerContent" aria-controls="homeNavHamburgerContent" aria-expanded="false" aria-label="Toggle nav" style="color: transparent; border-color: transparent;">-->
+<!--                <span class="fa-stack d-md-none">-->
+<!--                    <i class="fa fa-circle fa-stack-1x icon-under fa-3x"></i>-->
+<!--                    <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over"></i>-->
+<!--                </span>-->
+<!--                <span class="fa-stack d-none d-md-flex d-lg-none">-->
+<!--                    <i class="fa fa-circle fa-stack-1x icon-under fa-3x"></i>-->
+<!--                    <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over"></i>-->
+<!--                </span>-->
+<!--            </button>-->
+<!--        </div>-->
+<!--    </nav>-->
 
-            </ul>
-        </div>
-    </div>
-</div>
+<!--    <div class="logo col-12 d-flex justify-content-center pb-4">-->
+<!--        <div class="col-10 col-md-5  d-flex">-->
+<!--            <a href="/">-->
+<!--                <img alt="logo" class="img-fluid " src="/assets/images/white_logo.png?_cchid=b90a170187e3c754830a1ce083cb9b17">-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+<!--    </div>-->
+<!--</div>-->

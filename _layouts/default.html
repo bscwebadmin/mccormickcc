@@ -38,11 +38,7 @@
             gtag('config', '{{site.data.general_settings.ga_id}}');
         </script>
         {{ site.data.general_settings.head_code | raw}}
-        <script>
-            $('.dropdown-item').on('click', function() {
-            $('.content-item').hide();  // Hide all content items
-            $($(this).data('target')).show();  // Show the one corresponding to the clicked dropdown item
-            });
+
         </script>
     </head>
     <body>
