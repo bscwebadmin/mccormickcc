@@ -286,9 +286,9 @@ sub {
 sup {
     top: -0.5em;
 }
-img {
-    border-style: none;
-}
+/*img {*/
+/*    border-style: none;*/
+/*}*/
 button,
 input,
 optgroup,

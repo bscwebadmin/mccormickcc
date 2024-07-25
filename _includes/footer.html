@@ -2,49 +2,53 @@
 <footer class=" container-fluid py-5">
 
 <!--    MOBILE HERE-->
-
-    <div class="px-5 d-flex row justify-content-center d-lg-none">
-        {% if general_data.footer_logo_url %}
-        <div class="col-12 col-sm-10 py-4">
-          <img class="img-fluid" src="{{ general_data.footer_logo_url }}" alt="{{ general_data.site_title }}" />
+    <div class="row mx-0 justify-content-end">
+        <div class="d-flex d-lg-none justify-content-center px-5">
+            {% if general_data.footer_logo_url %}
+            <div class="col-12 col-sm-10 py-4">
+              <img class="img-fluid" src="{{ general_data.footer_logo_url }}" alt="{{ general_data.site_title }}" />
+            </div>
         </div>
         {% endif %}
-        <div class="py-4 d-grid col-10">
-            {% if general_data.address %}
-            {{ general_data.address.address }}
-            {% endif %}
-            <div class="position-relative col-12 col-sm-4 col-md-9">
-                <a href="{{ general_data.google_map_url }}" class="w-100 h-100">
-                    <address class="position-relative ">
-                        503 W University Ave
-                        Lafayette, LA 70506
-                    </address>
-                </a>
-            </div>
+        <div class="px-4 d-flex row d-lg-none justify-content-md-around justify-content-start">
+            <div class="py-4 d-grid col-10">
+                {% if general_data.address %}
+                {{ general_data.address.address }}
+                {% endif %}
+                <div class="position-relative col-12 col-sm-4 col-md-9">
+                    <a href="{{ general_data.google_map_url }}" class="w-100 h-100">
+                        <address class="position-relative py-0 my-0 ">
+                            503 W University Ave
+                            Lafayette, LA 70506
+                        </address>
+                    </a>
+                </div>
 
-            {% if general_data.address %}
-            <div class="position-relative col-12 col-3 col-md-6 ">
-                <a href="mailto:{{ general_data.email }}" class="">{{ general_data.email }}</a>
-            </div>
-            {% endif %}
-            {% if general_data.phone %}
-            <div class="position-relative col-7 col-sm-4 col-md-3">
-                <a href="tel:{{general_data.phone}}">{{ general_data.phone }}</a>
-            </div>
-            {% endif %}
-            <div class="py-4 col-10 col-sm-4 col-md-6 ">
-                <h6 class="text-primary fs-1 py-4">
-                VETERAN OWNED
-                20 YEARS EXPERIENCE
-                </h6>
-            </div>
-            <div class="position-relative col-9 col-md-5 ">
-                <p class="fw-bold ">CONNECT WITH US</p>
-                {% for social_account in general_data.social_accounts %}
-                 <a href="{{social_account.url}}"><img src="{{social_account.icon}}" alt="{{social_account.url}}"/></a>
-                {% endfor %}
+                {% if general_data.address %}
+                <div class="position-relative col-12 col-3 col-md-6 ">
+                    <a href="mailto:{{ general_data.email }}" class="">{{ general_data.email }}</a>
+                </div>
+                {% endif %}
+                {% if general_data.phone %}
+                <div class="position-relative col-7 col-sm-4 col-md-4">
+                    <a href="tel:{{general_data.phone}}">{{ general_data.phone }}</a>
+                </div>
+                {% endif %}
+                <div class="py-4 col-10 col-sm-4 col-md-6 ">
+                    <h6 class="text-primary fs-1 py-4">
+                    VETERAN OWNED
+                    20 YEARS EXPERIENCE
+                    </h6>
+                </div>
+                <div class="position-relative col-9 col-md-5 ">
+                    <p class="fw-bold ">CONNECT WITH US</p>
+                    {% for social_account in general_data.social_accounts %}
+                     <a href="{{social_account.url}}"><img src="{{social_account.icon}}" alt="{{social_account.url}}"/></a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
+    </div>
 <!--        <div class="mt-0 order-2 footer__Statement">-->
 <!--            {% if general_data.footer_title %}-->
 <!--             <h6>{{ general_data.footer_title }}</h6>-->
@@ -58,7 +62,7 @@
 <!--                {% endfor %}-->
 <!--            </div>-->
 <!--        </div>-->
-    </div>
+
 
 <!--    DESKTOP HERE-->
 
@@ -67,7 +71,7 @@
             <div class="row justify-content-evenly px-5 me-0">
                 {% if general_data.footer_logo_url %}
                 <div class="col-4 d-flex justify-content-end">
-                    <div class="col-8 ">
+                    <div class="col-12 ">
                         <img class="img-fluid" src="{{ general_data.footer_logo_url }}" alt="{{ general_data.site_title }}"/>
                     </div>
                 </div>
@@ -77,9 +81,8 @@
                 {% endif %}
                 <div class="col-4 d-flex justify-content-center">
                     <div class="d-flex justify-content-center ">
-                        <h6 class=" text-primary col-8 fs-2 text-center">
-                            VETERAN OWNED
-                            20 YEARS EXPERIENCE
+                        <h6 class=" text-primary col-10 col-lg-8 fs-2 text-center">
+                            VETERAN OWNED 20 YEARS EXPERIENCE
                         </h6>
                     </div>
                 </div>
