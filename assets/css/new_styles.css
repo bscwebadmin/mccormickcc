@@ -280,6 +280,10 @@ max-height: 25%;
 /*ABOUT PAGE*/
 /**/
 
+.padding-info {
+    padding: 10.6rem 13rem;
+}
+
 .about-mobile-img {
     width: 200px;
     height: 200px;

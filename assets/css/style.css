@@ -1166,9 +1166,9 @@ p:not(footer p, .pageHero p) {
 .pageHero__Image--BL {
     width: 76%;
 }
-.pageHero__ImageWrapper--Halfs {
-    display: none;
-}
+/*.pageHero__ImageWrapper--Halfs {*/
+/*    display: none;*/
+/*}*/
 .pageHero__Home__Inner {
     /*height: 53rem;*/
     background-image: var(--bgImage);
