@@ -17,24 +17,47 @@ contact_form_subtitle: "REQUEST A CONSULTATION"
 ---
 {% assign general_data = site.data.general_settings %}
 <div>
-	<section class="pageHero--Form pageHero">
-		<div class="pageHero__Form">
-		    {% if page.contact_form_title %}
-			 <h2>{{ page.contact_form_title }}</h2>
-			{% endif %}
-			<section class="formSection">
-			    {% if page.contact_form_subtitle %}
-				 <h5 class="formSection__Heading">{{ page.contact_form_subtitle }}</h5>
-				{% endif %}
-				{% include form.html %}
-			</section>
-		</div>
-		<div class="pageHero--Form__TripleImg">
-		    {% for gallery in page.gallery %}
-			<div class="pageHero--Form__imgWrapper">
-			  <img src="{{ gallery.image_url }}" />
+	<section class=" ">
+		<div class="d-flex flex-row z-2">
+			{% for gallery in page.gallery %}
+			<div class="d-flex object-fit-cover  ">
+				<img src="{{ gallery.image_url }}" class="img-fluid w-100" />
 			</div>
 			{% endfor %}
+		</div>
+		<div class="pageHero__Form">
+			<section class="">
+				<div class=" ">
+					<div class="d-flex flex-row justify-content-center contact-form px-5 py-5 bg-success">
+						{% if page.contact_form_title %}
+						<h2 class="text-uppercase fs-1 text-white f-weight-500">{{ page.contact_form_title }}</h2>
+						{% endif %}
+						<form action="https://formspree.io/f/mkndnqlr" method="POST"
+							  class="d-flex align-content-center justify-content-md-start form-container new-form cfForm col-lg-8 mx-xl-5 pt-5">
+							<div class="field-group inputs-container">
+								<div class="mb-3 form-text-color">
+									<input type="email" class="form-control form-text-color" id="inputName" placeholder="NAME" style="background-color: hsla(0, 0%, 100%, .25);">
+								</div>
+								<div class="mb-3 form-text-color">
+									<input type="email" class="form-control form-text-color" id="inputEmail1" placeholder="EMAIL" style="background-color: hsla(0, 0%, 100%, .25);">
+								</div>
+								<div class="mb-3 form-text-color">
+									<input type="text" class="form-control form-text-color" id="inputPhone1" placeholder="PHONE NUMBER" style="background-color: hsla(0, 0%, 100%, .25);">
+								</div>
+							</div>
+							<div class="field-group message-container">
+								<div class="mb-3 form-text-area-color">
+									<textarea type="text" class="form-control " id="inputMessage1" placeholder="MESSAGE" style="background-color: hsla(0, 0%, 100%, .25);" ></textarea>
+								</div>
+								<input type="submit" class="d-none d-lg-block ms-lg-auto formSubmit-Desktop" value="submit" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class=" ">
+
 		</div>
 	</section>
 </div>
