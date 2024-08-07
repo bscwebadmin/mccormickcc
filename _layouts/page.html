@@ -49,7 +49,7 @@
 		<div>
                     {% include header_2.html %}
                     {{ content }}
-			<div class="d-block d-lg-none ">
+			<div class=" {% if page.title == 'Contact Us' %} d-none {% else %}  d-block d-lg-none {% endif %}">
 					{% include form.html %}
 			</div>
 					{% include footer.html %}
