@@ -275,7 +275,12 @@ max-height: 25%;
 .font-size-5-rem{
     font-size: 5rem;
 }
-
+.font-size-2-rem{
+    font-size: 2rem;
+}
+.font-size-2-5rem{
+    font-size: 2rem;
+}
 /**/
 /*ABOUT PAGE*/
 /**/
@@ -313,4 +318,8 @@ max-height: 25%;
     .info-me-7 {
         margin-left: 7.25rem;
     }
+}
+.accordion-index-info{
+    --bs-accordion-active-bg: transparent;
+    color: #002e3b;
 }

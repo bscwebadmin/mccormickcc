@@ -58,8 +58,18 @@ about_section:
         <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="seal d-block img-fluid"/>
     </div>
 </section>
-<section class="d-none d-lg-block px-5 py-5 bg-success">
-    {% include contact_form.html %}
+<section class="d-none d-lg-block px-5 px-lg-3 py-5 bg-success">
+    <div class="d-flex flex-row justify-content-evenly">
+        <div class="d-flex col-4 col-xl-3 justify-content-lg-start justify-content-xl-end">
+            <h2 class="d-none d-xl-block text-white display-3 text-white text-uppercase col-11 mb-0 pt-lg-3 pt-xl-0">
+                contact us now for a consultation </h2>
+            <h2 class="d-none d-lg-block d-xl-none text-white display-4 text-white text-uppercase col-12 mb-0 pt-lg-3 pt-xl-0">
+                contact us now for a consultation </h2>
+        </div>
+        <div class="col-7">
+            {% include contact_form.html %}
+        </div>
+    </div>
 </section>
 <!--END DESKTOP-->
 
@@ -81,9 +91,12 @@ about_section:
             </div>
         </div>
         <div class=" d-flex justify-content-center py-4 bg-success">
-            <h2 class="text-white display-2 text-white text-uppercase col-8">
+            <div class="d-flex px-4 justify-content-md-center">
+                <h2 class="text-white display-3 text-white text-uppercase col-8 col-md-10">
                 contact us now for a consultation
-            </h2>
+                </h2>
+            </div>
+
         </div>
     </div>
 </section>
@@ -162,52 +175,139 @@ about_section:
 
 <!--MOBILE INFO NAV HERE-->
 
-<section class="container-fluid d-flex d-lg-flex justify-content-center py-5">
-    <div class="py-5">
-        <ul class="navbar-nav display-2">
-            <li class="nav-item">
-                <a class="nav-link index-info-color dropdown-center dropdown-toggle " href="#" id="mobile-legalDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">SOMETHING HERE</a>
-                <ul class="dropdown-menu border-0">
-                    <li><a class="dropdown-item text-uppercase index-info-color" data-target="#content1">SOMETHING HERE</a></li>
-                    <li><a class="dropdown-item text-uppercase index-info-color">SOMETHING HERE</a></li>
-                    <li><a class="dropdown-item text-uppercase index-info-color">SOMETHING HERE</a></li>
-                    <li><a class="dropdown-item text-uppercase index-info-color">SOMETHING HERE</a></li>
-                    <li><a class="dropdown-item text-uppercase index-info-color">SOMETHING HERE</a></li>
-                </ul>
-            </li>
+<!--<section class="d-flex d-lg-none justify-content-center align-items-center py-5">-->
+<!--    <div class="d-flex flex-column">-->
+<!--        <div class="d-flex dropdown justify-content-center">-->
+<!--            <button class="btn btn-link dropdown-toggle fs-1 link-underline link-underline-opacity-0 text-uppercase f-weight-500 text-success" role="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                Select a service-->
+<!--            </button>-->
+<!--            <div class="dropdown-menu border-0 py-0" aria-labelledby="dropdownMenuButton">-->
+<!--                <div class="accordion" id="accordionExample">-->
+<!--                    {% for item in page.service_section.services %}-->
+<!--                        <div class="accordion-item">-->
+<!--                            <h2 class="accordion-header" id="heading{{ forloop.index }}">-->
+<!--                                <button class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-parent="accordionExample" data-bs-target="#collapseExample{{ forloop.index }}" aria-expanded="false" aria-controls="collapseExample{{ forloop.index }}">-->
+<!--                                    <h3 class="text-uppercase fs-2">{{ item.text }}</h3>-->
+<!--                                </button>-->
+<!--                            </h2>-->
+<!--                        </div>-->
+<!--                    {% endfor %}-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="d-flex justify-content-center">-->
+<!--            <div class="d-flex col-10 py-3">-->
+<!--                {% for item in page.service_section.services %}-->
+<!--                <div id="collapseExample{{ forloop.index }}" class="accordion-collapse collapse " aria-labelledby="heading{{ forloop.index }}" data-bs-parent="dropdownMenuButton">-->
+<!--                    <div class="d-flex accordion-header fs-2">{{ item.text }} </div>-->
+<!--                    <div class="d-flex accordion-body fs-4" style="text-align: justify">-->
+<!--                        {{ item.description }}-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--<section class="d-flex d-lg-none justify-content-center align-items-center py-5">-->
+<!--    <div class="d-flex flex-column">-->
+<!--        <div class="d-flex dropdown justify-content-center">-->
+<!--            <button class="btn btn-link dropdown-toggle fs-1 link-underline link-underline-opacity-0 text-uppercase f-weight-500 text-success" role="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                Select a service-->
+<!--            </button>-->
+<!--            <div class="dropdown-menu border-0 py-0" aria-labelledby="dropdownMenuButton">-->
+<!--                <div class="accordion" id="accordionExample">-->
+<!--                    {% for item in page.service_section.services %}-->
+<!--                        <div class="accordion-item">-->
+<!--                            <h2 class="accordion-header" id="heading{{ forloop.index }}">-->
+<!--                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample{{ forloop.index }}" aria-expanded="false" aria-controls="collapseExample{{ forloop.index }}">-->
+<!--                                    <h3 class="text-uppercase fs-2">{{ item.text }}</h3>-->
+<!--                                </button>-->
+<!--                            </h2>-->
+<!--                            <div id="collapseExample{{ forloop.index }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#accordionExample">-->
+<!--                                <div class="accordion-body fs-4" style="text-align: justify;">-->
+<!--                                    {{ item.description }}-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    {% endfor %}-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
-        </ul>
+<section class="d-flex d-lg-none justify-content-center align-items-center py-5">
+    <div class="d-flex flex-column">
+        <div class="d-flex dropdown-center justify-content-center">
+            <button class="btn btn-link dropdown-toggle link-underline-info text-uppercase f-weight-500 text-success font-size-2-rem" type="button" role="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Select a service
+            </button>
+            <div class="dropdown-menu border-0 py-0" aria-labelledby="dropdownMenuButton">
+                <div class="accordion accordion-index-info" id="accordionExample">
+                    {% for item in page.service_section.services %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading{{ forloop.index }}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample{{ forloop.index }}" aria-expanded="false" aria-controls="collapseExample{{ forloop.index }}">
+                                    <h3 class="text-uppercase font-size-2-rem">{{ item.text }}</h3>
+                                </button>
+                            </h2>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="d-flex col-10 py-3">
+                {% for item in page.service_section.services %}
+                <div id="collapseExample{{ forloop.index }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.index }}">
+                    <h3 class="d-flex font-size-2-rem f-weight-500 pb-4 text-uppercase">{{ item.text }} </h3>
+                    <div class="d-flex accordion-body font-size-2-rem  f-weight-500" style="text-align: justify">
+                        {{ item.description }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-    <div>
-        <div id="content1" class="content-item" style="display:none;">Content for first dropdown item</div>
-
-    </div>
-
-
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const accordionItems = document.querySelectorAll('.accordion-button');
+    const dropdownButton = document.getElementById('dropdownMenuButton');
+
+    accordionItems.forEach(item => {
+        item.addEventListener('click', function () {
+            const targetId = this.getAttribute('data-bs-target');
+            const targetCollapse = document.querySelector(targetId);
+            const serviceTitle = this.querySelector('h3').innerHTML;
+
+            // Close all other open accordion items
+            document.querySelectorAll('.accordion-collapse').forEach(collapse => {
+                if (collapse !== targetCollapse) {
+                    collapse.classList.remove('show');
+                }
+            });
+
+            // Toggle the clicked item
+            targetCollapse.classList.toggle('show');
+
+            // Update the dropdown title
+            dropdownButton.innerHTML = serviceTitle;
+        });
+    });
+});
+</script>
+
+
+
+
 
 
 
 <!--MOBILE INFO NAV END-->
 
-<!--<section class="">-->
-<!--    <section class="d-flex flex-row justify-content-between serviceMenu  mx-auto maxWidth">-->
-<!--        <div class="border-0 serviceMenu__ServiceTitles d-block mt-0 serviceMenu__ServiceTitles&#45;&#45;Desktop" id="v-pills-tab" role="tablist" aria-orientation="vertical">-->
-<!--           {% for list in page.service_section.services %}-->
-<!--            <h3 class="mt-0 serviceMenu__ServiceTitle serviceMenu__ServiceTitle&#45;&#45;Mobile service-item {% if forloop.first %}active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" type="button" role="tab" aria-controls="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" aria-selected="true>-->
-<!--              <a style="font-size: unset;padding: 0; border: 0";>{{ list.text }} </a>-->
-<!--            </h3>-->
-<!--            {% endfor %}-->
-<!--        </div>-->
-<!--        <div class="serviceMenu__ServiceText tab-content" id="v-pills-tabContent">-->
-<!--           {% for list in page.service_section.services %}-->
-<!--           <div class="tab-pane fade  {% if forloop.first %}show active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" role="tabpanel" aria-labelledby="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab">-->
-<!--            <p>{{ list.description }}</p>-->
-<!--            <a href="{{list.url}}">Learn more</a>-->
-<!--           </div>-->
-<!--           {% endfor %}-->
-<!--        </div>-->
-<!--    </section>-->
 
 <!--NICK'S FORM AREA-->
 
@@ -287,20 +387,29 @@ about_section:
 
 <div class="d-block d-lg-none">
     <div class="">
-        <div class="row row-cols-1 justify-content-center " style="background: linear-gradient(180deg, rgba(116,22,37,.9), rgba(58,11,19,.9));">
-            <div class="d-flex col-8 border-0 py-3">
-                <img src="/assets/images/about_sm.jpg?_cchid=23ecf755b0243d1bb7a93a2eb5b67d9d" alt="SHANE MCCORMICK" class="img-fluid rounded-circle">
+        <div class="d-flex flex-column justify-content-center " style="background: linear-gradient(180deg, rgba(116,22,37,.9), rgba(58,11,19,.9));">
+            <div class="d-flex col-12 justify-content-center">
+                <div class="d-flex col-8 col-md-2 col-lg-8 border-0 py-3">
+                    <img src="/assets/images/about_sm.jpg?_cchid=23ecf755b0243d1bb7a93a2eb5b67d9d" alt="SHANE MCCORMICK" class="img-fluid rounded-circle">
+                </div>
             </div>
-            <div class="col-12 d-flex justify-content-center text-white display-2 py-3"> SHANE MCCORMICK
-            </div>
-            <div class="col-12 px-5 d-flex justify-content-center display-5 text-white">
-                <p class="editable ">
-                    Shane McCormick has over 20 years of legal experience fighting for diverse clients. As a veteran, he knows the importance of persistence and determination. He brings all these valuable skills to the courtroom to ensure the best possible outcome for every client, every time. A local attorney who knows the system, he has been providing outstanding legal services to Acadiana and the surrounding area since 2002.
-                </p>
-            </div>
-            <div class="col-12 d-flex justify-content-start px-5 py-3">
-                <div class="col-7 pb-3" >
-                    <a href="/about" class="d-flex btn btn-primary btn-lg rounded-0 learn-more-white-btn fs-2 fw-semibold justify-content-center py-3" role="button">LEARN MORE</a>
+            <div class="d-flex flex-column px-4">
+                <div class="d-flex justify-content-start col-12 px-2 ">
+                    <div class="col-12 col-md-9 d-flex justify-content-start justify-content-md-center text-white display-2 py-3"> SHANE MCCORMICK</div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="col-12 col-md-10  px-md-0 d-flex justify-content-center text-white px-2">
+                        <p class="editable font-size-2-rem" style="text-align: justify">
+                            Shane McCormick has over 20 years of legal experience fighting for diverse clients. As a veteran, he knows the importance of persistence and determination. He brings all these valuable skills to the courtroom to ensure the best possible outcome for every client, every time. A local attorney who knows the system, he has been providing outstanding legal services to Acadiana and the surrounding area since 2002.
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex col-6 px-md-0 col-md-12 mx-md-4 py-0">
+                    <div class="col-12 d-flex justify-content-start px-2 px-md-3 py-3">
+                        <div class="col-12 pb-3 col-md-4 col-lg-7 px-md-5" >
+                            <a href="/about" class="d-flex btn btn-primary btn-lg rounded-0 learn-more-white-btn fs-3 fw-semibold justify-content-center py-3" role="button">LEARN MORE</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -308,8 +417,8 @@ about_section:
 </div>
 
 <section class="d-flex d-lg-none justify-content-center">
-    <div class="col-12 col-sm-10 px-5 py-5">
-        <h5 class="formSection__Heading editable col-12">REQUEST A CONSULTATION</h5>
+    <div class="col-12 col-sm-10 py-5">
+        <h5 class="formSection__Heading editable col-12 px-5 mx-2">REQUEST A CONSULTATION</h5>
         {% include form.html %}
     </div>
 </section>
