@@ -68,10 +68,10 @@
 
     <div class="container-fluid">
         <div class="d-none d-lg-block">
-            <div class="row justify-content-evenly px-5 me-0">
+            <div class="d-flex flex-row justify-content-evenly px-5 me-0">
                 {% if general_data.footer_logo_url %}
                 <div class="col-4 d-flex justify-content-center">
-                    <div class="col-12  col-xl-9">
+                    <div class="col-12  col-xl-7">
                         <img class="img-fluid" src="{{ general_data.footer_logo_url }}" alt="{{ general_data.site_title }}"/>
                     </div>
                 </div>
@@ -79,9 +79,9 @@
                 {% if general_data.address %}
                 {{ general_data.address.address }}
                 {% endif %}
-                <div class="col-4 d-flex justify-content-center">
-                    <div class="d-flex justify-content-center ">
-                        <h6 class=" text-primary col-10 col-lg-12 col-xl-8 fs-1">
+                <div class="col- d-flex justify-content-center">
+                    <div class="d-flex justify-content-center col-9 ">
+                        <h6 class=" text-primary col-10 col-lg-12 col-xl-11 fs-1">
                             VETERAN OWNED 20 YEARS EXPERIENCE
                         </h6>
                     </div>
