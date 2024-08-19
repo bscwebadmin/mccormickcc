@@ -329,3 +329,6 @@ max-height: 25%;
     -webkit-columns: 2;
     -moz-columns: 2;
 }
+.index-tabs-no-bold {
+    font-weight: normal !important;
+}

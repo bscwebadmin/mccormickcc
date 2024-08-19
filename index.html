@@ -51,9 +51,10 @@ about_section:
 <!-- START DESKTOP-->
 
 <section
-        class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner d-none d-lg-flex overflow-y-hidden"
+        class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner d-none d-lg-flex overflow-y-hidden px-0"
         style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover;"
         xmlns="http://www.w3.org/1999/html">
+    {% include header.html %}
     <div class="seal-container d-flex mb-5">
         <div class="d-flex mb-5">
             <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="seal d-block img-fluid"/>
@@ -81,8 +82,8 @@ about_section:
          style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover; ">
     <div class="row py-0 ">
         <div class="container-fluid px-0 py-0">
-            <div class="d-flex col-12 py-5 ">
-                <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="img-fluid"/>
+            <div class="d-flex col-12 ">
+                <img src="{{page.hero_section.mobile_home_logo_url}}" alt="logo" class="img-fluid "/>
             </div>
         </div>
         <div class="d-flex justify-content-center py-4 phoneNum-bg">
