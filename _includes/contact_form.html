@@ -52,8 +52,8 @@
 <!--    </form>-->
 <!--</div>-->
 
-<div class="d-block">
-			<section class="">
+<div class="d-flex justify-content-center col-xl-9">
+			<section class="d-flex">
 				<div class="d-flex flex-column ">
 					<div class="d-flex d-md-flex flex-column justify-content-center contact-form px-md-5 px-lg-4 px-xl-0 col-12">
 						{% if page.contact_form_title %}
@@ -65,26 +65,26 @@
 						{% endif %}
 						<div class="col-xl-12 col-12 d-flex justify-content-xl-around ">
 							<form action="https://formspree.io/f/mkndnqlr" method="POST"
-								  class="d-flex flex-column flex-lg-row align-content-center justify-content-md-start cfForm col-lg-12 col-xl-11 pt-5 col-12 justify-content-lg-between">
-								<div class="d-flex justify-content-md-center col-lg-6">
-									<div class="col-11 col-lg-12 pe-lg-3 ps-xl-5">
-										<div class="mb-3 form-text-color col-12">
-											<input type="email" class="form-control form-text-color" id="inputName" placeholder="NAME" style="background-color: hsla(0, 0%, 100%, .25);">
+								  class="d-flex flex-column flex-lg-row align-content-center justify-content-md-start cfForm col-lg-12 col-xl-12 pt-5 col-12 justify-content-lg-between">
+								<div class="d-flex justify-content-md-center col-lg-6 col-xl-8">
+									<div class="d-flex flex-column col-11 col-lg-12 pe-lg-3 pe-xl-0 ps-xl-0">
+										<div class="d-flex mb-3 form-text-color col-12">
+											<input type="email" class="form-control form-text-color p-3 fs-4 required" id="inputName" placeholder="NAME" style="background-color: hsla(0, 0%, 100%, .25);">
 										</div>
-										<div class="mb-3 form-text-color col-12">
-											<input type="email" class="form-control form-text-color" id="inputEmail1" placeholder="EMAIL" style="background-color: hsla(0, 0%, 100%, .25);">
+										<div class="d-flex mb-3 form-text-color col-12">
+											<input type="email" class="form-control form-text-color p-3 fs-4 required" id="inputEmail1" placeholder="EMAIL" style="background-color: hsla(0, 0%, 100%, .25);">
 										</div>
-										<div class="mb-3 form-text-color col-12">
-											<input type="text" class="form-control form-text-color" id="inputPhone1" placeholder="PHONE NUMBER" style="background-color: hsla(0, 0%, 100%, .25);">
+										<div class="d-flex mb-3 form-text-color col-12">
+											<input type="text" class="form-control form-text-color p-3 fs-4 required" id="inputPhone1" placeholder="PHONE NUMBER" style="background-color: hsla(0, 0%, 100%, .25);">
 										</div>
 									</div>
 								</div>
-								<div class="d-flex justify-content-md-center col-lg-6">
-									<div class="col-11 col-lg-12 ps-lg-3 pe-xl-5">
+								<div class="d-flex justify-content-md-center col-lg-6 col-xl-8">
+									<div class="col-11 col-lg-12  ps-lg-3 pe-xl-0 p">
 										<div class="mb-4 form-text-area-color">
-											<textarea type="text" class="form-control " id="inputMessage1" placeholder="MESSAGE" style="background-color: hsla(0, 0%, 100%, .25);" ></textarea>
+											<textarea type="text" class="p-0 fs-4 p-3 pb-xl-5" id="inputMessage1" placeholder="MESSAGE" style="background-color: hsla(0, 0%, 100%, .25);" ></textarea>
 										</div>
-										<input type="submit" class="d-block d-lg-block ms-lg-auto formSubmit-Desktop" value="submit" />
+										<input type="submit" class="d-block d-lg-flex ms-lg-auto text-uppercase px-4 py-3 fs-4" value="submit" />
 									</div>
 								</div>
 							</form>

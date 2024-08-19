@@ -51,11 +51,13 @@ about_section:
 <!-- START DESKTOP-->
 
 <section
-        class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner d-none d-lg-block overflow-y-hidden"
+        class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner d-none d-lg-flex overflow-y-hidden"
         style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover;"
         xmlns="http://www.w3.org/1999/html">
-    <div class="seal-container">
-        <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="seal d-block img-fluid"/>
+    <div class="seal-container d-flex mb-5">
+        <div class="d-flex mb-5">
+            <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="seal d-block img-fluid"/>
+        </div>
     </div>
 </section>
 <section class="d-none d-lg-block px-5 px-lg-3 py-5 bg-success">

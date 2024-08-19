@@ -323,3 +323,9 @@ max-height: 25%;
     --bs-accordion-active-bg: transparent;
     color: #002e3b;
 }
+.allServices__Service__Text ul {
+    display: block;
+    column-count: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
