@@ -52,37 +52,40 @@
             </div>
         </div>
     </nav>
-    <div class="d-flex h-25">
-            <ul class="d-flex flex-row navbar-nav h-25 fs-2 px-lg-3 px-xl-0 ">
+    <div class="d-flex pe-5 align-self-xl-center">
+            <ul class="d-flex flex-row navbar-nav h-25 fs-2 px-lg-3 px-xl-0 me-xl-4 ">
                 <li class="nav-item mx-xl-4 mx-3 ">
-                    <a class="nav-link menu-link text-white active index-tabs-no-bold" aria-current="page" href="/">Home</a>
+                    <a class="nav-link menu-link text-white active index-tabs-no-bold fs-4" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item dropdown mx-xl-4 mx-3 d-flex">
-                    <a class="nav-link text-white" href="/legal-services">LEGAL SERVICES</a>
-                    <a class="nav-link text-white dropdown-toggle dropdown-center" href="#" id="legalDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                    <ul class="dropdown-menu dropdown-menu-end fs-3 border-0 px-3 py-3 bg-transparent index-tabs-no-bold">
-                        <li><a class="dropdown-item text-uppercase text-white hover-item f-weight-500 " href="/criminal-law">criminal law</a></li>
-                        <li><a class="dropdown-item text-uppercase text-white hover-item f-weight-500 " href="/personal-injury">personal injury</a></li>
-                        <li><a class="dropdown-item text-uppercase text-white hover-item f-weight-500 " href="/dwi-owi">dwi/owi</a></li>
-                        <li><a class="dropdown-item text-uppercase text-white hover-item f-weight-500 " href="/estate-planning">estate planning</a></li>
-                        <li><a class="dropdown-item text-uppercase text-white hover-item f-weight-500 " href="/family-law">family law</a></li>
-                        <li><a class="dropdown-item text-uppercase text-white hover-item f-weight-500 " href="/additional-services">additional services</a></li>
+                    <a class="nav-link text-white fs-4" href="/legal-services">LEGAL SERVICES</a>
+                    <a class="nav-link text-white dropdown-toggle dropdown-center fs-5 px-2" href="#" id="legalDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                    <ul class="dropdown-menu dropdown-menu-end fs-3 border-0 px-3 py-0 bg-transparent index-tabs-no-bold">
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/criminal-law">criminal law</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/personal-injury">personal injury</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/dwi-owi">dwi/owi</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/estate-planning">estate planning</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/family-law">family law</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/additional-services">additional services</a></li>
                     </ul>
                 </li>
                 <li class="nav-item mx-xl-4 mx-3">
-                    <a class="nav-link text-white" href="/about">ABOUT</a>
+                    <a class="nav-link text-white f-weight-500 fs-4" href="/about">ABOUT</a>
                 </li>
                 <li class="nav-item mx-xl-4 mx-3">
-                    <a class="nav-link text-white" href="/contact">CONTACT</a>
+                    <a class="nav-link text-white f-weight-500 fs-4" href="/contact">CONTACT</a>
                 </li>
             </ul>
     </div>
 </section>
+
+<!--MOBILE INDEX NAV STARTS HERE-->
+
 <div class="d-block d-lg-none bg-secondary">
     <nav class="navbar navbar-expand-lg bg-secondary z-3 py-4">
         {% assign general_data = site.data.general_settings %}
         <div class="container-fluid justify-content-end px-3">
-            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavHamburgerContent" aria-controls="homeNavHamburgerContent" aria-expanded="false" aria-label="Toggle nav" style="color: transparent; border-color: transparent;">
+            <button class="navbar-toggler bg-secondary" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavHamburgerContent" aria-controls="homeNavHamburgerContent" aria-expanded="false" aria-label="Toggle nav" style="color: transparent; border-color: transparent;">
                 <span class="fa-stack d-md-none">
                     <i class="fa fa-circle fa-stack-1x icon-under fa-3x"></i>
                     <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over"></i>
@@ -94,44 +97,43 @@
             </button>
         </div>
     </nav>
-
-    <div class="logo col-12 d-flex justify-content-center pb-4">
-        <div class="col-10 col-md-5  d-flex">
-            <a href="/">
-                <img alt="logo" class="img-fluid " src="/assets/images/white_logo.png?_cchid=b90a170187e3c754830a1ce083cb9b17">
-            </a>
+    <div>
+        <div class="collapse navbar-collapse" id="homeNavHamburgerContent" data-bs-theme="red">
+            <div class="p-2 ">
+                <ul class="navbar-nav text-white fs-2 grid gap-0 ">
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/legal-services">Legal Services</a>
+                    </li>
+                    <li class="nav-item g-col-12 fs-4 px-4">
+                        <a class="nav-link" href="/criminal-law">Criminal Law</a>
+                        <a class="nav-link" href="/personal-injury">Personal Injury</a>
+                        <a class="nav-link" href="/dwi-owi">DWI/OWI</a>
+                        <a class="nav-link" href="/estate-planning">Estate Planning</a>
+                        <a class="nav-link" href="/family-law">Family Law</a>
+                        <a class="nav-link" href="/additional-services">Additional Services</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center pb-4" id="logo">
+            <div class="col-10 col-md-5  d-flex position-relative z">
+                <a href="/">
+                    <img alt="logo" class="img-fluid " src="/assets/images/white_logo.png?_cchid=b90a170187e3c754830a1ce083cb9b17">
+                </a>
+            </div>
         </div>
     </div>
 
-    <div class="collapse navbar-collapse" id="homeNavHamburgerContent" data-bs-theme="red">
-        <div class="p-2 ">
-            <ul class="navbar-nav text-white fs-2 grid gap-0 ">
-                <li class="nav-item g-col-12">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item g-col-12">
-                    <a class="nav-link" href="/legal-services">Legal Services</a>
-                </li>
-                <li class="nav-item g-col-12 fs-4 px-4">
-                    <a class="nav-link" href="/criminal-law">Criminal Law</a>
-                    <a class="nav-link" href="/personal-injury">Personal Injury</a>
-                    <a class="nav-link" href="/dwi-owi">DWI/OWI</a>
-                    <a class="nav-link" href="/estate-planning">Estate Planning</a>
-                    <a class="nav-link" href="/family-law">Family Law</a>
-                    <a class="nav-link" href="/additional-services">Additional Services</a>
-                </li>
-                <li class="nav-item g-col-12">
-                    <a class="nav-link" href="/about">About</a>
-                </li>
-                <li class="nav-item g-col-12">
-                    <a class="nav-link" href="/contact">Contact</a>
-                </li>
-
-            </ul>
-        </div>
-    </div>
 </div>
-
 
 <!--<nav class="navbar navbar-expand-lg bg-primary">-->
 <!-- <div>-->

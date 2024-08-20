@@ -82,8 +82,8 @@ about_section:
          style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover; ">
     <div class="row py-0 ">
         <div class="container-fluid px-0 py-0">
-            <div class="d-flex col-12 ">
-                <img src="{{page.hero_section.mobile_home_logo_url}}" alt="logo" class="img-fluid "/>
+            <div class="d-flex col-12 justify-content-center super-padding-top pt-md-1">
+                <img src="{{page.hero_section.mobile_home_logo_url}}" alt="logo" class="img-fluid w-100"/>
             </div>
         </div>
         <div class="d-flex justify-content-center py-4 phoneNum-bg">
@@ -95,7 +95,10 @@ about_section:
         </div>
         <div class=" d-flex justify-content-center py-4 bg-success">
             <div class="d-flex px-5 justify-content-md-center">
-                <h2 class="text-white display-3 text-white text-uppercase col-8 col-md-10 px-1 px-sm-0">
+                <h2 class="d-flex d-md-none text-white display-2 text-white text-uppercase col-8 col-md-10 px-1 px-sm-0">
+                contact us now for a consultation
+                </h2>
+                <h2 class="d-none d-md-flex d-lg-none text-white display-5 text-white text-uppercase col-8 col-md-10 px-1 px-sm-0">
                 contact us now for a consultation
                 </h2>
             </div>
@@ -113,59 +116,59 @@ about_section:
             <nav class="navbar display-6 px-5 justify-content-center">
                 <ul class="navbar-nav flex-column justify-content-center" id="serviceTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link index-info-color" id="personal-injury-tab" data-bs-toggle="tab" data-bs-target="#personal-injury-content" role="tab" aria-controls="personal-injury-content" aria-selected="true">personal injury</a>
+                        <a class="nav-link index-info-color fs-2 active" id="personal-injury-tab" data-bs-toggle="tab" data-bs-target="#personal-injury-content" role="tab" aria-controls="personal-injury-content" aria-selected="true">personal injury</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link index-info-color" id="criminal-law-tab" data-bs-toggle="tab" data-bs-target="#criminal-law-content" role="tab" aria-controls="criminal-law-content" aria-selected="false">criminal law</a>
+                        <a class="nav-link index-info-color fs-2" id="criminal-law-tab" data-bs-toggle="tab" data-bs-target="#criminal-law-content" role="tab" aria-controls="criminal-law-content" aria-selected="false">criminal law</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link index-info-color" id="family-law-tab" data-bs-toggle="tab" data-bs-target="#family-law-content" role="tab" aria-controls="family-law-content" aria-selected="false">family law</a>
+                        <a class="nav-link index-info-color fs-2" id="family-law-tab" data-bs-toggle="tab" data-bs-target="#family-law-content" role="tab" aria-controls="family-law-content" aria-selected="false">family law</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link index-info-color" id="dwi-owi-tab" data-bs-toggle="tab" data-bs-target="#dwi-owi-content" role="tab" aria-controls="dwi-owi-content" aria-selected="false">dwi/owi</a>
+                        <a class="nav-link index-info-color fs-2" id="dwi-owi-tab" data-bs-toggle="tab" data-bs-target="#dwi-owi-content" role="tab" aria-controls="dwi-owi-content" aria-selected="false">dwi/owi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link index-info-color" id="estate-tab" data-bs-toggle="tab" data-bs-target="#estate-content" role="tab" aria-controls="estate-content" aria-selected="false">estate planning</a>
+                        <a class="nav-link index-info-color fs-2" id="estate-tab" data-bs-toggle="tab" data-bs-target="#estate-content" role="tab" aria-controls="estate-content" aria-selected="false">estate planning</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link index-info-color" id="additional-services-tab" data-bs-toggle="tab" data-bs-target="#additional-services-content" role="tab" aria-controls="additional-services-content" aria-selected="false">additional services</a>
+                        <a class="nav-link index-info-color fs-2" id="additional-services-tab" data-bs-toggle="tab" data-bs-target="#additional-services-content" role="tab" aria-controls="additional-services-content" aria-selected="false">additional services</a>
                     </li>
                 </ul>
             </nav>
         </div>
         <div class="tab-content col-6 d-flex align-items-center" id="serviceTabContent">
-            <div class="tab-pane fade fs-2" id="personal-injury-content" role="tabpanel" aria-labelledby="personal-injury-tab">
-                <p class="editable">
+            <div class="tab-pane fade show active fs-2 " id="personal-injury-content" role="tabpanel" aria-labelledby="personal-injury-tab">
+                <p class="editable fs-4" style="text-align: justify">
                 If you were injured through no fault of your own and need help navigating through the legal system contact us immediately. When dealing with these difficult, fragile matters, you will need an attorney with not only experience, but with compassion. Someone who will take a personal interest in your case and have your best interest in mind.
                 </p>
                 <a href="/personal-injury" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
             </div>
             <div class="tab-pane fade fs-2" id="criminal-law-content" role="tabpanel" aria-labelledby="criminal-law-tab">
-                <p class="editable">
+                <p class="editable fs-4" style="text-align: justify">
                 Our firm offers criminal defense services to those charged with having committed a crime. We take representation of a client very seriously as we understand the emotional toll placed on a person and their family when someone has been accused and/or charged with committing a crime. Our firm works tirelessly from the moment we are contacted by a client or their family, be it the day they are arrested or the week before trial.
                 </p>
                 <a href="/criminal-law" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
             </div>
              <div class="tab-pane fade fs-2" id="family-law-content" role="tabpanel" aria-labelledby="family-law-tab">
-                 <p class="editable">
+                 <p class="editable fs-4" style="text-align: justify">
                  We realize that extended litigation should be a last alternative in resolving a domestic or family dispute. We work to achieve our clients goals with the least emotional and financial expense.
                  </p>
                  <a href="/family-law" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
             </div>
             <div class="tab-pane fade fs-2" id="dwi-owi-content" role="tabpanel" aria-labelledby="dwi-owi-tab">
-                <p class="editable">
+                <p class="editable fs-4" style="text-align: justify">
                 If you have been arrested for driving under the influence of alcohol or drugs, it is imperative that you contact my office immediately. DUI cases can develop relatively quick, and the more time that I have to gather the facts, the better the case I can build to defend you.
                 </p>
                 <a href="/dwi-owi" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
             </div>
             <div class="tab-pane fade fs-2" id="estate-content" role="tabpanel" aria-labelledby="estate-tab">
-                <p class="editable">
+                <p class="editable fs-4" style="text-align: justify">
                 Call today to set up an appointment so that I can help you plan for your future so that your wishes can be carried out.
                 </p>
                 <a href="/estate-planning" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
             </div>
             <div class="tab-pane fade fs-2" id="additional-services-content" role="tabpanel" aria-labelledby="additional-services-tab">
-                <p class="editable">
+                <p class="editable fs-4" style="text-align: justify">
                 We pride ourselves on being a full service law firm and strive to fulfill our clients needs. Should you have a problem and/or dispute not specifically delineated above, please feel free to contact my office for a consultation.
                 </p>
                 <a href="/additional-services" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
@@ -330,7 +333,7 @@ about_section:
         <div class="col-7 px-5 py-5 position-relative mt-n5" style="background: linear-gradient(180deg, rgba(116,22,37,.9), rgba(58,11,19,.9)); margin-left: -30%;">
             <div class="px-5 py-5">
                 <div class="d-flex col-3 border-0 py-3">
-                    <img src="/assets/images/about_sm.jpg?_cchid=23ecf755b0243d1bb7a93a2eb5b67d9d" alt="SHANE MCCORMICK" class="img-fluid rounded-circle">
+                    <img src="/assets/images/about_sm.jpg?_cchid=23ecf755b0243d1bb7a93a2eb5b67d9d" alt="SHANE MCCORMICK" class="object-fit-cover rounded-circle" style="width: 138px; height: 138px;">
                 </div>
                 <div class="display-5 text-white col-lg-10 col-xl-10"> SHANE MCCORMICK
                     <p class="fs-3 py-3 col-11 editable">
@@ -348,13 +351,14 @@ about_section:
     <div class="">
         <div class="d-flex flex-column justify-content-center " style="background: linear-gradient(180deg, rgba(116,22,37,.9), rgba(58,11,19,.9));">
             <div class="d-flex col-12 justify-content-center">
-                <div class="d-flex col-8 col-md-2 col-lg-8 border-0 py-3">
-                    <img src="/assets/images/about_sm.jpg?_cchid=23ecf755b0243d1bb7a93a2eb5b67d9d" alt="SHANE MCCORMICK" class="img-fluid rounded-circle">
+                <div class= "border-0 py-3">
+                    <img src="/assets/images/about_sm.jpg?_cchid=23ecf755b0243d1bb7a93a2eb5b67d9d" alt="SHANE MCCORMICK" class="object-fit-cover rounded-circle" style="width: 133px; height: 133px;">
                 </div>
             </div>
             <div class="d-flex flex-column px-4">
                 <div class="d-flex justify-content-center col-12 px- px-md-0">
-                    <div class="col-11 col-md-9 d-flex justify-content-start justify-content-md-center text-white display-2 py-3 mx-md-4 px-0"> SHANE MCCORMICK</div>
+                    <h4 class="col-11 col-md-10 d-lg-flex d-none justify-content-start justify-content-md-start text-white display-5 py-3 mx-md-3 px-0 px-md-3 f-weight-500"> SHANE MCCORMICK</h4>
+                    <h4 class="col-11 col-md-10 d-flex d-lg-none justify-content-start justify-content-md-start text-white display-4 py-3 mx-md-3 px-0 px-md-3 f-weight-500"> SHANE MCCORMICK</h4>
                 </div>
                 <div class="d-flex justify-content-center px-1">
                     <div class="col-12 col-md-10  px-md-3 d-flex justify-content-center text-white px-3">

@@ -45,7 +45,7 @@ one_column_section: >-
 		</div>
 		<div class=" col-6 d-flex justify-content-around py-5 px-5" style="background: linear-gradient(180deg, #741625, #3a0b13); ">
 			{% if page.about_section.title %}
-			<div class=" d-flex flex-column col-xl-7 col-10 justify-content-center">
+			<div class=" d-flex flex-column col-xl-10 col-10 justify-content-center py-5">
 				 <h1 class="font-size-5-rem pt-5 pb-3 px-5 px-lg-4 py-lg-0 my-0 editable">{{ page.about_section.title }}</h1>
 				{% endif %}
 				{% if page.about_section.description %}
@@ -123,29 +123,35 @@ one_column_section: >-
 					<h5 class="text-success text-uppercase display-3 f-weight-500 d-block d-lg-none">request a consultation</h5>
 					<h5 class="text-success text-uppercase fs-3 f-weight-500 d-none d-lg-block">request a consultation</h5>
 				</div>
-				<div class="d-flex justify-content-center">
-					<h5 class=" text-success text-uppercase display-3 f-weight-500 d-block d-lg-none">+</h5>
-					<h5 class=" text-success text-uppercase fs-3 f-weight-500 d-none d-lg-block">+</h5>
-				</div>
 			</section>
 			<section class=" ">
 				<form action="https://formspree.io/f/mkndnqlr" method="POST"
 					  class="d-flex align-content-center justify-content-md-start form-container new-form cfForm col-lg-12 col-xl-10 px-5 px-xl-0 pe-xl-5">
+					<script src="https://www.google.com/recaptcha/api.js?=render=6LdnuyEqAAAAAOYHIAj7ieHcFABlBdFKZIRxCHQo"></script>
+					<script>
+						grecaptcha.ready(function() {
+							grecaptcha.execute('6LdnuyEqAAAAAOYHIAj7ieHcFABlBdFKZIRxCHQo', {action: 'submit'}).then(function (token) {
+								console.info("got token: " + token);
+								document.getElementById('g-recaptcha-response').value = token;
+							});
+						});
+					</script>
 					<div class="field-group inputs-container">
 						<div class="mb-3 ">
-							<input type="email" class="form-control" id="inputName" placeholder="NAME" style="background-color: #eef2f3;;">
+							<input type="text" class="form-control" id="inputName" placeholder="NAME" style="background-color: #eef2f3;;" required>
 						</div>
 						<div class="mb-3 ">
-							<input type="email" class="form-control" id="inputEmail1" placeholder="EMAIL" style="background-color: #eef2f3;;">
+							<input type="email" class="form-control" id="inputEmail1" placeholder="EMAIL" style="background-color: #eef2f3;;" required>
 						</div>
 						<div class="mb-3 ">
-							<input type="text" class="form-control" id="inputPhone1" placeholder="PHONE NUMBER" style="background-color: #eef2f3;;">
+							<input type="text" class="form-control" id="inputPhone1" placeholder="PHONE NUMBER" style="background-color: #eef2f3;;" required>
 						</div>
 					</div>
 					<div class="field-group message-container pe-xl-5">
 						<div class="mb-3 ">
-							<textarea type="text" class="form-control " id="inputMessage1" placeholder="MESSAGE" style="background-color: #eef2f3;;" ></textarea>
+							<textarea type="text" class="form-control " id="inputMessage1" placeholder="MESSAGE" style="background-color: #eef2f3;;" required></textarea>
 						</div>
+						<input class="g-recaptcha-response" name="g-recaptcha-response" type="hidden">
 						<input type="submit" class="d-none d-lg-block ms-lg-auto text-uppercase fs-3 py-3 px-4 text-white bg-success" value="submit" />
 					</div>
 				</form>
@@ -173,19 +179,19 @@ one_column_section: >-
 <!--Mobile Version here-->
 
 <section class="d-block d-lg-none sliceZone d-flex row px-0 mx-0 justify-content-center">
-	<div class="about-mobile-img mt-5 mb-3 d-lg-none">
-		{% for item in page.gallery %}
-		{% unless forloop.first %}
-		{% break %}
-		{% endunless %}
-		<img src="{{ item.image_url }}" class="{% if forloop.first %} d-flex d-lg-none rounded-circle about-mobile-cover {% else %} {% endif %}" >
-		{% endfor %}
+	<div class=" ">
+<!--		{% for item in page.gallery %}-->
+<!--		{% unless forloop.first %}-->
+<!--		{% break %}-->
+<!--		{% endunless %}-->
+<!--		<img src="{{ item.image_url }}" class="{% if forloop.first %} d-flex d-lg-none rounded-circle about-mobile-cover {% else %} {% endif %}" >-->
+<!--		{% endfor %}-->
 	</div>
 	<section class="aboutSection pt-0 px-0 mx-0">
 		<div class="d-flex justify-content-center ">
-			<div class="col-10 ">
+			<div class="col-10 pt-5">
 				{% for item in page.description %}
-				 <p class="py-3 "> {{ item.section }} </p>
+				 <p class="py-3 " style="text-align: justify;"> {{ item.section }} </p>
 				{% endfor %}
 			</div>
 			<section class="formSection">
@@ -205,7 +211,7 @@ one_column_section: >-
 	</section>
 	<section class="justText order-1">
 		{% if page.one_column_section %}
-		<p>
+		<p style="text-align: justify;">
 		  {{ page.one_column_section }}
 		</p>
 		{% endif %}
@@ -214,11 +220,6 @@ one_column_section: >-
 		<div class="col-10 d-flex justify-content-center justify-content-lg-start text-start px-5 mx-2 pt-5">
 			<h5 class="text-success text-uppercase display-3 f-weight-500 d-block d-lg-none">request a consultation</h5>
 			<h5 class="text-success text-uppercase fs-3 f-weight-500 d-none d-lg-block">request a consultation</h5>
-		</div>
-		<div class="d-flex justify-content-center">
-			<h5 class=" text-success text-uppercase display-3 f-weight-500 d-block d-lg-none">+</h5>
-			<h5 class=" text-success text-uppercase fs-3 f-weight-500 d-none d-lg-block">+</h5>
-
 		</div>
 	</section>
 </section>

@@ -332,3 +332,7 @@ max-height: 25%;
 .index-tabs-no-bold {
     font-weight: normal !important;
 }
+.super-padding-top {
+    padding-top: 185px;
+
+}
