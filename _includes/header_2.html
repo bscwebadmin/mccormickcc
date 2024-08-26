@@ -92,7 +92,7 @@
 
         <div class=" d-flex justify-content-end col-lg-5 col-12">
             <a class="navbar-brand mx-0" href="/">
-                <img id="nav-logo1" class="d-block h-auto py-0 px-0 menu__Logo menu__Logo--Text img-fluid" alt="logo"
+                <img id="nav-logo1" class="d-none h-auto py-0 px-0 menu__Logo menu__Logo--Text img-fluid" alt="logo"
                      src="/assets/images/logo.png">
             </a>
         </div>
@@ -125,10 +125,10 @@
 
 <!--REAL HEADER-->
 
-<nav class="d-lg-block d-block navbar navbar-expand-lg bg-white z-3 py-5 w-100 z-3 position-fixed top-0 w-100">
+<nav class="d-lg-block d-block navbar navbar-expand-lg bg-white z-3 py-4 w-100 z-3 position-fixed top-0 w-100">
     {% assign general_data = site.data.general_settings %}
     <div class="d-flex justify-content-end px-4">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavHamburgerContent" aria-controls="homeNavHamburgerContent" aria-expanded="false" aria-label="Toggle nav" style="color: transparent; border-color: transparent;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-controls="homeNavHamburgerContent" aria-expanded="false" aria-label="Toggle nav" style="color: transparent; border-color: transparent;">
             <span class="fa-stack d-md-none">
                 <i class="fa fa-circle fa-stack-1x fa-3x"></i>
                 <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over" style="color:#002e3b;"></i>
@@ -140,7 +140,7 @@
         </button>
     </div>
     <div class="d-block d-lg-none">
-        <div class="collapse navbar-collapse" id="homeNavHamburgerContent" data-bs-theme="white">
+        <div class="multi-collapse collapse navbar-collapse" id="homeNavHamburgerContent" data-bs-theme="white">
             <div class="p-2 lh-sm">
                 <ul class="navbar-nav index-info-color fs-2 grid gap-0 ">
                     <li class="nav-item g-col-12">
@@ -174,7 +174,7 @@
     <div class="container-fluid justify-content-lg-end justify-content-center">
 
         <div class=" d-flex justify-content-lg-end justify-content-center col-lg-5 col-12 ">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand multi-collapse collapse show" href="/">
                 <img id="nav-logo" class="d-block h-auto py-0 px-0 menu__Logo menu__Logo--Text img-fluid" alt="logo"
                      src="/assets/images/logo.png">
             </a>
