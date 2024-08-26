@@ -11,7 +11,7 @@ banner_section:
 contact_section:
   title: CONTACT US now for a consultation
   sub_title: REQUEST A CONSULTATION
-  banner_image_url: /assets/images/banner_8.jpg
+  banner_image_url: /assets/images/gallery_03.jpg
 white_section:
   title: INJURED? OUT OF WORK? MOUNTING MEDICAL EXPENSES?
   description: >-
@@ -130,8 +130,8 @@ services_section:
     <div>
         <div class="d-flex flex-row py-lg-4">
             <div class="d-flex justify-content-xl-end col-xl-5 col-lg-5 justify-content-lg-evenly">
-                <div class="d-flex col-xl-9 col-lg-10 justify-content-xl-center justify-content-lg-center">
-                    <h3 class="d-flex f-weight-500 fs-2 col-xl-8 col-lg-11 lh-1h px-xl-4" style="color: #0E161E; ">{{sectionINFO.title}}</h3>
+                <div class="d-flex col-xl-8 col-lg-10 justify-content-xl-center justify-content-lg-center">
+                    <h3 class="d-flex f-weight-500 fs-2 col-xl-8 col-lg-11 lh-1h px-xl-4 px-lg-5" style="color: #0E161E; ">{{sectionINFO.title}}</h3>
                 </div>
             </div>
             <div class="d-flex justify-content-xl-start justify-content-lg-start">
@@ -143,7 +143,7 @@ services_section:
     </div>
 </section>
 <section>
-    <div class="d-flex flex-row">
+    <div class="d-none d-lg-flex flex-row ">
         {% for img in page.gallery %}
         <div class="col-xl-4">
             <img src="{{img.image_url}}" class="w-100 object-fit-cover h-100">
@@ -199,7 +199,7 @@ services_section:
         </div>
     </div>
     <div class="py-4 d-flex justify-content-center">
-        <h3 class="d-flex f-weight-500 display-1 lh-1 px-4 col-10" style="color: #0E161E; ">{{sectionINFO.title}}</h3>
+        <h3 class="d-flex f-weight-500 display-2 lh-1 px-3 px-md-2 col-md-11 col-10 " style="color: #0E161E; ">{{sectionINFO.title}}</h3>
     </div>
     <div class=" ">
         {% for item in sectionINFO.gallery %}
@@ -207,8 +207,8 @@ services_section:
             <img src="{{ item.image_url }} " class="{% if item.image_url == '/assets/images/gallery_06.jpg' %} d-none {% else %} w-100 img-fluid {% endif %}">
         </div>
         {% endfor %}
-        <div class="pb-3 px-5 ">
-            <p class="f-weight-500 d-flex fs-1 px-3" style="text-align: justify; color: #0E161E; ">{{sectionINFO.description}}</p>
+        <div class="d-flex pb-3 px-5 px-md-3">
+            <p class="f-weight-500 d-flex fs-1 px-3 px-md-5" style="text-align: justify; color: #0E161E; ">{{sectionINFO.description}}</p>
         </div>
         <div class="py-5 px-3" style="background-color: #eef2f3;">
             <p class="f-weight-500 fs-1 px-5" style="color: #0e161e; text-align: justify;">{{sectionPREFOOTER.title}}</p>
