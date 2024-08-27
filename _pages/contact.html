@@ -20,8 +20,8 @@ contact_form_subtitle: "REQUEST A CONSULTATION"
 	<section class=" ">
 		<div class="d-none d-lg-flex flex-row z-2 px-0 mx-0 col-12 ">
 			{% for gallery in page.gallery %}
-			<div class="d-flex object-fit-cover  ">
-				<img src="{{ gallery.image_url }}" class="img-fluid w-100" />
+			<div class="d-flex">
+				<img src="{{ gallery.image_url }}" class="img-fluid w-100 object-fit-cover" />
 			</div>
 			{% endfor %}
 		</div>

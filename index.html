@@ -102,7 +102,6 @@ about_section:
                 contact us now for a consultation
                 </h2>
             </div>
-
         </div>
     </div>
 </section>
@@ -191,12 +190,12 @@ about_section:
                     <span class="d-flex col-md-7 justify-content-end align-self-center col-2 "><i class="d-flex justify-content-end fa-solid fa-caret-down fa-2xl text-success"></i></span>
                 </button>
             </div>
-            <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="collapse navbar-collapse show" id="navbarContent">
                 <div class="d-flex justify-content-center col-md-12 col-12 pe-2">
                     <ul class="navbar-nav col-12 col-md-11 px-3 px-md-2">
                         {% for item in page.service_section.services %}
                         <li class="{% if forloop.index == 1 %} nav-item pt-5 {% else %} nav-item {% endif %}">
-                            <a class="nav-link" href="#collapseExample{{ forloop.index }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseExample{{ forloop.index }}">
+                            <a class="{% if forloop.index == 1 %} nav-link active {% else %} nav-link {% endif %}" href="#collapseExample{{ forloop.index }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseExample{{ forloop.index }}">
                                 <h3 class="text-uppercase f-weight-500 display-5 text-info">{{ item.text }}</h3>
                             </a>
                         </li>
@@ -210,13 +209,13 @@ about_section:
         <div class="d-flex justify-content-center mt-3 " id="infoContainer">
             <div class="d-flex col-12 col-md-11 px-1 px-3 px-md-2 pt-0">
                 {% for item in page.service_section.services %}
-                <div id="collapseExample{{ forloop.index }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#infoContainer">
+                <div id="collapseExample{{ forloop.index }}" class="{% if forloop.index == 1 %} accordion-collapse collapse show {% else %} accordion-collapse collapse {% endif %}" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#infoContainer">
                     <h3 class="d-flex display-5 f-weight-500 pb-4 text-uppercase">{{ item.text }}</h3>
                     <div class="d-flex accordion-body font-size-2-rem f-weight-500" style="text-align: justify">
                         {{ item.description }}
                     </div>
                     <div class="d-flex py-4">
-                        <a href="{{ item.url }}" class="btn btn-primary btn-lg f-weight-500 rounded-0 learn-more-btn px-5 fs-2 py-3" role="button">LEARN MORE</a>
+                        <a href="{{ item.url }}" class=" btn btn-primary btn-lg f-weight-500 rounded-0 learn-more-btn px-5 fs-2 py-3" role="button">LEARN MORE</a>
                     </div>
                 </div>
                 {% endfor %}
