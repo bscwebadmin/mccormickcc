@@ -74,7 +74,8 @@ services_section:
               <div class="col pt-5">
                   {% if page.banner_section.title %}
                   <div class="d-flex justify-content-around">
-                      <H1 class="col-10 text-white py-1 font-title editable text-uppercase">{{page.banner_section.title}}</H1>
+                      <h1 class="d-none d-md-flex col-10 text-white py-1 add-service-font-title editable text-uppercase">{{page.banner_section.title}}</h1>
+                      <h1 class="d-flex d-md-none col-10 text-white py-1 add-service-font-title editable text-uppercase">Additional Services</h1>
                   </div>
                   {% endif %}
               </div>
@@ -191,11 +192,11 @@ services_section:
         </div>
     </div>
     <div class="py-4 d-flex justify-content-center">
-        <h3 class="d-flex f-weight-500 display-1 lh-1 px-2 col-10 text-uppercase" style="color: #0E161E; ">{{sectionINFO.title}}</h3>
+        <h3 class="d-flex f-weight-500 display-2 lh-1 px-3 px-md-3 col-10 col-md-11 text-uppercase" style="color: #0E161E; ">{{sectionINFO.title}}</h3>
     </div>
     <div class=" ">
         <div class="pb-3 px-5 ">
-            <p class="f-weight-500 d-flex fs-1 px-3" style="text-align: justify; color: #0E161E; ">{{sectionINFO.description}}</p>
+            <p class="f-weight-500 d-flex fs-1 px-md-3 px-3" style="text-align: justify; color: #0E161E; ">{{sectionINFO.description}}</p>
         </div>
         <div class="py-5 px-3" style="background-color: #eef2f3;">
             <p class="f-weight-500 fs-1 px-5" style="color: #0e161e; text-align: justify;">{{sectionPREFOOTER.title}}</p>

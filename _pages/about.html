@@ -59,15 +59,18 @@ one_column_section: >-
 	</div>
 	<div class="d-block d-lg-none">
 		<div class="pt-5" style="background: linear-gradient(180deg, #741625, #3a0b13); ">
-			{% if page.about_section.title %}
-			 <h1 class="font-size-5-rem pt-5 pb-3 px-5 px-lg-0 py-lg-0 my-0 editable">{{ page.about_section.title }}</h1>
-			{% endif %}
-			{% if page.about_section.description %}
-			 <p class="fs-1 px-5 px-lg-0 pb-5 pb-lg-0 editable">{{ page.about_section.description }}</p>
-			{% endif %}
-			<div class="d-flex justify-content-center d-lg-none py-4 py-lg-0" style="background-color: #70707040">
-			 <a href="tel:{{ general_data.phone }}" class="display-1 link-underline link-underline-opacity-0 text-white">{{ general_data.phone }}</a>
+			<div class="d-flex flex-column px-md-5">
+				{% if page.about_section.title %}
+				 <h1 class="font-size-5-rem pt-5 pb-3 px-5 px-lg-0 py-lg-0 my-0 editable">{{ page.about_section.title }}</h1>
+				{% endif %}
+				{% if page.about_section.description %}
+				 <p class="fs-1 px-5 px-md-0 ps-md-5 px-lg-0 pb-5 pb-lg-0 editable col-md-11" style="text-align: justify;">{{ page.about_section.description }}</p>
+				{% endif %}
 			</div>
+				<div class="d-flex justify-content-center d-lg-none py-4 py-lg-0" style="background-color: #70707040">
+				 <a href="tel:{{ general_data.phone }}" class="font-size-3rem link-underline link-underline-opacity-0 text-white">{{ general_data.phone }}</a>
+				</div>
+
 		</div>
 	</div>
 	<div class="pageHero__Form py-5 d-flex justify-content-center d-lg-none">

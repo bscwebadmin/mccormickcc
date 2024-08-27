@@ -1072,7 +1072,7 @@ p:not(footer p, .pageHero p) {
 /*    }*/
 /*}*/
 .justText {
-    padding: 3.2rem 11vw;
+    padding: 3.2rem 9vw;
     color: #002e3b;
     font-size: 2rem;
     background-color: #eef2f3;
