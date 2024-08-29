@@ -22,84 +22,207 @@ gallery:
   - image_url: "/assets/images/banner_2.jpg"
   - image_url: "/assets/images/big_man.jpg"
   - image_url: "/assets/images/banner_one.jpg"
-description: >-
-   Shane McCormick was born in Port Sulphur, Louisiana in 1968. In 1980, his family relocated to Crowley, Louisiana where he attended high school. Upon graduation in 1986 Shane joined the United States Navy, where he rose to the rank of EW3 and served on several different vessels. In 1991, he was honorably discharged after having served in Operation Desert Storm. From 2001 to 2009, he also served as a reserve officer and Captain in the Judge Advocate General’s Corps of the United States Army, providing vital legal support to soldiers being deployed during Operation Enduring Freedom.<br /><br /> Following his journey with the United States Navy, Shane attended the University of Louisiana at Lafayette (formerly University of Southwestern Louisiana) where he earned his Bachelor of Arts degree. In 2000, he received his Juris Doctorate from Southern University Law Center in Baton Rouge. Upon graduation, Shane began work in the courts system as a judicial law clerk under the Honorable Phyllis Keaty.<br /> <br />From 2002 to 2013 Shane and his business partner operated Brazee & McCormick, an independent full-service law firm in Lafayette. From there, McCormick Law Firm was born and a new chapter had begun.<br /> <br /> McCormick Law firm provides excellent legal representation for diverse clientele across Acadiana. Our practice areas include litigation services for criminal law, personal injury, family law, and more. Whether you’re faced with a drug charge, going through a divorce, or were injured at the hands of someone else, you need the most skilled and professional legal services available. Rely on an attorney that knows the system, to get you the fair compensation that you deserve. Trust an experienced attorney and legal team to have your back: anytime, anywhere. Trust McCormick Law Firm.
-
+description:
+  - section: "Shane McCormick was born in Port Sulphur, Louisiana in 1968. In 1980, his family relocated to Crowley, Louisiana where he attended high school. Upon graduation in 1986 Shane joined the United States Navy, where he rose to the rank of EW3 and served on several different vessels. In 1991, he was honorably discharged after having served in Operation Desert Storm. From 2001 to 2009, he also served as a reserve officer and Captain in the Judge Advocate General’s Corps of the United States Army, providing vital legal support to soldiers being deployed during Operation Enduring Freedom."
+  - section: "Following his journey with the United States Navy, Shane attended the University of Louisiana at Lafayette (formerly University of Southwestern Louisiana) where he earned his Bachelor of Arts degree. In 2000, he received his Juris Doctorate from Southern University Law Center in Baton Rouge. Upon graduation, Shane began work in the courts system as a judicial law clerk under the Honorable Phyllis Keaty."
+  - section: "From 2002 to 2013 Shane and his business partner operated Brazee & McCormick, an independent full-service law firm in Lafayette. From there, McCormick Law Firm was born and a new chapter had begun."
+  - section: "McCormick Law firm provides excellent legal representation for diverse clientele across Acadiana. Our practice areas include litigation services for criminal law, personal injury, family law, and more. Whether you’re faced with a drug charge, going through a divorce, or were injured at the hands of someone else, you need the most skilled and professional legal services available. Rely on an attorney that knows the system, to get you the fair compensation that you deserve. Trust an experienced attorney and legal team to have your back: anytime, anywhere. Trust McCormick Law Firm."
 one_column_section: >-
-  Our goal is to provide an effective legal strategy to reach a favorable outcome for our clients. We will properly evaluate your unique situation and guide you throughout the legal process. You can trust R.Shane McCormick to get the most favorable outcome for your case. Call now for a free consultation.
+  Our goal is to provide an effective legal strategy to reach a favorable outcome for our clients. We will properly evaluate your unique situation and guide you throughout the legal process. You can trust R. Shane McCormick to get the most favorable outcome for your case. Call now for a free consultation.
 ---
 
 {% assign general_data = site.data.general_settings %}
 
 <div>
-<section class="pageHero pageHero--Halfs">
-	<div class="pageHero__ImageWrapper pageHero__ImageWrapper--Halfs">
-	 {% if page.about_section.background_image_url %}
-	  <img class="pageHero__Image" src="{{ page.about_section.background_image_url }}" />
-	 {% endif %}
-	</div>
-	<div class="pageHero__Text">
-	    {% if page.about_section.title %}
-		 <h1>{{ page.about_section.title }}</h1>
-		{% endif %}
-		{% if page.about_section.description %}
-		 <p class="pageDesc--About">{{ page.about_section.description }}</p>
-		{% endif %}
-		<div class="pageHero__Phone">
-		 <a href="tel:{{ general_data.phone }}">{{ general_data.phone }}</a>
+<section class="text-white">
+<!--	<div class="pageHero__ImageWrapper pageHero__ImageWrapper&#45;&#45;Halfs">-->
+	<div class="px-0 mx-0 row d-none d-lg-flex">
+		<div class="d-none d-lg-flex px-0 col-6">
+			{% if page.about_section.background_image_url %}
+	<!--	  <img class="pageHero__Image" src="{{ page.about_section.background_image_url }}" />-->
+		  <img class="img-fluid object-fit-cover w-100" src="{{ page.about_section.background_image_url }}" />
+			{% endif %}
+		</div>
+		<div class=" col-6 d-flex justify-content-around py-5 px-5" style="background: linear-gradient(180deg, #741625, #3a0b13); ">
+			{% if page.about_section.title %}
+			<div class=" d-flex flex-column col-xl-10 col-10 justify-content-center py-5">
+				 <h1 class="font-size-5-rem pt-5 pb-3 px-5 px-lg-4 py-lg-0 my-0 editable">{{ page.about_section.title }}</h1>
+				{% endif %}
+				{% if page.about_section.description %}
+				 <p class="fs-4 px-lg-4 pb-5 pb-lg-0 editable col-12 col-lg-12 px-0" style="text-align: justify;">{{ page.about_section.description }}</p>
+				{% endif %}
+				<div class="d-flex justify-content-center d-lg-none py-4 py-lg-0" style="background-color: #70707040">
+				 <a href="tel:{{ general_data.phone }}" class="display-1 link-underline link-underline-opacity-0 text-white">{{ general_data.phone }}</a>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="pageHero__Form">
-	    {% if page.contact_section.title %}
-		 <h2>{{ page.contact_section.title }}</h2>
-		{% endif %}
-		<section class="formSection">
-		    {% if page.contact_section.sub_title %}
-			 <h5 class="formSection__Heading">{{ page.contact_section.sub_title }}</h5>
-			{% endif %}
-			<form method="post" netlify-honeypot="bot-field" data-netlify="true" action="{{general_data.contact_form_action_url}}" name="contact" class="cfForm">
-				<input type="hidden" name="bot-field" />+ <input type="hidden" name="form-name" value="contact" />
-				<div class="formFlex">
-					<div class="formSmallInputs inputWrapper">
-						<input type="text" class="" name="NAME" placeholder="NAME" /><input type="text" class="" name="EMAIL" placeholder="EMAIL" />
-						<input type="text" class="" name="PHONE NUMBER" placeholder="PHONE NUMBER" />
-					</div>
-					<div class="formLargeInputs inputWrapper"><textarea class="inputLarge" name="MESSAGE" placeholder="MESSAGE"></textarea></div>
+	<div class="d-block d-lg-none">
+		<div class="pt-5" style="background: linear-gradient(180deg, #741625, #3a0b13); ">
+			<div class="d-flex flex-column px-md-5">
+				{% if page.about_section.title %}
+				 <h1 class="font-size-5-rem pt-5 pb-3 px-5 px-lg-0 py-lg-0 my-0 editable">{{ page.about_section.title }}</h1>
+				{% endif %}
+				{% if page.about_section.description %}
+				 <p class="fs-1 px-5 px-md-0 ps-md-5 px-lg-0 pb-5 pb-lg-0 editable col-md-11" style="text-align: justify;">{{ page.about_section.description }}</p>
+				{% endif %}
+			</div>
+				<div class="d-flex justify-content-center d-lg-none py-4 py-lg-0" style="background-color: #70707040">
+				 <a href="tel:{{ general_data.phone }}" class="font-size-3rem link-underline link-underline-opacity-0 text-white">{{ general_data.phone }}</a>
 				</div>
-				<input type="submit" class="formSubmit" value="submit" />
-			</form>
-		</section>
+
+		</div>
+	</div>
+	<div class="pageHero__Form py-5 d-flex justify-content-center d-lg-none">
+	    {% if page.contact_section.title %}
+		 <h2 class="py-0 my-0 col-10 text-uppercase font-size-3rem d-lg-none">{{ page.contact_section.title }}</h2>
+		{% endif %}
+<!--		<section class="formSection d-none">-->
+<!--		    {% if page.contact_section.sub_title %}-->
+<!--			 <h5 class="formSection__Heading">{{ page.contact_section.sub_title }}</h5>-->
+<!--			{% endif %}-->
+<!--			<form method="post" netlify-honeypot="bot-field" data-netlify="true" action="{{general_data.contact_form_action_url}}" name="contact" class="cfForm">-->
+<!--				<input type="hidden" name="bot-field" />+ <input type="hidden" name="form-name" value="contact" />-->
+<!--				<div class="formFlex">-->
+<!--					<div class="formSmallInputs inputWrapper">-->
+<!--						<input type="text" class="" name="NAME" placeholder="NAME" /><input type="text" class="" name="EMAIL" placeholder="EMAIL" />-->
+<!--						<input type="text" class="" name="PHONE NUMBER" placeholder="PHONE NUMBER" />-->
+<!--					</div>-->
+<!--					<div class="formLargeInputs inputWrapper"><textarea class="inputLarge" name="MESSAGE" placeholder="MESSAGE"></textarea></div>-->
+<!--				</div>-->
+<!--				<input type="submit" class="formSubmit" value="submit" />-->
+<!--			</form>-->
+<!--		</section>-->
+		<!--			<section class="formSection">-->
+<!--				{% if page.contact_section.sub_title %}-->
+<!--				 <h5 class="formSection__Heading">{{ page.contact_section.sub_title }}</h5>-->
+<!--				{% endif %}-->
+<!--				{% include form.html %}-->
+<!--			</section>-->
 	</div>
 </section>
 </div>
-<section class="sliceZone">
-<section class="aboutSection">
-	<div class="aboutSection__Text">
-		<div class="sanityText">
-			{% if page.description %}
-             <p> {{ page.description }} </p>
-			{% endif %}
-		</div>
-		<section class="formSection">
-		    {% if page.contact_section.sub_title %}
-			 <h5 class="formSection__Heading">{{ page.contact_section.sub_title }}</h5>
-			{% endif %}
-			{% include form.html %}
+
+<!--DESKTOP VERSION HERE-->
+
+<section class=" d-none d-lg-flex sliceZone d-flex row px-0 mx-0 justify-content-center">
+	<div class="about-mobile-img mt-5 mb-3 d-lg-none">
+		{% for item in page.gallery %}
+		{% unless forloop.first %}
+		{% break %}
+		{% endunless %}
+		<img src="{{ item.image_url }}" class="{% if forloop.first %} d-flex d-lg-none rounded-circle about-mobile-cover {% else %} {% endif %}" >
+		{% endfor %}
+	</div>
+	<section class="d-flex flex-row pt-0 px-0 mx-0 d-flex justify-content-around">
+		<div class="d-flex flex-column mx-0 px-0 col-8 col-xl-9 py-5 my-5 justify-content-center justify-content-xl-between about-mainText-padding">
+			{% for item in page.description %}
+			<div class="col-12 px-5 px-xl-0 col-xl-9">
+				 <p class="py-2 fs-4" style="text-align: justify;"> {{ item.section }} </p>
+			</div>
+			{%endfor%}
+			<section class="py-3 ">
+				<div class="col-10 d-flex justify-content-center justify-content-lg-start text-start px-xl-0 px-5 mx-lg-0 mx-2">
+					<h5 class="text-success text-uppercase display-3 f-weight-500 d-block d-lg-none">request a consultation</h5>
+					<h5 class="text-success text-uppercase fs-3 f-weight-500 d-none d-lg-block">request a consultation</h5>
+				</div>
+			</section>
+			<section class=" ">
+				<form action="https://formspree.io/f/mkndnqlr" method="POST"
+					  class="d-flex align-content-center justify-content-md-start form-container new-form cfForm col-lg-12 col-xl-10 px-5 px-xl-0 pe-xl-5">
+					<script src="https://www.google.com/recaptcha/api.js?render=6LdnuyEqAAAAAOYHIAj7ieHcFABlBdFKZIRxCHQo"></script>
+					<script>
+						grecaptcha.ready(function() {
+							grecaptcha.execute('6LdnuyEqAAAAAOYHIAj7ieHcFABlBdFKZIRxCHQo', {action: 'submit'}).then(function (token) {
+								console.info("got token: " + token);
+								document.getElementById('g-recaptcha-response').value = token;
+							});
+						});
+					</script>
+					<div class="field-group inputs-container">
+						<div class="mb-3 ">
+							<input type="text" class="form-control" id="inputName" placeholder="NAME" style="background-color: #eef2f3;;" required>
+						</div>
+						<div class="mb-3 ">
+							<input type="email" class="form-control" id="inputEmail1" placeholder="EMAIL" style="background-color: #eef2f3;;" required>
+						</div>
+						<div class="mb-3 ">
+							<input type="text" class="form-control" id="inputPhone1" placeholder="PHONE NUMBER" style="background-color: #eef2f3;;" required>
+						</div>
+					</div>
+					<div class="field-group message-container pe-xl-5">
+						<div class="mb-3 ">
+							<textarea type="text" class="form-control " id="inputMessage1" placeholder="MESSAGE" style="background-color: #eef2f3;;" required></textarea>
+						</div>
+						<input class="g-recaptcha-response" name="g-recaptcha-response" type="hidden">
+						<input type="submit" class="d-none d-lg-block ms-lg-auto text-uppercase fs-3 py-3 px-4 text-white bg-success" value="submit" />
+					</div>
+				</form>
 		</section>
-	</div>
-	<div class="aboutSection__Images">
-	   {% for gallery in page.gallery %}
-		<div class="aboutSection__ImgWrapper">
-		  <img src="{{ gallery.image_url }}" class="aboutSection__Img" />
 		</div>
-       {% endfor %}
+		<div class="d-flex flex-column col-4 col-xl-3 px-0 align-self-">
+			{% for gallery in page.gallery %}
+			<div class="col-12">
+				<img src="{{ gallery.image_url }}" class="img-fluid w-100" />
+			</div>
+			{%endfor%}
+		</div>
+	</section>
+	<section class="justText fs-1" style="text-align: justify;">
+		{% if page.one_column_section %}
+		<p>
+		  {{ page.one_column_section }}
+		</p>
+		{% endif %}
+	</section>
+</section>
+
+
+
+<!--Mobile Version here-->
+
+<section class="d-block d-lg-none sliceZone d-flex row px-0 mx-0 justify-content-center">
+	<div class=" ">
+<!--		{% for item in page.gallery %}-->
+<!--		{% unless forloop.first %}-->
+<!--		{% break %}-->
+<!--		{% endunless %}-->
+<!--		<img src="{{ item.image_url }}" class="{% if forloop.first %} d-flex d-lg-none rounded-circle about-mobile-cover {% else %} {% endif %}" >-->
+<!--		{% endfor %}-->
 	</div>
-</section>
-<section class="justText">
-{% if page.one_column_section %}
-	<p>
-	  {{ page.one_column_section }}
-	</p>
-{% endif %}
-</section>
+	<section class="aboutSection pt-0 px-0 mx-0">
+		<div class="d-flex justify-content-center ">
+			<div class="col-10 pt-5">
+				{% for item in page.description %}
+				 <p class="py-3 " style="text-align: justify;"> {{ item.section }} </p>
+				{% endfor %}
+			</div>
+			<section class="formSection">
+				{% if page.contact_section.sub_title %}
+				 <h5 class="formSection__Heading">{{ page.contact_section.sub_title }}</h5>
+				{% endif %}
+				{% include form.html %}
+			</section>
+		</div>
+		<div class=" d-block d-lg-block">
+		   {% for gallery in page.gallery %}
+			<div class="aboutSection__ImgWrapper">
+			  <img src="{{ gallery.image_url }}" class="aboutSection__Img" />
+			</div>
+		   {% endfor %}
+		</div>
+	</section>
+	<section class="justText order-1">
+		{% if page.one_column_section %}
+		<p style="text-align: justify;">
+		  {{ page.one_column_section }}
+		</p>
+		{% endif %}
+	</section>
+	<section class=" order-2">
+		<div class="col-10 d-flex justify-content-center justify-content-lg-start text-start px-5 mx-2 pt-5">
+			<h5 class="text-success text-uppercase display-3 f-weight-500 d-block d-lg-none">request a consultation</h5>
+			<h5 class="text-success text-uppercase fs-3 f-weight-500 d-none d-lg-block">request a consultation</h5>
+		</div>
+	</section>
 </section>

@@ -10,6 +10,10 @@
 		<link rel="canonical" href="{{ page.url }}" />
 		<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/assets/css/style.css" />
+		<link rel="stylesheet" href="/assets/css/new_styles.css" />
+
+		<script src="https://kit.fontawesome.com/178160c53c.js" crossorigin="anonymous"></script>
+
         <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-icon-72x72.png" />
@@ -32,19 +36,23 @@
 			gtag('js', new Date());
 			gtag('config', '{{site.data.general_settings.ga_id}}');
 		</script>
+		<script>
+            $('.dropdown-item').on('click', function() {
+            $('.content-item').hide();  // Hide all content items
+            $($(this).data('target')).show();  // Show the one corresponding to the clicked dropdown item
+            });
+        </script>
 		{{ site.data.general_settings.head_code | raw}}
 	</head>
 	<body>
 	 {{ site.data.general_settings.body_code | raw}}
 		<div>
-		
                     {% include header_2.html %}
                     {{ content }}
-					<section class="formSection">
-						<h5 class="formSection__Heading editable">REQUEST A CONSULTATION</h5>
-						{% include form.html %}
-					</section>
-                     {% include footer.html %}
+			<div class=" {% if page.title == 'Contact Us' %} d-none {% else %}  d-block d-lg-none {% endif %}">
+					{% include form.html %}
+			</div>
+					{% include footer.html %}
 
 		</div>
         <script src="/assets/js/bootstrap.bundle.min.js"></script>

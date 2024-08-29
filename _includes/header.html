@@ -1,41 +1,159 @@
-<section class="menu homeNav">
-    <div class="hamburger" id="mobile-nav">
-        <div class="hamburger__Line"></div>
-        <div class="hamburger__Line"></div>
-        <div class="hamburger__Line"></div>
-    </div>
-    <div class="menuLogoWrapper">
+<!--<section class="d-flex top-0 vw-100 menu vw-100 align-items-stretch z-1 justify-content-between ps-0 py-0 homeNav">-->
+<!--    <div class="hamburger" id="mobile-nav">-->
+<!--        <div class="hamburger__Line"></div>-->
+<!--        <div class="hamburger__Line"></div>-->
+<!--        <div class="hamburger__Line"></div>-->
+<!--    </div>-->
+<!--    <div class="w-50 d-flex flex-column menuLogoWrapper">-->
+<!--        {% assign general_data = site.data.general_settings %}-->
+<!--        <a aria-current="page" href="/">-->
+<!--            <img id="nav-logo" class="d-block h-auto py-0 px-0 menu__Logo menu__Logo&#45;&#45;Text img-fluid" alt="logo" src="{{ general_data.site_logo_url }}" />-->
+<!--        </a>-->
+<!--    </div>-->
+<!--    <div class="collapse show d-flex flex-row menu__Links" id="menu__Links_id">-->
+<!--        <div class="menu__LinkContainer">-->
+<!--            <a aria-current="page" class=" menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;mobile" href="/">Home</a>-->
+<!--            <a aria-current="page" class="d-block menuLink mb-0 menuLink&#45;&#45;Top menuLink&#45;&#45;Desk" href="/">Home</a>-->
+<!--        </div>-->
+<!--        <div class="d-block position-relative menu__LinkContainer">-->
+<!--            <a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;mobile" href="/legal-services.html">-->
+<!--            Legal Services</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/criminal-law.html">Criminal Law</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/personal-injury.html">PERSONAL INJURY</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/dwi-owi.html">DWI/OWI</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/estate-planning.html">Estate Planning</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/family-law.html">Family Law</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;mobile" href="/additional-services.html">Additional Services</a>-->
+<!--            <a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;Desk" href="/legal-services.html">Legal Services</a>-->
+<!--            <div class="d-block ms-1 position-absolute z-1 dropArrow" id="dropArrowBtn">▼</div>-->
+<!--            <div class="subLinkContainer d-none" id="subLinkContainerId">-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/criminal-law">Criminal Law</a>-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/personal-injury">PERSONAL INJURY</a>-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/dwi-owi">DWI/OWI</a>-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/estate-planning">Estate Planning</a>-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/family-law">Family Law</a>-->
+<!--                <a class="menuLink menuLink&#45;&#45;Sub sub&#45;&#45;desk" href="/additional-services">Additional Services</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="menu__LinkContainer"><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;mobile" href="/about.html">About</a><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;Desk" href="/about.html">About</a></div>-->
+<!--        <div class="menu__LinkContainer"><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;mobile" href="/contact.html">Contact</a><a class="menuLink menuLink&#45;&#45;Top menuLink&#45;&#45;Desk" href="/contact.html">Contact</a></div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<section class="  d-lg-flex d-none col-12 justify-content-between">
+    <nav class="    navbar navbar-expand-lg bg-primary col-6 z-3 py-5">
         {% assign general_data = site.data.general_settings %}
-        <a aria-current="page" href="/">
-            <img id="nav-logo" class="menu__Logo menu__Logo--Text img-fluid" alt="logo" src="{{ general_data.site_logo_url }}" />
-        </a>
-    </div>
-    <div class="collapse show menu__Links" id="menu__Links_id">
-        <div class="menu__LinkContainer">
-            <a aria-current="page" class="menuLink menuLink--Top menuLink--mobile" href="/">Home</a>
-            <a aria-current="page" class="menuLink menuLink--Top menuLink--Desk" href="/">Home</a>
-        </div>
-        <div class="menu__LinkContainer">
-            <a class="menuLink menuLink--Top menuLink--mobile" href="/legal-services.html">
-            Legal Services</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/criminal-law.html">Criminal Law</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/personal-injury.html">PERSONAL INJURY</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/dwi-owi.html">DWI/OWI</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/estate-planning.html">Estate Planning</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/family-law.html">Family Law</a>
-            <a class="menuLink menuLink--Sub sub--mobile" href="/additional-services.html">Additional Services</a>
-            <a class="menuLink menuLink--Top menuLink--Desk" href="/legal-services.html">Legal Services</a>
-            <div class="dropArrow" id="dropArrowBtn">▼</div>
-            <div class="subLinkContainer d-none" id="subLinkContainerId">
-                <a class="menuLink menuLink--Sub sub--desk" href="/criminal-law">Criminal Law</a>
-                <a class="menuLink menuLink--Sub sub--desk" href="/personal-injury">PERSONAL INJURY</a>
-                <a class="menuLink menuLink--Sub sub--desk" href="/dwi-owi">DWI/OWI</a>
-                <a class="menuLink menuLink--Sub sub--desk" href="/estate-planning">Estate Planning</a>
-                <a class="menuLink menuLink--Sub sub--desk" href="/family-law">Family Law</a>
-                <a class="menuLink menuLink--Sub sub--desk" href="/additional-services">Additional Services</a>
+        <div class="d-flex col-12 justify-content-end">
+            <div class="d-flex justify-content-center col-5  ">
+                <a class="navbar-brand me-5" href="/">
+                    <img id="nav-logo" class="d-flex h-auto py-0 px-0 menu__Logo menu__Logo--Text img-fluid" alt="logo"
+                         src="{{ general_data.site_logo_url }}">
+                </a>
             </div>
         </div>
-        <div class="menu__LinkContainer"><a class="menuLink menuLink--Top menuLink--mobile" href="/about.html">About</a><a class="menuLink menuLink--Top menuLink--Desk" href="/about.html">About</a></div>
-        <div class="menu__LinkContainer"><a class="menuLink menuLink--Top menuLink--mobile" href="/contact.html">Contact</a><a class="menuLink menuLink--Top menuLink--Desk" href="/contact.html">Contact</a></div>
+    </nav>
+    <div class="d-flex pe-5 align-self-xl-center">
+            <ul class="d-flex flex-row navbar-nav h-25 fs-2 px-lg-3 px-xl-0 me-xl-4 ">
+                <li class="nav-item mx-xl-4 mx-3 ">
+                    <a class="nav-link menu-link text-white active index-tabs-no-bold fs-4" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item dropdown mx-xl-4 mx-3 d-flex">
+                    <a class="nav-link text-white fs-4" href="/legal-services">LEGAL SERVICES</a>
+                    <a class="nav-link text-white dropdown-toggle dropdown-center fs-5 px-2" href="#" id="legalDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                    <ul class="dropdown-menu dropdown-menu-end fs-3 border-0 px-3 py-0 bg-transparent index-tabs-no-bold">
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/criminal-law">criminal law</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/personal-injury">personal injury</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/dwi-owi">dwi/owi</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/estate-planning">estate planning</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/family-law">family law</a></li>
+                        <li><a class="dropdown-item text-uppercase text-white bg-transparent hover-item f-weight-500 fs-5 ps-4" href="/additional-services">additional services</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-xl-4 mx-3">
+                    <a class="nav-link text-white f-weight-500 fs-4" href="/about">ABOUT</a>
+                </li>
+                <li class="nav-item mx-xl-4 mx-3">
+                    <a class="nav-link text-white f-weight-500 fs-4" href="/contact">CONTACT</a>
+                </li>
+            </ul>
     </div>
 </section>
+
+<!--<script>-->
+
+<!--    var myCollapsible = document.getElementById('navbar-toggler1')-->
+<!--    myCollapsible.addEventListener('click', function () {-->
+<!--        var bsCollapse = new bootstrap.Collapse(myCollapsible, {-->
+<!--            toggle: false-->
+<!--        })-->
+<!--    })-->
+<!--</script>-->
+
+<!--MOBILE INDEX NAV STARTS HERE-->
+
+<div class="d-block d-lg-none bg-secondary">
+    <nav class="navbar navbar-expand-lg bg-secondary z-3 py-4">
+        {% assign general_data = site.data.general_settings %}
+        <div class="container-fluid justify-content-end px-3">
+            <button class="navbar-toggler bg-secondary" id="navbar-toggler1" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-controls="homeNavHamburgerContent" aria-expanded="false" aria-label="Toggle nav" style="color: transparent; border-color: transparent;">
+                <span class="fa-stack d-md-none">
+                    <i class="fa fa-circle fa-stack-1x icon-under fa-3x"></i>
+                    <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over"></i>
+                </span>
+                <span class="fa-stack d-none d-md-flex d-lg-none">
+                    <i class="fa fa-circle fa-stack-1x icon-under fa-3x"></i>
+                    <i class="fa fa-solid fa-bars fa-stack-1x fa-3x icon-over"></i>
+                </span>
+            </button>
+        </div>
+    </nav>
+    <div>
+        <div class="multi-collapse collapse navbar-collapse" id="homeNavHamburgerContent" data-bs-theme="red">
+            <div class="p-2 ">
+                <ul class="navbar-nav text-white fs-2 grid gap-0 ">
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/legal-services">Legal Services</a>
+                    </li>
+                    <li class="nav-item g-col-12 fs-4 px-4">
+                        <a class="nav-link" href="/criminal-law">Criminal Law</a>
+                        <a class="nav-link" href="/personal-injury">Personal Injury</a>
+                        <a class="nav-link" href="/dwi-owi">DWI/OWI</a>
+                        <a class="nav-link" href="/estate-planning">Estate Planning</a>
+                        <a class="nav-link" href="/family-law">Family Law</a>
+                        <a class="nav-link" href="/additional-services">Additional Services</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item g-col-12">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center pb-4 ">
+            <div class="col-10 col-md-5 d-flex">
+                <a href="/" class="multi-collapse collapse show">
+                    <img alt="logo" class="img-fluid" src="/assets/images/white_logo.png?_cchid=b90a170187e3c754830a1ce083cb9b17">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--<nav class="navbar navbar-expand-lg bg-primary">-->
+<!-- <div>-->
+<!--  <ul class="navbar-nav">-->
+<!--   <li class="nav-item">-->
+<!--    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+<!--   </li>-->
+<!--   <li class="nav-item">-->
+<!--    <a class="nav-link" href="#">About</a>-->
+<!--   </li>-->
+<!--  </ul>-->
+<!-- </div>-->
+<!--</nav>-->

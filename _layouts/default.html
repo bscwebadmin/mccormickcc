@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/new_styles.css" />
+        <script src="https://kit.fontawesome.com/178160c53c.js" crossorigin="anonymous"></script>
         <link data-react-helmet="true" rel="canonical" href="{{page.url}}" />
         {% capture seo %}{% seo %}
          <meta name="keywords" content="{{page.keywords}}" />
@@ -36,21 +38,30 @@
             gtag('config', '{{site.data.general_settings.ga_id}}');
         </script>
         {{ site.data.general_settings.head_code | raw}}
+
     </head>
     <body>
        {{ site.data.general_settings.body_code | raw}}
         <div>
-            <div>
-                <div>
-                   {% include header.html %}
-                    <section class="home">
+            <div class="d-flex">
+                <div class="d-none d-lg-block desktop-home">
+                    <section class=" ">
                         {{ content }}
                         {% include footer.html %}
                     </section>
+
+                </div>
+                <div class="d-flex d-lg-none mobile-home ">
+                   {% include header.html %}
+                    <section class=" ">
+                        {{ content }}
+                        {% include footer.html %}
+                    </section>
+
                 </div>
             </div>
         </div>
         <script src="/assets/js/bootstrap.bundle.min.js"></script>
-        <script src="/assets/js/main.js"></script>
+        <script src="/assets/js/main.js" defer></script>
     </body>
 </html>

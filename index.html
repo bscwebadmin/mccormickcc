@@ -48,65 +48,345 @@ about_section:
 
 {% assign general_data = site.data.general_settings %}
 
+<!-- START DESKTOP-->
 
-    <section class="pageHero--Home pageHero">
-        <div style="background-image: url({{ page.hero_section.background_image_url}});" class="pageHero__Home__Inner">
-            {% if page.hero_section.mobile_home_logo_url %}
-             <img src="{{page.hero_section.mobile_home_logo_url}}" alt="logo" class="pageHero__Home__Logo pageHero__Home__Logo--Cut img-fluid" />
-            {% endif %}
-            {% if page.hero_section.desktop_home_logo_url %}
-             <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="pageHero__Home__Logo pageHero__Home__Logo--Desk img-fluid" />
-            {% endif %}
-            <div class="pageHero__Phone"><a href="tel:{{ general_data.phone }}">{{ general_data.phone }}</a></div>
+<section
+        class="container-fluid text-white text-center d-flex align-items-start py-0 vh-100 pageHero__Home__Inner d-none d-lg-flex overflow-y-hidden px-0"
+        style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover;"
+        xmlns="http://www.w3.org/1999/html">
+    {% include header.html %}
+    <div class="seal-container d-flex mb-5">
+        <div class="d-flex mb-5">
+            <img src="{{page.hero_section.desktop_home_logo_url}}" alt="logo" class="seal d-block img-fluid"/>
         </div>
-        {% include contact_form.html %}
-    </section>
-
-<section class="sliceZone">
-    <section class="serviceMenu maxWidth">
-       
-        <div class="serviceMenu__ServiceTitles serviceMenu__ServiceTitles--Desktop" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-           {% for list in page.service_section.services %}
-            <h3 class="serviceMenu__ServiceTitle serviceMenu__ServiceTitle--Mobile service-item {% if forloop.first %}active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" type="button" role="tab" aria-controls="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" aria-selected="true>
-              <a style="font-size: unset;padding: 0; border: 0";>{{ list.text }} </a>
-            </h3>
-            {% endfor %}
-        </div>
-        <div class="serviceMenu__ServiceText tab-content" id="v-pills-tabContent">
-           {% for list in page.service_section.services %}
-           <div class="tab-pane fade  {% if forloop.first %}show active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" role="tabpanel" aria-labelledby="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab">
-            <p>{{ list.description }}</p>
-            <a href="{{list.url}}">Learn more</a>
-           </div>
-           {% endfor %}
-        </div>
-    </section>
-    {% assign about = page.about_section %}
-    <section class="textOverlay">
-        <div class="textOverlay__ImageWrapper textOverlay__ImageWrapper--BG">
-        {% if about.background_image %}
-          <img class="textOverlay__BG" src="{{ about.background_image }}" alt="paper" />
-        {% endif %}
-        </div>
-        <div class="textOverlay__Red">
-            <div class="textOverlay__ImageWrapper textOverlay__ImageWrapper--Headshot">
-            {% if about.profile_image %}
-              <img class="textOverlay__Headshot" src="{{ about.profile_image }}" alt="{{about.title}}" />
-            {% endif %}
-            </div>
-            {% if about.title %}
-             <h4>{{ about.title }}</h4>
-            {% endif %}
-            {% if about.description %}
-            <p>{{ about.description }}</p>
-            {% endif %}
-            {% if about.button_text %}
-             <a href="{{about.button_url}}">{{ about.button_text }}</a>
-            {% endif %}
-        </div>
-    </section>
+    </div>
 </section>
-<section class="formSection">
-    <h5 class="formSection__Heading editable">REQUEST A CONSULTATION</h5>
-    {% include form.html %}
+<section class="d-none d-lg-block px-5 px-lg-3 py-5 bg-success">
+    <div class="d-flex flex-row justify-content-evenly">
+        <div class="d-flex col-4 col-xl-4 justify-content-lg-start justify-content-xl-end">
+            <h2 class="d-none d-xl-block text-white display-3 text-white text-uppercase col-11 col-xl-8 mb-0 pt-lg-3 pt-xl-0">
+                contact us now for a consultation </h2>
+            <h2 class="d-none d-lg-block d-xl-none text-white display-4 text-white text-uppercase col-12 mb-0 pt-lg-3 pt-xl-0">
+                contact us now for a consultation </h2>
+        </div>
+        <div class="col-7">
+            {% include contact_form.html %}
+        </div>
+    </div>
+</section>
+<!--END DESKTOP-->
+
+<!-- START MOBILE-->
+
+<section class=" text-white py-0 d-lg-none z-0 py-0"
+         style="background-image: url({{ page.hero_section.background_image_url}});background-size: cover; ">
+    <div class="row py-0 ">
+        <div class="container-fluid px-0 py-0">
+            <div class="d-flex col-12 justify-content-center super-padding-top pt-md-1">
+                <img src="{{page.hero_section.mobile_home_logo_url}}" alt="logo" class="img-fluid w-100"/>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center py-4 phoneNum-bg">
+            <div class=" ">
+                <div class=" ">
+                    <a href="tel:" class="text-white display-3 link-underline link-underline-opacity-0">337-889-0529</a>
+                </div>
+            </div>
+        </div>
+        <div class=" d-flex justify-content-center py-4 bg-success">
+            <div class="d-flex px-5 justify-content-md-center">
+                <h2 class="d-flex d-md-none text-white display-2 text-white text-uppercase col-8 col-md-10 px-1 px-sm-0">
+                contact us now for a consultation
+                </h2>
+                <h2 class="d-none d-md-flex d-lg-none text-white display-5 text-white text-uppercase col-8 col-md-10 px-1 px-sm-0">
+                contact us now for a consultation
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!--END MOBILE-->
+
+<!--DESKTOP INFO NAV HERE-->
+
+<section class="container-fluid d-none d-lg-grid py-5">
+    <div class="row">
+        <div class="col-5 d-grid">
+            <nav class="navbar display-6 px-5 justify-content-center">
+                <ul class="navbar-nav flex-column justify-content-center" id="serviceTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link index-info-color fs-2 active" id="personal-injury-tab" data-bs-toggle="tab" data-bs-target="#personal-injury-content" role="tab" aria-controls="personal-injury-content" aria-selected="true">personal injury</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link index-info-color fs-2" id="criminal-law-tab" data-bs-toggle="tab" data-bs-target="#criminal-law-content" role="tab" aria-controls="criminal-law-content" aria-selected="false">criminal law</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link index-info-color fs-2" id="family-law-tab" data-bs-toggle="tab" data-bs-target="#family-law-content" role="tab" aria-controls="family-law-content" aria-selected="false">family law</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link index-info-color fs-2" id="dwi-owi-tab" data-bs-toggle="tab" data-bs-target="#dwi-owi-content" role="tab" aria-controls="dwi-owi-content" aria-selected="false">dwi/owi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link index-info-color fs-2" id="estate-tab" data-bs-toggle="tab" data-bs-target="#estate-content" role="tab" aria-controls="estate-content" aria-selected="false">estate planning</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link index-info-color fs-2" id="additional-services-tab" data-bs-toggle="tab" data-bs-target="#additional-services-content" role="tab" aria-controls="additional-services-content" aria-selected="false">additional services</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="tab-content col-6 d-flex align-items-center" id="serviceTabContent">
+            <div class="tab-pane fade show active fs-2 " id="personal-injury-content" role="tabpanel" aria-labelledby="personal-injury-tab">
+                <p class="editable fs-4 col-xl-10" style="text-align: justify">
+                If you were injured through no fault of your own and need help navigating through the legal system contact us immediately. When dealing with these difficult, fragile matters, you will need an attorney with not only experience, but with compassion. Someone who will take a personal interest in your case and have your best interest in mind.
+                </p>
+                <a href="/personal-injury" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
+            </div>
+            <div class="tab-pane fade fs-2" id="criminal-law-content" role="tabpanel" aria-labelledby="criminal-law-tab">
+                <p class="editable fs-4 col-xl-10" style="text-align: justify">
+                Our firm offers criminal defense services to those charged with having committed a crime. We take representation of a client very seriously as we understand the emotional toll placed on a person and their family when someone has been accused and/or charged with committing a crime. Our firm works tirelessly from the moment we are contacted by a client or their family, be it the day they are arrested or the week before trial.
+                </p>
+                <a href="/criminal-law" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
+            </div>
+             <div class="tab-pane fade fs-2" id="family-law-content" role="tabpanel" aria-labelledby="family-law-tab">
+                 <p class="editable fs-4 col-xl-10" style="text-align: justify">
+                 We realize that extended litigation should be a last alternative in resolving a domestic or family dispute. We work to achieve our clients goals with the least emotional and financial expense.
+                 </p>
+                 <a href="/family-law" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
+            </div>
+            <div class="tab-pane fade fs-2" id="dwi-owi-content" role="tabpanel" aria-labelledby="dwi-owi-tab">
+                <p class="editable fs-4 col-xl-10" style="text-align: justify">
+                If you have been arrested for driving under the influence of alcohol or drugs, it is imperative that you contact my office immediately. DUI cases can develop relatively quick, and the more time that I have to gather the facts, the better the case I can build to defend you.
+                </p>
+                <a href="/dwi-owi" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
+            </div>
+            <div class="tab-pane fade fs-2" id="estate-content" role="tabpanel" aria-labelledby="estate-tab">
+                <p class="editable fs-4 col-xl-10" style="text-align: justify">
+                Call today to set up an appointment so that I can help you plan for your future so that your wishes can be carried out.
+                </p>
+                <a href="/estate-planning" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
+            </div>
+            <div class="tab-pane fade fs-2" id="additional-services-content" role="tabpanel" aria-labelledby="additional-services-tab">
+                <p class="editable fs-4 col-xl-10" style="text-align: justify">
+                We pride ourselves on being a full service law firm and strive to fulfill our clients needs. Should you have a problem and/or dispute not specifically delineated above, please feel free to contact my office for a consultation.
+                </p>
+                <a href="/additional-services" class="btn btn-primary btn-lg rounded-0 learn-more-btn" role="button" >LEARN MORE </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--DESKTOP INFO NAV END-->
+
+<!--MOBILE INFO NAV HERE-->
+
+<section class="d-flex d-lg-none justify-content-center align-items-center pt-4 pb-1">
+    <div class="d-flex flex-column col-10 col-md-10">
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-light bg-light col-12 justify-content-md-start bg-transparent border-bottom border-top">
+            <div class="d-flex col-md-7 mx- mx-md-0 px-0 pb-2">
+                <button class="navbar-toggler d-flex px-0 py-0 border-0 flex-grow-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" style="color: transparent;">
+                    <span class="d-flex text-uppercase text-success display-4  col-md-12 col-12 justify-content-md-evenly justify-content-evenly f-weight-500 pe-md-3" id="service-title">Select a service</span>
+                    <span class="d-flex col-md-7 justify-content-end align-self-center col-2 "><i class="d-flex justify-content-end fa-solid fa-caret-down fa-2xl text-success"></i></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse show" id="navbarContent">
+                <div class="d-flex justify-content-center col-md-12 col-12 pe-2">
+                    <ul class="navbar-nav col-12 col-md-11 px-3 px-md-2">
+                        {% for item in page.service_section.services %}
+                        <li class="{% if forloop.index == 1 %} nav-item pt-5 {% else %} nav-item {% endif %}">
+                            <a class="{% if forloop.index == 1 %} nav-link active {% else %} nav-link {% endif %}" href="#collapseExample{{ forloop.index }}" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseExample{{ forloop.index }}">
+                                <h3 class="text-uppercase f-weight-500 display-5 text-info">{{ item.text }}</h3>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Info Section -->
+        <div class="d-flex justify-content-center mt-3 " id="infoContainer">
+            <div class="d-flex col-12 col-md-11 px-1 px-3 px-md-2 pt-0">
+                {% for item in page.service_section.services %}
+                <div id="collapseExample{{ forloop.index }}" class="{% if forloop.index == 1 %} accordion-collapse collapse show {% else %} accordion-collapse collapse {% endif %}" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#infoContainer">
+                    <h3 class="d-flex display-5 f-weight-500 pb-4 text-uppercase">{{ item.text }}</h3>
+                    <div class="d-flex accordion-body font-size-2-rem f-weight-500" style="text-align: justify">
+                        {{ item.description }}
+                    </div>
+                    <div class="d-flex py-4">
+                        <a href="{{ item.url }}" class=" btn btn-primary btn-lg f-weight-500 rounded-0 learn-more-btn px-5 fs-2 py-3" role="button">LEARN MORE</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var itemText = this.getElementsByTagName('h3')[0].textContent.trim();
+            document.getElementById('service-title').textContent = itemText;
+        });
+    });
+});
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const allCollapses = document.querySelectorAll('.accordion-collapse');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                // Close all accordion items first
+                allCollapses.forEach(collapse => {
+                    collapse.classList.remove('show');
+                });
+
+                // Open the clicked accordion item
+                const targetId = this.getAttribute('href');
+                const targetCollapse = document.querySelector(targetId);
+                if (targetCollapse) {
+                    targetCollapse.classList.add('show');
+                }
+            });
+        });
+        document.querySelectorAll('.nav-link').forEach(function(link) {
+            link.addEventListener('click', function () {
+                var itemText = this.getElementsByTagName('h3')[0].textContent.trim();
+                document.getElementById('service-title').textContent = itemText;
+            });
+        });
+
+    });
+</script>
+
+
+
+<!--MOBILE INFO NAV END-->
+
+
+<!--NICK'S FORM AREA-->
+
+<!--<div class="container custom-service">-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-6 border-0 serviceMenu__ServiceTitles d-block mt-0 serviceMenu__ServiceTitles&#45;&#45;Desktop" role="tablist" aria-orientation="vertical">-->
+<!--            {% for list in page.service_section.services %}-->
+<!--            <h3 class="mt-0 serviceMenu__ServiceTitle serviceMenu__ServiceTitle&#45;&#45;Mobile service-item {% if forloop.first %}active{% endif %}" data-bs-toggle="pill" data-bs-target="#v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" type="button" role="tab" aria-controls="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" aria-selected="true">-->
+<!--                <a style="font-size: unset;padding: 0; border: 0";>{{ list.text }} </a>-->
+<!--            </h3>-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+<!--        <div class="col-md-6 serviceMenu__ServiceText tab-content" id="v-pills-tabContent">-->
+<!--            {% for list in page.service_section.services %}-->
+<!--            <div class="tab-pane fade  {% if forloop.first %}show active{% endif %}" id="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}" role="tabpanel" aria-labelledby="v-pills-{{ list.text | replace: ' ', '-' | replace: '/', '-' }}-tab">-->
+<!--                <p class="service-paragraph">{{ list.description }}</p>-->
+<!--                <a class="d-inline-block text-decoration-none text-uppercase service-learn-more " href="{{list.url}}">Learn more</a>-->
+<!--            </div>-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+    {% assign about = page.about_section %}
+<!--    <section class="p-0 d-flex flex-row justify-content-end align-items-center textOverlay">-->
+<!--        <div class="d-block position-absolute overflow-hidden z-0 textOverlay__ImageWrapper&#45;&#45;BG">-->
+<!--        {% if about.background_image %}-->
+<!--          <img class="" src="{{ about.background_image }}" alt="paper" />-->
+<!--        {% endif %}-->
+<!--        </div>-->
+<!--        <div class="position-relative position-relative textOverlay__Red">-->
+<!--            <div class="overflow-hidden position-relative mt-0 me-auto mb-5 ms-0 textOverlay__ImageWrapper&#45;&#45;Headshot">-->
+<!--            {% if about.profile_image %}-->
+<!--              <img class="h-100 w-auto object-fit-cover d-block textOverlay__Headshot" src="{{ about.profile_image }}" alt="{{about.title}}" />-->
+<!--            {% endif %}-->
+<!--            </div>-->
+<!--            {% if about.title %}-->
+<!--             <h4>{{ about.title }}</h4>-->
+<!--            {% endif %}-->
+<!--            {% if about.description %}-->
+<!--            <p>{{ about.description }}</p>-->
+<!--            {% endif %}-->
+<!--            {% if about.button_text %}-->
+<!--             <a href="{{about.button_url}}">{{ about.button_text }}</a>-->
+<!--            {% endif %}-->
+<!--        </div>-->
+<!--    </section>-->
+<!--</section>-->
+
+
+
+<!-- DESKTOP MCCORMICK AREA HERE-->
+
+<div class="d-none d-lg-block">
+    <div class="row justify-content-between me-0">
+        <div class=" col-8 d-flex d-lg-none d-xl-flex py-5">
+            {% if about.background_image %}
+            <img src="{{ about.background_image }}" alt="paper" class="img-fluid py-5 object-fit-cover h-75 w-100 ">
+            {% endif %}
+        </div>
+        <div class="  col-8 d-lg-flex d-none d-xl-none py-5">
+            {% if about.background_image %}
+            <img src="{{ about.background_image }}" alt="paper" class="img-fluid py-5 object-fit-cover h-100 w-100">
+            {% endif %}
+        </div>
+        <div class="d-flex col-7 px-5 py-lg-5 py-xl-0 " style="background: linear-gradient(180deg, rgba(116,22,37,.9), rgba(58,11,19,.9)); margin-left: -30%;">
+            <div class="flex-column px-5 pt-xl-5">
+                <div class="d-flex col-3 border-0 py-3">
+                    <img src="/assets/images/about_sm.jpg?_cchid=23ecf755b0243d1bb7a93a2eb5b67d9d" alt="SHANE MCCORMICK" class="object-fit-cover rounded-circle" style="width: 138px; height: 138px;">
+                </div>
+                <div class="display-5 text-white col-lg-11 col-xl-10"> SHANE MCCORMICK
+                    <p class="fs-3 py-3 col-11 col-lg-12 col-xl-11 editable" style="text-align: justify">
+                        Shane McCormick has over 20 years of legal experience fighting for diverse clients. As a veteran, he knows the importance of persistence and determination. He brings all these valuable skills to the courtroom to ensure the best possible outcome for every client, every time. A local attorney who knows the system, he has been providing outstanding legal services to Acadiana and the surrounding area since 2002.
+                    </p>
+                </div>
+                <a href="/about" class="btn btn-primary btn-lg rounded-0 learn-more-white-btn px-5 py-3 fs-5 mt-3" role="button">LEARN MORE </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--MOBILE MCCORMICK AREA HERE-->
+
+<div class="d-block d-lg-none">
+    <div class="">
+        <div class="d-flex flex-column justify-content-center " style="background: linear-gradient(180deg, rgba(116,22,37,.9), rgba(58,11,19,.9));">
+            <div class="d-flex col-12 justify-content-center">
+                <div class= "border-0 py-3">
+                    <img src="/assets/images/about_sm.jpg?_cchid=23ecf755b0243d1bb7a93a2eb5b67d9d" alt="SHANE MCCORMICK" class="object-fit-cover rounded-circle" style="width: 133px; height: 133px;">
+                </div>
+            </div>
+            <div class="d-flex flex-column px-4">
+                <div class="d-flex justify-content-center col-12 px- px-md-0">
+                    <h4 class="col-11 col-md-10 d-lg-flex d-none justify-content-start justify-content-md-start text-white display-5 py-3 mx-md-3 px-0 px-md-3 f-weight-500"> SHANE MCCORMICK</h4>
+                    <h4 class="col-11 col-md-10 d-flex d-lg-none justify-content-start justify-content-md-start text-white display-4 py-3 mx-md-3 px-0 px-md-3 f-weight-500"> SHANE MCCORMICK</h4>
+                </div>
+                <div class="d-flex justify-content-center px-1">
+                    <div class="col-12 col-md-10  px-md-3 d-flex justify-content-center text-white px-3">
+                        <p class="editable font-size-2-rem" style="text-align: justify">
+                            Shane McCormick has over 20 years of legal experience fighting for diverse clients. As a veteran, he knows the importance of persistence and determination. He brings all these valuable skills to the courtroom to ensure the best possible outcome for every client, every time. A local attorney who knows the system, he has been providing outstanding legal services to Acadiana and the surrounding area since 2002.
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex col-6 px-md-0 col-md-12 mx-md-4 py-0">
+                    <div class="col-12 d-flex justify-content-start px-2 px-md-3 py-3">
+                        <div class="col-12 pb-3 col-md-4 col-lg-7 px-md-5 mx-3" >
+                            <a href="/about" class="d-flex btn btn-primary btn-lg rounded-0 learn-more-white-btn fs-3 fw-semibold justify-content-center py-3" role="button">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="d-flex d-lg-none justify-content-center">
+    <div class="col-12 col-sm-10 py-5">
+        <h5 class="formSection__Heading editable col-12 px-5 mx-2">REQUEST A CONSULTATION</h5>
+        {% include form.html %}
+    </div>
 </section>

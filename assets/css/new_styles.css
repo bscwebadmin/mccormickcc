@@ -1,0 +1,341 @@
+/*DEFAULT*/
+/**/
+/**/
+.mobile-home{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    overflow-x: hidden;
+}
+/*.desktop-home{*/
+/*    min-height: 100vh;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    width: 100vw*/
+/*}*/
+
+
+
+
+/*NAVBAR DESKTOP*/
+/**/
+/**/
+
+/*.bg-primary{*/
+/*    background-color: rgba(116, 22, 37, .86) !important;*/
+/*}*/
+
+.navbar-half-transparent{
+    background-color: transparent !important;
+}
+.
+
+.desktop-dropdown{
+    border-color: transparent;
+}
+
+/*.navbar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    z-index: 10;   !* Increase this value if the nav still appears below content *!*/
+/*}*/
+
+
+/*.nav-link {*/
+/*    font-size: 2rem;*/
+/*}*/
+
+.custom-nav {
+    height: 13.2rem;
+    padding: 1rem 4rem;
+}
+/*.icon-wrapper {*/
+/*  display: inline-block;*/
+/*  padding: 10px;*/
+
+.icon-under {
+    color:  #741625
+}
+.icon-over {
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/*.nav-item {*/
+/*    margin-right: 30px*/
+/*}*/
+
+.no-y-scroll {
+    overflow-y: hidden;
+}
+
+/**/
+/*CONTACT FORM DESKTOP*/
+/**/
+
+.index-info-color .nav-link {
+    color: rgba(0, 46, 59, 1) !important;
+}
+
+
+
+}
+.contact-form {
+    background-color: #002e3b;
+    /*color: #ffffff;*/
+}
+/*textarea::placeholder {*/
+/*    color: #ffffff;*/
+/*}*/
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    /*width: 350px;*/
+    width: 33rem;
+}
+
+.form-control {
+    border-radius: 0;
+    font-size: 2rem;
+    height: 4.75rem;
+}
+
+#inputMessage1 {
+    border: none;
+    height: 16.25rem;
+}
+
+.form-container {
+    display: flex;
+    align-items: start;
+    gap: 3%;
+    justify-content: start;
+}
+
+.inputs-container, .message-container {
+    flex: 1;
+}
+
+input.form-control, textarea.form-control {
+    color: black !important;
+}
+
+.new-form{
+    padding-right: 3rem
+}
+
+.formSubmit-Mobile {
+    background-color: #002e3b;
+    text-transform: uppercase;
+    margin-left: auto;
+    color: #fff;
+    padding: 1.2rem 2.2rem;
+}
+.formSubmit-Desktop {
+    background-color: #fff;
+    text-transform: uppercase;
+    margin-left: auto;
+    color: #002e3b;
+    padding: 1.2rem 2.2rem;
+}
+
+/**/
+/*HOME*/
+/**/
+
+.seal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100rem;
+}
+
+.seal {
+    /*width: 100%;*/
+    height: 30vh;
+    width: auto;
+    object-fit: cover;
+}
+.phoneNum-bg {
+    background-color: hsla(0,0%,43.9%,.25);
+}
+
+.learn-more-btn {
+    background-color: transparent;
+    color: black;
+    border-color: black;
+}
+
+.learn-more-btn:hover {
+    background-color: transparent;
+    color: black;
+    border-color: black;
+}
+
+.learn-more-white-btn {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+.learn-more-white-btn:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.hover-item:hover {
+    background-color: transparent;
+}
+
+.form-text-color input::placeholder{
+    color: white !important;
+    opacity: 100%;
+}
+.form-text-area-color textarea::placeholder{
+    color: white !important;
+    opacity: 100%;
+}
+/*input::placeholder{*/
+/*    color: white !important;*/
+/*}*/
+.custom-service {
+    /*margin-right: .2rem !important;*/
+    padding-left: 6rem;
+    padding-top: 5.3rem;
+    padding-bottom: 5.3rem;
+}
+
+.service-paragraph {
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.service-learn-more {
+    color: #0e161e;
+    font-size: 1.6rem;
+    border: 1px solid;
+    padding: 1.3rem 2.7rem;
+}
+
+
+/**/
+/* ABOUT SECTION ON HOME PAGE*/
+/**/
+
+.writing-image{
+    left: 0;
+    width: 72vw;
+    height: 44.3rem;
+}
+
+ /*LEGAL SERVICES PAGE*/
+
+.legal-img{
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+.legal-img img{
+    margin-left: -100px;
+    margin-top: -50px;
+}
+.link-container{
+    align-items: flex-start;
+}
+.info-cutter {
+max-height: 25%;
+}
+
+.font-title {
+    font-size: 5rem;
+}
+
+.font-size-3rem {
+    font-size: 3rem;
+
+}
+.font-size-3-5rem{
+    font-size: 3.5rem;
+}
+
+.f-weight-500{
+    font-weight: 500;
+}
+.section-title{
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.font-size-7-rem{
+    font-size: 7rem;
+}
+.font-size-5-rem{
+    font-size: 5rem;
+}
+.font-size-2-rem{
+    font-size: 2rem;
+}
+.font-size-2-5rem{
+    font-size: 2rem;
+}
+/**/
+/*ABOUT PAGE*/
+/**/
+
+.padding-info {
+    padding: 10.6rem 13rem;
+}
+
+
+.about-mobile-img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.about-mobile-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 1200px) {
+    .about-mainText-padding {
+    padding-right: 0rem !important;
+    padding-left: 18rem !important;
+
+    }
+}
+@media (min-width: 2400px) {
+    .info-me-7 {
+        margin-left: 7.25rem;
+    }
+}
+@media (min-width: 1400px) {
+    .info-me-7 {
+        margin-left: 7.25rem;
+    }
+}
+.accordion-index-info{
+    --bs-accordion-active-bg: transparent;
+    color: #002e3b;
+}
+.allServices__Service__Text ul {
+    display: block;
+    column-count: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+.index-tabs-no-bold {
+    font-weight: normal !important;
+}
+.super-padding-top {
+    padding-top: 185px;
+
+}
+.add-service-font-title{
+    font-size: 4.0rem;
+}
