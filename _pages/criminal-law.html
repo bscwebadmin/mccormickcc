@@ -124,35 +124,6 @@ services_section:
                         {% include contact_form.html %}
                     </div>
                 </div>
-
-
-<!--                <div class="d-flex col-8 justify-content-around pb-5">-->
-<!--                    <div class="allServices__Service__Text col-8 py-xl-5 py-lg-3">-->
-<!--                        {% if sectionTwo.title %}-->
-<!--                        <h3 class="px-4 fs-3  ">{{ sectionTwo.title }}</h3>-->
-<!--                        {% endif %}-->
-<!--                        {% if sectionTwo.subtitle %}-->
-<!--                        <p class="px-4 fs-4 ">{{ sectionTwo.subtitle }}</p>-->
-<!--                        {% endif %}-->
-<!--                        <div class="fs-4">-->
-<!--                            <div class="d-grid lh-sm">-->
-<!--                                <ul class="row ">-->
-<!--                                {% for list in sectionTwo.lists %}-->
-<!--                                  <div class="col-6 py-1">-->
-<!--                                    <li class="ps-1 col-10" style="">{{ list }}</li>-->
-<!--                                  </div>-->
-<!--                                {% endfor %}-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        <div class=" ">-->
-<!--                            {% if sectionTwo.button_text %}-->
-<!--        &lt;!&ndash;                   <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>&ndash;&gt;-->
-<!--                            <a href="{{ sectionTwo.button_url }}" class="btn btn-lg rounded-0 text-uppercase border-success text-success mx-5 px-4 my-xl-4 my-0" role="button">{{sectionTwo.button_text}}</a>-->
-<!--                            {% endif %}-->
-<!--                        </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
         </div>
     </section>
@@ -160,53 +131,6 @@ services_section:
 
 <!--DESKTOP CRIME INFO AREA HERE-->
 
-<!--<section class="d-lg-block d-none ">-->
-<!--    {% assign sectionINFO = page.white_section %}-->
-<!--    <div>-->
-<!--        <div class="d-flex flex-row py-lg-4">-->
-<!--            <div class="d-flex justify-content-xl-end col-xl-6 col-lg-5 justify-content-lg-evenly">-->
-<!--                <div class="d-flex col-xl-8 col-lg-10 justify-content-xl-center justify-content-lg-center">-->
-<!--                    <h3 class="d-flex f-weight-500 fs-1 col-xl-6 col-lg-11 lh-1h px-0" style="color: #0E161E; ">{{sectionINFO.title}}</h3>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="d-flex justify-content-xl-start justify-content-lg-start">-->
-<!--                <div class="d-flex col-xl-8 col-lg-11">-->
-<!--                    <p class="fs-4 px-xl-5 lh-sm" style="color: #0E161E; text-align: justify;">{{sectionINFO.description}}</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-<!--<section class="d-lg-flex d-none justify-content-end">-->
-<!--    <div class="d-flex col-xl-10 col-lg-11">-->
-<!--        <div class="row px-lg-5 mx-0 py-xl-5 py-lg-5 justify-content-start" style="background-color: #eef2f3;">-->
-<!--            {% assign sectionPREFOOTER = page.services_section %}-->
-<!--            <div class="d-flex flex-row col-xl-6 justify-content-center justify-content-xl-start justify-content-lg-around px-lg-5">-->
-<!--                <div class="d-flex flex-column col-xl-10 col-lg-6 me-xl-5 ">-->
-<!--                    <p class="fs-3 lh-sm ps-xl-4 py-xl-2" style="text-align: justify; color: #0E161E;">{{sectionPREFOOTER.title}}</p>-->
-<!--                    <div class="d-xl-flex d-lg-none mx-5 mx-md-0 px-xl-0">-->
-<!--                        <a href="{{ sectionPREFOOTER.button_url }}" class="btn btn-lg fs-5 rounded-0 text-uppercase border-black mx-md-4 px-5 my-3 f-weight-500 py-3 py-xl-2 px-xl-4" role="button" style="color: #0E161E;">{{ sectionPREFOOTER.button_text }}</a>-->
-<!--                    </div>-->
-<!--                    <div class="d-lg-flex d-xl-none mx-5 mx-md-5 px-xl-4">-->
-<!--                        <a href="{{ sectionPREFOOTER.button_url }}" class="btn btn-lg fs-5 rounded-0 text-uppercase border-black mx-md-4 px-4 my-3 f-weight-500 py-3 py-xl-2 px-xl-4" role="button" style="color: #0E161E;">{{ sectionPREFOOTER.button_text }}</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="d-flex col-xl-8 col-lg-4 justify-content-end ms-xl-5">-->
-<!--                    <ul class="ps-xl-4 d-xl-flex d-lg-none flex-column ">-->
-<!--                        {% for list in sectionPREFOOTER.services %}-->
-<!--                        <li class=" fs-3 f-weight-500 lh-1 py-1" style="color:#0E161E; ">{{ list.list }}</li>-->
-<!--                        {%endfor%}-->
-<!--                    </ul>-->
-<!--                    <ul class="ps-xl-4 d-lg-flex d-xl-none flex-column ">-->
-<!--                        {% for list in sectionPREFOOTER.services %}-->
-<!--                        <li class=" fs-4 f-weight-500 lh-1 py-1" style="color:#0E161E; ">{{ list.list }}</li>-->
-<!--                        {%endfor%}-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
 <section class="d-lg-block d-none ">
     {% assign sectionINFO = page.white_section %}
     <div>
@@ -303,71 +227,3 @@ services_section:
         <h5 class="d-none d-md-block d-lg-none display-5 f-weight-500 px-5 mx-2 pt-5">{{ sectionTwo.sub_title }} </h5>
     </div>
 </section>
-
-
-<!--<section class="hero pageHero pageHero&#45;&#45;Collage">-->
-<!--	<div class="pageHero__Text">-->
-<!--		{% if page.banner_section.title %}-->
-<!--		 <h1>{{ page.banner_section.title }}</h1>-->
-<!--		{% endif %}-->
-<!--		{% for list in page.banner_section.lists %}-->
-<!--		 <p class="pageDesc pageHeroBreak">{{ list }}</p>-->
-<!--		{% endfor %}-->
-<!--		<div class="pageHero__Phone">-->
-<!--		   <a href="tel:{{ general_data.phone }}">{{ general_data.phone }}</a>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<div class="pageHero__Form">-->
-<!--	    {% if page.contact_section.title %}-->
-<!--		 <h2>{{ page.contact_section.title }}</h2>-->
-<!--		{% endif %}-->
-<!--		<section class="formSection">-->
-<!--		    {% if page.contact_section.sub_title %}-->
-<!--			 <h5 class="formSection__Heading">{{ page.contact_section.sub_title }}</h5>-->
-<!--			{% endif %}-->
-<!--			{% include form.html %}-->
-<!--		</section>-->
-<!--	</div>-->
-<!--	{% if page.banner_section.banner_image_url %}-->
-<!--	<div class="pageHero__ImageWrapper pageHero__ImageWrapper&#45;&#45;TR">-->
-<!--		<img class="pageHero__Image pageHero__Image&#45;&#45;TR pageHero__ImageWrapper&#45;&#45;TR" src="{{page.banner_section.banner_image_url}}" />-->
-<!--	</div>-->
-<!--	{% endif %}-->
-<!--	{% if page.contact_section.banner_image_url %}-->
-<!--	<div class="pageHero__ImageWrapper pageHero__ImageWrapper&#45;&#45;BL">-->
-<!--		<div class="blueBlock"></div>-->
-<!--		<img class="pageHero__Image pageHero__Image&#45;&#45;BL" src="{{page.contact_section.banner_image_url}}" />-->
-<!--	</div>-->
-<!--	{% endif %}-->
-<!--</section>-->
-
-<!--{% assign service = page.services_section %}-->
-<!--{% assign white = page.white_section %}-->
-<!--<section class="sliceZone">-->
-<!--	<section class="pageBody maxWidth">-->
-<!--	    {% if white.title %}-->
-<!--		<h3>{{ white.title }}</h3>-->
-<!--		{% endif %}-->
-<!--		{% if white.description %}-->
-<!--		<p>{{ white.description }} </p>-->
-<!--		{% endif %}-->
-<!--	</section>-->
-<!--	<section class="pagePrefooter">-->
-<!--		<div class="pagePrefooter__Text">-->
-<!--		   {% if service.title %}-->
-<!--			<p>{{ service.title }}</p>-->
-<!--			{% endif %}-->
-<!--			{% if service.button_text %}-->
-<!--			 <a class="prefooter__Button prefooter__Button&#45;&#45;Desktop" href="{{service.button_url}}">{{service.button_text}}</a>-->
-<!--			{% endif %}-->
-<!--		</div>-->
-<!--		<ul>-->
-<!--		    {% for list in service.services %}-->
-<!--			<li>{{ list.list }}</li>-->
-<!--			{% endfor %}-->
-<!--		</ul>-->
-<!--		{% if service.button_text %}-->
-<!--		 <a class="prefooter__Button prefooter__Button&#45;&#45;Mobile" href="{{service.button_url}}">{{service.button_text}}</a>-->
-<!--		{% endif %}-->
-<!--	</section>-->
-<!--</section>-->

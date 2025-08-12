@@ -115,31 +115,6 @@ additional_services_section:
 ---
 {% assign general_data = site.data.general_settings %}
 
-<!--    <section class="pageHero pageHero&#45;&#45;Thirds ">-->
-<!--        <div class="pageHero__Text row py-3">-->
-<!--           {% if page.banner_section.title %}-->
-<!--            <div class=" order-1">-->
-<!--                <h1 class="col">{{ page.banner_section.title }}</h1>-->
-<!--            </div>-->
-<!--           {% endif %}-->
-<!--            {% if page.banner_section.background_image_url %}-->
-<!--            <div class="d-flex col-5 order-3">-->
-<!--                <img class="img-fluid" src="{{ page.banner_section.background_image_url }}" />-->
-<!--            </div>-->
-<!--            {% endif %}-->
-<!--           {% if page.banner_section.description %}-->
-<!--            <p class="pageDesc col-3 order-2">{{ page.banner_section.description }}</p>-->
-<!--           {% endif %}-->
-<!--            <div class="pageHero__Phone col-2"><a href="tel:{{ general_data.phone }}">{{ general_data.phone }}</a></div>-->
-<!--        </div>-->
-<!--		<section class="formSection col-2">-->
-<!--			{% if page.contact_form_section.sub_title %}-->
-<!--			 <h5 class="formSection__Heading">{{ page.contact_form_section.sub_title }}</h5>-->
-<!--			{% endif %}-->
-<!--		{% include form.html %}-->
-<!--        </section>-->
-<!--    </section>-->
-
 <section>
     <div class="container-fluid mx-0 px-0" style="background: linear-gradient(180deg, #741625, #3a0b13);">
       <div class=" d-none d-lg-block">
@@ -226,15 +201,12 @@ additional_services_section:
                             <div class="d-grid lh-sm">
                                 <ul class="px-0 ">
                                 {% for list in sectionTwo.lists %}
-<!--                                  <div class="col-6 py-1">-->
                                     <li class="ps-1 col-12 fs-3 lh-1 py-1" style="">{{ list }}</li>
-<!--                                  </div>-->
                                 {% endfor %}
                                 </ul>
                             </div>
                         <div class=" ">
                             {% if sectionTwo.button_text %}
-        <!--                   <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>-->
                             <a href="{{ sectionTwo.button_url }}" class="btn btn-lg rounded-0 text-uppercase border-success text-success px-4 my-xl-4 my-0 mx-1" role="button">{{sectionTwo.button_text}}</a>
                             {% endif %}
                         </div>
@@ -295,15 +267,12 @@ additional_services_section:
                             <div class="d-grid lh-sm">
                                 <ul class="px-0 ">
                                 {% for list in sectionFour.lists %}
-<!--                                  <div class="col-6 py-1">-->
                                     <li class="ps-1 col-12 fs-3 lh-1 py-1" style="">{{ list }}</li>
-<!--                                  </div>-->
                                 {% endfor %}
                                 </ul>
                             </div>
                         <div class=" ">
                             {% if sectionFour.button_text %}
-        <!--                   <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>-->
                             <a href="{{ sectionFour.button_url }}" class="btn btn-lg rounded-0 text-uppercase border-success text-success px-4 my-xl-4 my-0 mx-1" role="button">{{sectionFour.button_text}}</a>
                             {% endif %}
                         </div>
@@ -311,34 +280,6 @@ additional_services_section:
                     </div>
                 </div>
             </div>
-<!--            <div class="row mx-0 px-0">-->
-<!--                <div class="col-4 p-0 d-flex">-->
-<!--                    <img src="{{sectionFour.image_url}}" alt="{{sectionFour.title}}" class="w-100 " />-->
-<!--                </div>-->
-<!--                <div class="d-flex col-8 justify-content-around pb-5">-->
-<!--                    <div class="allServices__Service__Text col-8 py-5">-->
-<!--                        {% if sectionFour.title %}-->
-<!--                        <h3 class="px-4 fs-4  ">{{ sectionFour.title }}</h3>-->
-<!--                        {% endif %}-->
-<!--                        {% if sectionFour.subtitle %}-->
-<!--                        <p class="px-4 fs-4 ">{{ sectionFour.subtitle }}</p>-->
-<!--                        {% endif %}-->
-<!--                        <div class="fs-4">-->
-<!--                            <div class="d-grid lh-sm">-->
-<!--                                <ul class=" ">-->
-<!--                                    {% for list in sectionFour.lists %}-->
-<!--                                        <li class="ps-1 col-12" style="">{{ list }}</li>-->
-<!--                                    {% endfor %}-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                            {% if sectionFour.button_text %}-->
-<!--&lt;!&ndash;                   <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>&ndash;&gt;-->
-<!--                            <a href="{{ sectionFour.button_url }}" class="btn btn-lg rounded-0 text-uppercase border-success text-success mx-5 px-4 my-4" role="button">{{sectionFour.button_text}}</a>-->
-<!--                            {% endif %}-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
 
 <!--DWI/OWI SECTION-->
 
@@ -392,15 +333,12 @@ additional_services_section:
                             <div class="d-grid lh-sm">
                                 <ul class="px-0 ">
                                 {% for list in sectionSix.lists %}
-<!--                                  <div class="col-6 py-1">-->
                                     <li class="ps-1 col-12 fs-3 lh-1 py-1" style="">{{ list }}</li>
-<!--                                  </div>-->
                                 {% endfor %}
                                 </ul>
                             </div>
                         <div class=" ">
                             {% if sectionSix.button_text %}
-        <!--                   <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>-->
                             <a href="{{ sectionSix.button_url }}" class="btn btn-lg rounded-0 text-uppercase border-success text-success px-4 my-xl-4 my-0 mx-1" role="button">{{sectionSix.button_text}}</a>
                             {% endif %}
                         </div>
@@ -470,7 +408,6 @@ additional_services_section:
                         </ul>
                     </div>
                     {% if sectionTwo.button_text %}
-<!--                   <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>-->
                     <a href="{{ sectionTwo.button_url }}" class="btn btn-lg fs-3 rounded-0 text-uppercase border-success text-success mx-2 mx-md-4 px-5 px-lg-4 my-xl-4 my-3 f-weight-500 py-3" role="button">{{sectionTwo.button_text}}</a>
                     {% endif %}
                   </div>
@@ -500,7 +437,6 @@ additional_services_section:
                         </ul>
                     </div>
                     {% if sectionThree.button_text %}
-<!--                   <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>-->
                     <a href="{{ sectionThree.button_url }}" class="btn btn-lg fs-3 rounded-0 text-uppercase border-success text-success mx-2 mx-md-4 px-5 px-lg-4 my-xl-4 my-3 f-weight-500 py-3" role="button">{{sectionThree.button_text}}</a>
                     {% endif %}
                   </div>
@@ -530,7 +466,6 @@ additional_services_section:
                         </ul>
                     </div>
                     {% if sectionFour.Button_text %}
-<!--                   <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>-->
                     <a href="{{ sectionFour.Button_url }}" class="btn btn-lg fs-3 rounded-0 text-uppercase border-success text-success mx-2 mx-md-4 px-5 px-lg-4 my-xl-4 my-3 f-weight-500 py-3" role="button">{{sectionFour.Button_text}}</a>
                     {% endif %}
                   </div>
@@ -561,7 +496,6 @@ additional_services_section:
                         </ul>
                     </div>
                     {% if sectionFive.button_text %}
-<!--                   <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>-->
                     <a href="{{ sectionFive.button_url }}" class="btn btn-lg fs-3 rounded-0 text-uppercase border-success text-success mx-2 mx-md-4 px-5 px-lg-4 my-xl-4 my-3 f-weight-500 py-3" role="button">{{sectionFive.button_text}}</a>
                     {% endif %}
                   </div>
@@ -591,7 +525,6 @@ additional_services_section:
                         </ul>
                     </div>
                     {% if sectionSix.button_text %}
-<!--                   <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>-->
                     <a href="{{ sectionSix.button_url }}" class="btn btn-lg fs-3 rounded-0 text-uppercase border-success text-success mx-2 mx-md-4 px-5 px-lg-4 my-xl-4 my-3 f-weight-500 py-3" role="button">{{sectionSix.button_text}}</a>
                     {% endif %}
                   </div>
@@ -620,7 +553,6 @@ additional_services_section:
                         </ul>
                     </div>
                     {% if sectionSeven.button_text %}
-<!--                   <a href="{{ sectionTwo.button_url }}">{{sectionTwo.button_text}}</a>-->
                     <a href="{{ sectionSeven.button_url }}" class="btn btn-lg fs-3 rounded-0 text-uppercase border-success text-success mx-2 mx-md-4 px-5 px-lg-4 my-xl-4 my-3 f-weight-500 py-3" role="button">{{sectionSeven.button_text}}</a>
                     {% endif %}
                   </div>
@@ -628,9 +560,11 @@ additional_services_section:
           </div>
         </div>
 </section>
-<section class=" order-2">
-    <div class="col-10 d-flex justify-content-center justify-content-lg-start text-start px-5 mx-2 pt-5">
-        <h5 class="text-success text-uppercase display-3 f-weight-500 d-block d-lg-none">request a consultation</h5>
-        <h5 class="text-success text-uppercase fs-3 f-weight-500 d-none d-lg-block">request a consultation</h5>
+<section class="container-fluid order-2">
+    <div class="px-5 mx-2 pt-5 d-none d-lg-block">
+        <a class="text-success text-uppercase fs-3 f-weight-500 text-decoration-none btn btn-lg rounded-0 border-success" href="/contact">request a consultation</a>
+    </div>
+    <div class="px-5 mx-2 pt-5 d-block d-lg-none">
+        <a class="text-success display-3 text-uppercase f-weight-500 text-decoration-none" href="/contact">request a consultation</a>
     </div>
 </section>
